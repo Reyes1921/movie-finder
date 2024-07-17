@@ -10,6 +10,9 @@ export const Search = () => {
   )
   return (
     <Layout loading={loading} search={movieSerie}>
+      <h2 className="text-4xl p-4 ml-5 text-center md:text-left font-bold text-[#3b82f6]">
+        Results for: <span className="text-white">{data}</span>
+      </h2>
       {movieSerie?.results?.length === 0 ? (
         <div className="h-screen flex justify-center items-center animated fadeIn">
           <h3 className="text-white text-center text-4xl p-20">

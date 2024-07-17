@@ -25,7 +25,9 @@ export const Home = () => {
       })
       .then((res) => {
         setItems(res.data.results)
-        setLoading(false)
+        setTimeout(() => {
+          setLoading(false)
+        }, 300)
       })
       .catch((err) => {
         console.log(err)

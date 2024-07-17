@@ -12,7 +12,9 @@ export const useGetRuntime = (param) => {
     const {data, error} = await getMovieSerie(param)
     setRuntime(data)
 
-    setLoading(false)
+    setTimeout(() => {
+      setLoading(false)
+    }, 500)
     setError(error)
   }
 

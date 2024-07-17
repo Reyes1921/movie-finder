@@ -12,7 +12,9 @@ export const useGetInfiniteScroll = (param) => {
     const {data, error} = await getMovieSerie(param)
     setMovieSerie(data)
 
-    setLoading(false)
+    setTimeout(() => {
+      setLoading(false)
+    }, 500)
     setError(error)
   }
 
