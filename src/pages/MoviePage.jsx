@@ -17,7 +17,7 @@ export const MoviePage = () => {
       <div className="w-full h-auto bg-slate-900 shadow-md overflow-hidden mx-auto grid gap-1 grid-cols-1 md:grid-cols-1 lg:grid-cols-4 m-10">
         <div className=" md:w-full flex justify-center mb-5">
           <img
-            className="rounded w-ful "
+            className="rounded w-ful"
             src={`https://image.tmdb.org/t/p/w342/${movie?.poster_path}`}
             alt={`${movie?.title}`}
           />

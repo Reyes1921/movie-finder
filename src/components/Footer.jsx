@@ -13,7 +13,7 @@ export const Footer = () => {
             className="w-5/12 lg:w-4/12 md:w-4/12 "
           />
         </div>
-        <h3 className="text-stone-50 flex justify-center">© Reyes Rondón</h3>
+        <h3 className="text-stone-50 flex justify-center">Reyes Rondón</h3>
       </div>
     </footer>
   )

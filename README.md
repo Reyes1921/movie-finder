@@ -29,16 +29,20 @@ Currently, two official plugins are available:
 - `Responsive` -- LISTO
 - `Dropdown aveces no funciona`
 - `Paginación en popular, top rated de movies y series`
-- `Ver lo de runtime`
+- `Ver lo de runtime - suspense??`
 - `Pagina de las personas individual`
+- `Mejorar layout de cast y crew`
 - `Estilo al scroll` -- LISTO
 - `Fonts` -- LISTO Sarala
 - `Language???`
 - `Reducir css`
+- `Hover a películas y series`
 - `SEO` -- LISTO
-- `DarkMode`
+- `DarkMode??`
 - `Responsive tags` -- LISTO
 - `Imagen mas resolución`
+- `Redirects`
+- `Header???`
 - `Ver lo del loader que sale muy rápido`
 - `Remate`
 

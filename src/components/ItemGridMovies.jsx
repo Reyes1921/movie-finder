@@ -27,10 +27,7 @@ export const ItemGridMovies = ({movie}) => {
         >
           <div className="absolute inset-0 z-10 transition duration-300  bg-gradient-to-t from-black via-gray-900 to-transparent" />
 
-          <div
-            className="relative cursor-pointer group z-10 px-10 pt-10 space-y-6 movie_info"
-            data-lity=""
-          >
+          <div className="relative cursor-pointer group z-10 px-10 pt-10 space-y-6 movie_info">
             <div className="poster__info align-self-end w-full mt-10">
               <div className="h-32" />
               <div className="space-y-6 detail_info">
@@ -71,7 +68,7 @@ export const ItemGridMovies = ({movie}) => {
           <img
             alt={`${movie.title}`}
             className="absolute inset-0 transform w-full -translate-y-4"
-            src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
             style={{filter: "grayscale(0)"}}
           />
 
