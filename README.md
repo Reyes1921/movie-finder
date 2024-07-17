@@ -37,7 +37,7 @@ Currently, two official plugins are available:
 - `Reducir css`
 - `SEO` -- LISTO
 - `DarkMode`
-- `Responsive tags`
+- `Responsive tags` -- LISTO
 - `Imagen mas resolución`
 - `Ver lo del loader que sale muy rápido`
 - `Remate`

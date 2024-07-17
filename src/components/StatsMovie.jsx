@@ -17,12 +17,12 @@ export const StatsMovie = ({data}) => {
             <div className="imdb-title text-center text-black">T M D B</div>
           </div>
         </div>
-        <div className="space-x-3 mt-5">
+        <div className=" mt-5">
           {data.genres.map((genres) => {
             return (
               <span
                 key={genres.id}
-                className="bg-blue-900 text-white inline-block text-center px-2 py-1 rounded text-md font-semibold"
+                className="bg-blue-900 text-white inline-block text-center px-2 py-1 m-1 rounded text-md font-semibold"
               >
                 {genres.name}
               </span>
