@@ -67,21 +67,19 @@ export const SimilarSeries = ({serieId}) => {
                       alt={`${serie.name}`}
                     />
                     <div className="poster__footer flex justify-center flex-row relative pb-10 space-x-4 z-10 mb-3">
-                      <div className="imdb-box w-50">
+                      <div className=" w-50">
                         <div
                           className={`flex flex-col border rounded-md p-1 ${colorScore(
                             serie.vote_average.toFixed(1)
                           )}`}
                         >
-                          <div className="imdb-score text-3xl text-center font-bold text-black">
+                          <div className=" text-3xl text-center font-bold text-black">
                             {serie.vote_average.toFixed(1)}
                           </div>
-                          <div className="imdb-title text-center text-black">
-                            moviedb
-                          </div>
-                          <div className="imdb-voted text-xs text-black">
+                          <div className=" text-center text-black">moviedb</div>
+                          {/* <div className="imdb-voted text-xs text-black">
                             {serie.vote_count} votes
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                       <button id="btn2" className="btn bt2 text-xs ">

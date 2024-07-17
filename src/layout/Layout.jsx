@@ -13,7 +13,7 @@ export const Layout = ({loading, children, error, pagination}) => {
       ) : (
         <div>{children}</div>
       )}
-      <Pagination itemsPerPage={pagination} />
+      {/* <Pagination itemsPerPage={pagination} /> */}
       <Footer />
     </div>
   )

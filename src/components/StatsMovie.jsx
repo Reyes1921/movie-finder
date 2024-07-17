@@ -5,16 +5,16 @@ export const StatsMovie = ({data}) => {
   return (
     <>
       <div className="mx-auto max-w-2xl lg:max-w-none">
-        <div className="imdb-box w-40  sticky top-0 ">
+        <div className=" w-40  sticky top-0 ">
           <div
             className={`flex flex-col border rounded-md p-1 ${colorScore(
               data.vote_average?.toFixed(1)
             )} w-full`}
           >
-            <div className="imdb-score text-3xl text-center font-bold text-black">
+            <div className=" text-3xl text-center font-bold text-black">
               {data.vote_average?.toFixed(1)}
             </div>
-            <div className="imdb-title text-center text-black">T M D B</div>
+            <div className=" text-center text-black">T M D B</div>
           </div>
         </div>
         <div className=" mt-5">

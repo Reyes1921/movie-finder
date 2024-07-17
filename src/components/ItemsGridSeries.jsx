@@ -44,15 +44,15 @@ export const ItemsGridSeries = ({serie}) => {
                     </h3>
                   </div>
                   <div className="flex flex-row justify-between datos">
-                    <div className="flex flex-col datos_col">
+                    <div className="flex flex-col ">
                       <div className="popularity">{serie.popularity}</div>
                       <div className="text-sm text-gray-400">Popularity:</div>
                     </div>
-                    <div className="flex flex-col datos_col">
+                    <div className="flex flex-col ">
                       <div className="release">{serie.first_air_date}</div>
                       <div className="text-sm text-gray-400">Release date:</div>
                     </div>
-                    <div className="flex flex-col datos_col">
+                    <div className="flex flex-col ">
                       <div className="release">
                         {loading
                           ? "1h 33min"
@@ -79,18 +79,16 @@ export const ItemsGridSeries = ({serie}) => {
             />
 
             <div className="poster__footer flex justify-center flex-row relative pb-10 space-x-4 z-10 ">
-              <div className="imdb-box w-20">
+              <div className=" w-20">
                 <div
                   className={`flex flex-col border rounded-md p-1 ${colorScore(
                     serie.vote_average.toFixed(1)
                   )} w-full`}
                 >
-                  <div className="imdb-score text-3xl text-center font-bold text-black">
+                  <div className=" text-3xl text-center font-bold text-black">
                     {serie.vote_average.toFixed(1)}
                   </div>
-                  <div className="imdb-title text-center text-black">
-                    moviedb
-                  </div>
+                  <div className=" text-center text-black">moviedb</div>
                   <div className="imdb-voted text-xs text-black">
                     {serie.vote_count} votes
                   </div>

@@ -31,7 +31,8 @@ Currently, two official plugins are available:
 - `Paginación en popular, top rated de movies y series`
 - `Ver lo de runtime - suspense??`
 - `Pagina de las personas individual`
-- `Mejorar layout de cast y crew`
+- `Mejorar layout de cast`
+- `Mejorar layout de crew`
 - `Estilo al scroll` -- LISTO
 - `Fonts` -- LISTO Sarala
 - `Language???`
@@ -40,11 +41,13 @@ Currently, two official plugins are available:
 - `SEO` -- LISTO
 - `DarkMode??`
 - `Responsive tags` -- LISTO
-- `Imagen mas resolución`
+- `Imagen mas resolución` -- LISTO
 - `Redirects`
 - `Header???`
 - `Ver lo del loader que sale muy rápido`
 - `Remate`
+- `Hacer readme a github`
+- `Agregar a portfolio`
 
 FUTURO
 

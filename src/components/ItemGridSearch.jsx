@@ -43,17 +43,17 @@ export const ItemGridSearch = ({movieSerie}) => {
                     </h3>
                   </div>
                   <div className="flex flex-row justify-between datos">
-                    <div className="flex flex-col datos_col">
+                    <div className="flex flex-col ">
                       <div className="popularity">{movieSerie.popularity}</div>
                       <div className="text-sm text-gray-400">Popularity:</div>
                     </div>
-                    <div className="flex flex-col datos_col">
+                    <div className="flex flex-col ">
                       <div className="release">
                         {movieSerie[releasedOrAired]}
                       </div>
                       <div className="text-sm text-gray-400">Release date:</div>
                     </div>
-                    <div className="flex flex-col datos_col">
+                    <div className="flex flex-col ">
                       <div className="release">
                         {movieSerie.media_type.substr(0, 1).toUpperCase() +
                           movieSerie.media_type.substr(1)}
@@ -78,20 +78,18 @@ export const ItemGridSearch = ({movieSerie}) => {
               style={{filter: "grayscale(0)"}}
             />
 
-            <div className="poster__footer flex justify-center flex-row relative pb-10 space-x-4 z-10 ">
-              <div className="imdb-box w-20">
+            <div className="flex justify-center flex-row relative pb-10 space-x-4 z-10 ">
+              <div className=" w-20">
                 <div
                   className={`flex flex-col border rounded-md p-1 ${colorScore(
                     movieSerie.vote_average?.toFixed(1)
                   )} w-full`}
                 >
-                  <div className="imdb-score text-3xl text-center font-bold text-black">
+                  <div className=" text-3xl text-center font-bold text-black">
                     {movieSerie.vote_average?.toFixed(1)}
                   </div>
-                  <div className="imdb-title text-center text-black">
-                    moviedb
-                  </div>
-                  <div className="imdb-voted text-xs text-black">
+                  <div className=" text-center text-black">moviedb</div>
+                  <div className="text-xs text-black">
                     {movieSerie.vote_count} votes
                   </div>
                 </div>

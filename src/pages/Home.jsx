@@ -10,7 +10,7 @@ export const Home = () => {
   const [index, setIndex] = useState(2)
   const [items, setItems] = useState([])
   const [loadingMessage, setLoadingMessage] = useState(
-    <div className="flex bg-slate-900  justify-center items-center h-screen">
+    <div className="flex bg-slate-900 justify-center items-center h-screen">
       <span className="loader"></span>
     </div>
   )
