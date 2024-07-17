@@ -142,6 +142,16 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+.p-submenu-list {
+  background-color: #1b2335;
+  border-radius: 5px;
+}
+
+div.menu-mobile > ul.p-menubar-root-list {
+  left: auto;
+  right: 0;
+  width: auto;
+}
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
