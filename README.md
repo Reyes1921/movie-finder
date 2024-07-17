@@ -28,24 +28,26 @@ Currently, two official plugins are available:
 - `Pagina 404 (REDIRECCION AL HOME)` -- LISTO
 - `Responsive` -- LISTO
 - `Dropdown aveces no funciona` -- LISTO
-- `Paginación en popular, top rated de movies y series`
 - `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
-- `Pagina de las personas individual`
-- `Mejorar layout de cast`
-- `Mejorar layout de crew`
 - `Estilo al scroll` -- LISTO
 - `Fonts` -- LISTO Sarala
 - `Quitar runtime de series` -- LISTO
-- `Language???`
-- `Reducir css`
 - `Hover a películas y series` -- LISTO
 - `SEO` -- LISTO
-- `DarkMode??`
 - `Responsive tags` -- LISTO
 - `Imagen mas resolución` -- LISTO
-- `Redirects`
 - `Header???` -- LISTO
 - `Ver lo del loader que sale muy rápido` -- LISTO
+- `Paginación en popular, top rated de movies y series`
+- `Sticky header????/`
+- `Pagina de las personas individual`
+- `Mejorar layout de cast`
+- `Mejorar layout de crew`
+- `Mejorar similares`
+- `Language???`
+- `DarkMode??`
+- `Redirects`
+- `Reducir css`
 - `Remate`
 - `Hacer readme a github`
 - `Agregar a portfolio`
