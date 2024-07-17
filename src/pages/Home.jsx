@@ -19,8 +19,7 @@ export const Home = () => {
     axios
       .get(`https://api.themoviedb.org/3/movie/popular`, {
         headers: {
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyN2E2MGUwMWFmZDMxMTRlYmM5OGJkODMwYTE0MGY1OSIsInN1YiI6IjYzYWYzYzhlODc0MWM0MDBiZmRmOGFhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1Mh8cNx_9gdmsf2DhguV8JTzhsw5c_I_5LvGt8MQ2Aw",
+          Authorization: process.env.API_Bearer,
         },
       })
       .then((res) => {
@@ -37,8 +36,7 @@ export const Home = () => {
       axios
         .get(`https://api.themoviedb.org/3/movie/popular?page=${index}`, {
           headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyN2E2MGUwMWFmZDMxMTRlYmM5OGJkODMwYTE0MGY1OSIsInN1YiI6IjYzYWYzYzhlODc0MWM0MDBiZmRmOGFhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1Mh8cNx_9gdmsf2DhguV8JTzhsw5c_I_5LvGt8MQ2Aw",
+            Authorization: process.env.API_Bearer,
           },
         })
         .then((res) => {
