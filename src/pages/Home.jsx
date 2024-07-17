@@ -3,6 +3,7 @@ import {useEffect, useState} from "react"
 import {MovieGrid} from "../components"
 import {Layout} from "../layout/Layout"
 import axios from "axios"
+const apiBearer = import.meta.env.VITE_API_BEARER
 
 export const Home = () => {
   const [hasMore, setHasMore] = useState(true)
@@ -19,7 +20,7 @@ export const Home = () => {
     axios
       .get(`https://api.themoviedb.org/3/movie/popular`, {
         headers: {
-          Authorization: process.env.API_Bearer,
+          Authorization: apiBearer,
         },
       })
       .then((res) => {
@@ -36,7 +37,7 @@ export const Home = () => {
       axios
         .get(`https://api.themoviedb.org/3/movie/popular?page=${index}`, {
           headers: {
-            Authorization: process.env.API_Bearer,
+            Authorization: apiBearer,
           },
         })
         .then((res) => {
