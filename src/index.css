@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Font*/
+@font-face {
+  font-family: "Sarala";
+  src: url("/fonts/Sarala-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "Sarala", sans-serif;
+}
+
 .btn {
   font-size: 1.2rem;
   padding: 1rem 2rem;
@@ -105,4 +117,26 @@
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+html {
+  scrollbar-width: auto;
+  scrollbar-color: #2176f6 #1b2335;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2176f6;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
 }

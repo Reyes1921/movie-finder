@@ -30,6 +30,17 @@ Currently, two official plugins are available:
 - `Dropdown aveces no funciona`
 - `Paginación en popular, top rated de movies y series`
 - `Ver lo de runtime`
+- `Pagina de las personas individual`
+- `Estilo al scroll` -- LISTO
+- `Fonts` -- LISTO Sarala
+- `Language???`
+- `Reducir css`
+- `SEO` -- LISTO
+- `DarkMode`
+- `Responsive tags`
+- `Imagen mas resolución`
+- `Ver lo del loader que sale muy rápido`
+- `Remate`
 
 FUTURO
 
