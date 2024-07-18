@@ -9,8 +9,8 @@ export const CastMovie = ({id}) => {
   const responsiveOptions = [
     {
       breakpoint: "1400px",
-      numVisible: 6,
-      numScroll: 3,
+      numVisible: 4,
+      numScroll: 4,
     },
     {
       breakpoint: "1199px",
@@ -41,8 +41,8 @@ export const CastMovie = ({id}) => {
 
   const personTemplate = (person) => {
     return (
-      <div className="flex justify-around items-center pb-0 mb-0 hover:scale-110 transition-all">
-        <Link className="rounded-sm p-2" to={`/person/${person.id}`}>
+      <div className="flex justify-center p-0 m-0 hover:scale-110 transition-all">
+        <Link className="rounded-sm p-1" to={`/person/${person.id}`}>
           <img
             src={
               person.profile_path == null
@@ -50,12 +50,16 @@ export const CastMovie = ({id}) => {
                 : `https://media.themoviedb.org/t/p/w138_and_h175_face/${person.profile_path}`
             }
             alt={`${person.name}`}
-            className="rounded-lg w-32 h-32 object-cover border-4 border-[#3b82f6]"
+            className="rounded-lg w-16 h-16 md:w-32 md:h-32 object-cover mx-auto"
           />
 
           <div className="mt-2">
-            <h3 className="text-sm font-bold">{person.name}</h3>
-            <span className="text-[#3b82f6] text-sm">{person.character}</span>
+            <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center sm:text-left">
+              {person.name}
+            </p>
+            <span className="text-[10px] sm:text-xs md:text-sm text-[#3b82f6] text-center sm:text-left">
+              {person.character}
+            </span>
           </div>
         </Link>
       </div>
@@ -67,7 +71,7 @@ export const CastMovie = ({id}) => {
         <div className="">
           <h3 className="text-left text-white text-4xl mb-5 font-bold">Cast</h3>
         </div>
-        <div className="bg-[#1B2335] rounded-2xl p-4">
+        <div className="bg-[#1B2335] rounded-2xl py-3">
           {loading ? (
             <div className="flex justify-center">
               <span className="loader"></span>
@@ -76,7 +80,7 @@ export const CastMovie = ({id}) => {
             <div>
               <Carousel
                 value={cast.cast}
-                numVisible={9}
+                numVisible={8}
                 numScroll={3}
                 responsiveOptions={responsiveOptions}
                 itemTemplate={personTemplate}
