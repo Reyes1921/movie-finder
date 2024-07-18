@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react"
 import {useGetMovieSerie} from "../hooks"
+import {Link} from "react-router-dom"
 
 export const CastSerie = ({id}) => {
   const [movieId, setMovieId] = useState(id)
@@ -28,23 +29,25 @@ export const CastSerie = ({id}) => {
             ) : (
               cast.cast.map((cast) => {
                 return (
-                  <li
-                    className="flex items-center flex-col justify-center"
+                  <Link
+                    to={`/person/${cast.id}`}
                     key={cast.id + Math.random(0 - 1)}
                   >
-                    <img
-                      src={
-                        cast.profile_path == null
-                          ? "/thumbnail-cast.png"
-                          : `https://media.themoviedb.org/t/p/w138_and_h175_face/${cast.profile_path}`
-                      }
-                      alt={`${cast.name}`}
-                      className="rounded-full w-16 h-16 object-cover"
-                    />
-                    <h5 className="font-semibold text-white text-center">
-                      {cast.name}
-                    </h5>
-                  </li>
+                    <li className="flex items-center flex-col justify-center">
+                      <img
+                        src={
+                          cast.profile_path == null
+                            ? "/thumbnail-cast.png"
+                            : `https://media.themoviedb.org/t/p/w138_and_h175_face/${cast.profile_path}`
+                        }
+                        alt={`${cast.name}`}
+                        className="rounded-full w-16 h-16 object-cover"
+                      />
+                      <h5 className="font-semibold text-white text-center">
+                        {cast.name}
+                      </h5>
+                    </li>
+                  </Link>
                 )
               })
             )}

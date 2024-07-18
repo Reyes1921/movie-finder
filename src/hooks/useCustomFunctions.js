@@ -25,6 +25,13 @@ export const useCustomFunctions = () => {
     return array?.[index]?.name
   }
 
+  const findInArrayId = (array, job, job2) => {
+    const index = array?.findIndex(
+      (crew) => crew.job === job || crew.job === job2
+    )
+    return array?.[index]?.id
+  }
+
   const findInArrayNameTwo = (array, job, job2, job3) => {
     let arr = []
     array?.forEach((element) => {
@@ -60,5 +67,6 @@ export const useCustomFunctions = () => {
     findInArrayNameTwo,
     findInArrayImg,
     findInArrayProducers,
+    findInArrayId,
   }
 }

@@ -42,7 +42,7 @@ Currently, two official plugins are available:
 - `Mejorar similares` -- LISTO
 - `Paginación en popular, top rated de movies y series`
 - `Sticky header????`
-- `Pagina de las personas individual`
+- `Pagina de las personas individual` (falta info personal, y conocidos por galería)
 - `Mejorar layout de cast`
 - `Mejorar layout de crew`
 - `Language???`

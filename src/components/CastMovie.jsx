@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react"
 import {useGetMovieSerie} from "../hooks"
+import {Link} from "react-router-dom"
 
 export const CastMovie = ({id}) => {
   const [movieId, setMovieId] = useState(id)
@@ -12,26 +13,24 @@ export const CastMovie = ({id}) => {
     setMovieId(id)
   }, [])
   return (
-    <>
-      <div className="flex items-center justify-center bg-slate-900 mb-5">
-        <div className="md:w-full  bg-slate-900 px-1 py-1  md:m4 m-1">
-          <div className="">
-            <h3 className="text-left text-white text-4xl mb-5 font-bold">
-              Cast
-            </h3>
-          </div>
-          <ul className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 lg:gap-2 md:gap-4 gap-8 px-5">
-            {loading ? (
-              <div className="flex justify-center">
-                <span className="loader"></span>
-              </div>
-            ) : (
-              cast.cast.map((cast) => {
-                return (
-                  <li
-                    className="flex items-center flex-col justify-center"
-                    key={cast.id + Math.random(0 - 1)}
-                  >
+    <div className="flex items-center justify-center bg-slate-900 mb-5">
+      <div className="md:w-full  bg-slate-900 px-1 py-1  md:m4 m-1">
+        <div className="">
+          <h3 className="text-left text-white text-4xl mb-5 font-bold">Cast</h3>
+        </div>
+        <ul className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 lg:gap-2 md:gap-4 gap-8 px-5">
+          {loading ? (
+            <div className="flex justify-center">
+              <span className="loader"></span>
+            </div>
+          ) : (
+            cast.cast.map((cast) => {
+              return (
+                <Link
+                  to={`/person/${cast.id}`}
+                  key={cast.id + Math.random(0 - 1)}
+                >
+                  <li className="flex items-center flex-col justify-center">
                     <img
                       src={
                         cast.profile_path == null
@@ -45,12 +44,12 @@ export const CastMovie = ({id}) => {
                       {cast.name}
                     </h5>
                   </li>
-                )
-              })
-            )}
-          </ul>
-        </div>
+                </Link>
+              )
+            })
+          )}
+        </ul>
       </div>
-    </>
+    </div>
   )
 }

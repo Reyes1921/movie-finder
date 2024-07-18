@@ -9,6 +9,7 @@ import {
   MoviePage,
   SeriePage,
   Search,
+  Person,
 } from "./pages"
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/serie/:serieTitle/:serieId",
     element: <SeriePage />,
+  },
+  {
+    path: "/person/:idPerson",
+    element: <Person />,
   },
   {
     path: "/*",
