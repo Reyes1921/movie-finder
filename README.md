@@ -38,15 +38,15 @@ Currently, two official plugins are available:
 - `Imagen mas resolución` -- LISTO
 - `Header???` -- LISTO
 - `Ver lo del loader que sale muy rápido` -- LISTO
+- `Redirects` -- LISTO
+- `Mejorar similares` -- LISTO
 - `Paginación en popular, top rated de movies y series`
-- `Sticky header????/`
+- `Sticky header????`
 - `Pagina de las personas individual`
 - `Mejorar layout de cast`
 - `Mejorar layout de crew`
-- `Mejorar similares`
 - `Language???`
 - `DarkMode??`
-- `Redirects`
 - `Reducir css`
 - `Remate`
 - `Hacer readme a github`

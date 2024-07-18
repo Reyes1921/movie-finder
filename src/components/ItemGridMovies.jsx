@@ -27,8 +27,8 @@ export const ItemGridMovies = ({movie}) => {
           <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-[#1d273d2b] to-transparent" />
 
           <div className="relative cursor-pointer group z-10 p-5 pb-0">
-            <div className="poster__info align-self-end w-full">
-              <div className="h-64 md:h-80" />
+            <div className=" align-self-end w-full">
+              <div className="h-64 md:h-64" />
               <div className="space-y-3">
                 <div className="flex flex-col space-y-2 inner">
                   <h3 className="text-xl font-bold text-white min-h-[56px]">
