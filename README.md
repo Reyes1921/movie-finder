@@ -40,13 +40,14 @@ Currently, two official plugins are available:
 - `Ver lo del loader que sale muy rápido` -- LISTO
 - `Redirects` -- LISTO
 - `Mejorar similares` -- LISTO
-- `Paginación en popular, top rated de movies y series`
 - `Sticky header????`
 - `Pagina de las personas individual` (falta info personal, y conocidos por galería)
 - `Mejorar layout de cast`
 - `Mejorar layout de crew`
+- `Cambiar foto de no foto`
 - `Language???`
 - `DarkMode??`
+- `Paginación en popular, top rated de movies y series`
 - `Reducir css`
 - `Remate`
 - `Hacer readme a github`

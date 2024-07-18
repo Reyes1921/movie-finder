@@ -17,7 +17,7 @@ export const SimilarSeries = ({serieId}) => {
           <span className="loader"></span>
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mb-10">
+        <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mb-10">
           {movieSerie.results.slice(0, 6).map((serie) => {
             return (
               <div
