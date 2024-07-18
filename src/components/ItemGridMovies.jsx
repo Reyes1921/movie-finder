@@ -35,10 +35,10 @@ export const ItemGridMovies = ({movie}) => {
                     {movie?.title}
                   </h3>
                 </div>
-                <div className="flex justify-around mb-0 pb-0">
+                <div className="flex flex-col sm:flex-row justify-around mb-0 pb-0">
                   <div className="relative text-sm">
                     <div
-                      className={`flex justify-center border rounded-md min-w-[53px] ${colorScore(
+                      className={`flex justify-center border rounded-md w-[53px] mb-2 md: md:min-w-[53px] ${colorScore(
                         movie?.vote_average.toFixed(1)
                       )}`}
                     >
@@ -48,11 +48,11 @@ export const ItemGridMovies = ({movie}) => {
                     </div>
                   </div>
                   <div className="flex flex-col p-1">
-                    <div className="text-sm">{movie?.release_date}</div>
+                    <div className="text-xs">{movie?.release_date}</div>
                     <div className="text-xs text-gray-400">Release date</div>
                   </div>
                   <div className="flex flex-col p-1 min-w-[76px]">
-                    <div className="text-sm">
+                    <div className="text-xs">
                       {loading ? "1h 33min" : time_convert(runtime?.runtime)}
                     </div>
                     <div className="text-xs text-gray-400">Runtime</div>
