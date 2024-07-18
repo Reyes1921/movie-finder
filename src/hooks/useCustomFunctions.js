@@ -84,6 +84,31 @@ export const useCustomFunctions = () => {
     ]
   }
 
+  const responsiveOptionsPerson = () => {
+    return [
+      {
+        breakpoint: "1400px",
+        numVisible: 4,
+        numScroll: 4,
+      },
+      {
+        breakpoint: "1199px",
+        numVisible: 3,
+        numScroll: 3,
+      },
+      {
+        breakpoint: "767px",
+        numVisible: 3,
+        numScroll: 3,
+      },
+      {
+        breakpoint: "575px",
+        numVisible: 2,
+        numScroll: 2,
+      },
+    ]
+  }
+
   return {
     numberFormater,
     time_convert,
@@ -94,5 +119,6 @@ export const useCustomFunctions = () => {
     findInArrayProducers,
     findInArrayId,
     responsiveOptions,
+    responsiveOptionsPerson,
   }
 }

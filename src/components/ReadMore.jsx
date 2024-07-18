@@ -9,7 +9,7 @@ export const ReadMore = ({children}) => {
     setIsReadMore(!isReadMore)
   }
   return (
-    <p>
+    <p className="animated fadeIn">
       {isReadMore ? text.slice(0, 1000) : text}
       <span
         onClick={toggleReadMore}
