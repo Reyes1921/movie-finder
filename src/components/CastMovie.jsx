@@ -1,33 +1,12 @@
 import {useEffect, useState} from "react"
-import {useGetMovieSerie} from "../hooks"
+import {useCustomFunctions, useGetMovieSerie} from "../hooks"
 import {Link} from "react-router-dom"
 import {Carousel} from "primereact/carousel"
 
 export const CastMovie = ({id}) => {
   const [movieId, setMovieId] = useState(id)
 
-  const responsiveOptions = [
-    {
-      breakpoint: "1400px",
-      numVisible: 4,
-      numScroll: 4,
-    },
-    {
-      breakpoint: "1199px",
-      numVisible: 3,
-      numScroll: 3,
-    },
-    {
-      breakpoint: "767px",
-      numVisible: 3,
-      numScroll: 3,
-    },
-    {
-      breakpoint: "575px",
-      numVisible: 2,
-      numScroll: 2,
-    },
-  ]
+  const {responsiveOptions} = useCustomFunctions()
 
   const {
     movieSerie: cast,
@@ -82,7 +61,7 @@ export const CastMovie = ({id}) => {
                 value={cast.cast}
                 numVisible={8}
                 numScroll={3}
-                responsiveOptions={responsiveOptions}
+                responsiveOptions={responsiveOptions()}
                 itemTemplate={personTemplate}
                 circular
               />

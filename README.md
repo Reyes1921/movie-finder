@@ -42,7 +42,7 @@ Currently, two official plugins are available:
 - `Mejorar similares` -- LISTO
 - `Sticky header????`
 - `Pagina de las personas individual` (falta info personal, y conocidos por galería)
-- `Mejorar layout de cast`
+- `Mejorar layout de cast` -- LISTO
 - `Mejorar layout de crew`
 - `Cambiar foto de no foto`
 - `Language???`

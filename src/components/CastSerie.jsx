@@ -1,59 +1,74 @@
 import {useEffect, useState} from "react"
-import {useGetMovieSerie} from "../hooks"
+import {useCustomFunctions, useGetMovieSerie} from "../hooks"
 import {Link} from "react-router-dom"
+import {Carousel} from "primereact/carousel"
 
 export const CastSerie = ({id}) => {
   const [movieId, setMovieId] = useState(id)
+
+  const {responsiveOptions} = useCustomFunctions()
+
   const {
     movieSerie: cast,
     loading,
     error,
   } = useGetMovieSerie(`/tv/${movieId}/credits`)
+
   useEffect(() => {
     setMovieId(id)
   }, [])
-  return (
-    <>
-      <div className="flex items-center justify-center bg-slate-900 mb-5">
-        <div className="md:w-full  bg-slate-900 px-1 py-1  md:m4 m-1">
-          <div className="">
-            <h3 className="text-left text-white text-4xl mb-5 font-bold">
-              Cast
-            </h3>
+
+  const personTemplate = (person) => {
+    return (
+      <div className="flex justify-center p-0 m-0 hover:scale-110 transition-all">
+        <Link className="rounded-sm p-1" to={`/person/${person.id}`}>
+          <img
+            src={
+              person.profile_path == null
+                ? "/thumbnail-cast.png"
+                : `https://media.themoviedb.org/t/p/w138_and_h175_face/${person.profile_path}`
+            }
+            alt={`${person.name}`}
+            className="rounded-lg w-16 h-16 md:w-32 md:h-32 object-cover mx-auto"
+          />
+
+          <div className="mt-2">
+            <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center sm:text-left">
+              {person.name}
+            </p>
+            <span className="text-[10px] sm:text-xs md:text-sm text-[#3b82f6] text-center sm:text-left">
+              {person.character}
+            </span>
           </div>
-          <ul className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 lg:gap-2 md:gap-4 gap-8 px-5">
-            {loading ? (
-              <div className="flex justify-center">
-                <span className="loader"></span>
-              </div>
-            ) : (
-              cast.cast.map((cast) => {
-                return (
-                  <Link
-                    to={`/person/${cast.id}`}
-                    key={cast.id + Math.random(0 - 1)}
-                  >
-                    <li className="flex items-center flex-col justify-center">
-                      <img
-                        src={
-                          cast.profile_path == null
-                            ? "/thumbnail-cast.png"
-                            : `https://media.themoviedb.org/t/p/w138_and_h175_face/${cast.profile_path}`
-                        }
-                        alt={`${cast.name}`}
-                        className="rounded-full w-16 h-16 object-cover"
-                      />
-                      <h5 className="font-semibold text-white text-center">
-                        {cast.name}
-                      </h5>
-                    </li>
-                  </Link>
-                )
-              })
-            )}
-          </ul>
+        </Link>
+      </div>
+    )
+  }
+  return (
+    <div className="flex items-center justify-center bg-slate-900 h-auto">
+      <div className="w-full bg-slate-900">
+        <div className="">
+          <h3 className="text-left text-white text-4xl mb-5 font-bold">Cast</h3>
+        </div>
+        <div className="bg-[#1B2335] rounded-2xl py-3">
+          {loading ? (
+            <div className="flex justify-center">
+              <span className="loader"></span>
+            </div>
+          ) : (
+            <div>
+              <Carousel
+                value={cast.cast}
+                numVisible={8}
+                numScroll={3}
+                responsiveOptions={responsiveOptions()}
+                itemTemplate={personTemplate}
+                circular
+              />
+            </div>
+          )}
         </div>
       </div>
-    </>
+    </div>
   )
 }
