@@ -3,14 +3,14 @@ import {useCustomFunctions, useGetMovieSerie} from "../hooks"
 
 export const SimilarSeries = ({serieId}) => {
   const {movieSerie, loading, error} = useGetMovieSerie(
-    `/tv/${serieId}/similar`
+    `/tv/${serieId}/recommendations`
   )
 
   const {colorScore} = useCustomFunctions()
   return (
     <>
       <h3 className="text-left text-white text-4xl mb-10 mt-10 font-bold">
-        Similar Series
+        Recommendations
       </h3>
       {loading ? (
         <div className="flex justify-center">

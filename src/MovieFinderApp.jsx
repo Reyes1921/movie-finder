@@ -46,7 +46,7 @@ const router = createBrowserRouter([
     element: <SeriePage />,
   },
   {
-    path: "/person/:idPerson",
+    path: "/person/:idPerson/:namePerson",
     element: <Person />,
   },
   {

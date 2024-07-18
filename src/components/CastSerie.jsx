@@ -21,7 +21,13 @@ export const CastSerie = ({id}) => {
   const personTemplate = (person) => {
     return (
       <div className="flex justify-center p-0 m-0 hover:scale-110 transition-all">
-        <Link className="rounded-sm p-1" to={`/person/${person.id}`}>
+        <Link
+          className="rounded-sm p-1"
+          to={`/person/${person.id}/${person?.name
+            .toLowerCase()
+            .split(" ")
+            .join("-")}`}
+        >
           <img
             src={
               person.profile_path == null

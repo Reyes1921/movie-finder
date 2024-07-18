@@ -28,7 +28,6 @@ Currently, two official plugins are available:
 - `Pagina 404 (REDIRECCION AL HOME)` -- LISTO
 - `Responsive` -- LISTO
 - `Dropdown aveces no funciona` -- LISTO
-- `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
 - `Estilo al scroll` -- LISTO
 - `Fonts` -- LISTO Sarala
 - `Quitar runtime de series` -- LISTO
@@ -44,7 +43,11 @@ Currently, two official plugins are available:
 - `Pagina de las personas individual` (falta info personal, y conocidos por galería)
 - `Mejorar layout de cast` -- LISTO
 - `Mejorar layout de crew`
+- `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
 - `Cambiar foto de no foto`
+- `Upcoming now playing????`
+- `Validaciones`
+- `CSS foto page`
 - `Language???`
 - `DarkMode??`
 - `Paginación en popular, top rated de movies y series`

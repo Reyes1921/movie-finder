@@ -59,8 +59,6 @@ export const ItemGridMovies = ({movie}) => {
                   </div>
                 </div>
                 <div className="flex flex-col overview">
-                  {/* <div className="flex flex-col" />
-                  <div className="text-xs text-gray-400 mb-2">Overview:</div> */}
                   <p className="text-xs text-gray-400 mb-5 mt-0 min-h-[56px]">
                     {movie?.overview?.substr(0, 120) + "..."}
                   </p>
@@ -74,19 +72,6 @@ export const ItemGridMovies = ({movie}) => {
             src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
             style={{maskImage: "linear-gradient(black 30%, transparent)"}}
           />
-
-          {/* <div className="flex justify-center flex-row relative  space-x-4 z-10 "> */}
-          {/* <div className=" w-20">
-            <div className="text-2xl text-center font-bold text-black p-2">
-              {movie?.vote_average.toFixed(1)}
-            </div> */}
-          {/* <div className=" text-center text-black">moviedb</div> */}
-          {/* <div className="imdb-voted text-xs text-black">
-                  {movie?.vote_count} votes
-                </div> */}
-          {/* </div> */}
-          {/* <button className="btn">More Info</button> */}
-          {/* </div> */}
         </div>
       </Link>
     </div>

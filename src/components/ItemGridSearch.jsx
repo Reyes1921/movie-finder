@@ -12,7 +12,7 @@ export const ItemGridSearch = ({movieSerie}) => {
   const {colorScore} = useCustomFunctions()
 
   return (
-    <div className="flex max-w-sm w-full bg-slate-900 shadow-md rounded-lg overflow-hidden mx-auto">
+    <div className="flex max-w-sm w-full bg-slate-900 shadow-md rounded-lg overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
       <Link
         to={`/${movieOrSerie}/${movieSerie[titleOrName]
           .toLowerCase()
