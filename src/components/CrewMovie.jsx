@@ -44,7 +44,7 @@ export const CrewMovie = ({idMovie: id}) => {
                         <div className="flex flex-col ">
                           <img
                             alt=""
-                            className="self-center flex-shrink-0 w-20 h-20 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500 mt-2"
+                            className="self-center flex-shrink-0 w-14 hw-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500 mt-2"
                             src={
                               item.profile_path == null
                                 ? "/thumbnail-cast.png"
@@ -88,7 +88,7 @@ export const CrewMovie = ({idMovie: id}) => {
                         <div className="flex flex-col ">
                           <img
                             alt=""
-                            className="self-center flex-shrink-0 w-20 h-20 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500 mt-2"
+                            className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500 mt-2"
                             src={
                               item.profile_path == null
                                 ? "/thumbnail-cast.png"
@@ -130,7 +130,7 @@ export const CrewMovie = ({idMovie: id}) => {
                 <div className="flex flex-col ">
                   <img
                     alt=""
-                    className="self-center flex-shrink-0 w-20 h-20 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
+                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                     src={
                       findInArrayImg(crew.crew, "Original Music Composer") ==
                       null
@@ -174,7 +174,7 @@ export const CrewMovie = ({idMovie: id}) => {
                 <div className="flex flex-col ">
                   <img
                     alt=""
-                    className="self-center flex-shrink-0 w-20 h-20 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
+                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                     src={
                       findInArrayImg(crew.crew, "Director of Photography") ==
                       null
@@ -215,7 +215,7 @@ export const CrewMovie = ({idMovie: id}) => {
                 <div className="flex flex-col ">
                   <img
                     alt=""
-                    className="self-center flex-shrink-0 w-20 h-20 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
+                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
                     src={
                       findInArrayImg(crew.crew, "Editor") == null
                         ? "/thumbnail-cast.png"

@@ -1,6 +1,7 @@
 import {useParams} from "react-router-dom"
 import {LayoutSingle} from "../layout"
 import {useGetMovieSerie} from "../hooks"
+import {ReadMore} from "../components"
 
 export const Person = () => {
   const {idPerson} = useParams()
@@ -28,9 +29,9 @@ export const Person = () => {
               {person?.known_for_department}
             </span>
           </h3>
-          <p className="text-white text-justify mb-5 text-1xl ">
-            {person?.biography}
-          </p>
+          <div className="text-white text-justify mb-5 text-1xl ">
+            <ReadMore>{person?.biography}</ReadMore>
+          </div>
         </div>
       </div>
     </LayoutSingle>
