@@ -14,11 +14,15 @@ export const Person = () => {
 
   return (
     <LayoutSingle loading={loading} error={error}>
-      <div className="w-full h-auto bg-slate-900 shadow-md overflow-hidden mx-auto grid gap-1 grid-cols-1 md:grid-cols-4 m-10">
+      <div className="w-full h-auto bg-slate-900 shadow-md overflow-hidden mx-auto grid gap-1 grid-cols-1 md:grid-cols-4 m-10 p-5">
         <div className=" md:w-full flex flex-col justify-center mb-5 col-span-1 ">
           <img
             className="h-72 md:h-auto max-w-full rounded-2xl object-contain bg-contain p-5"
-            src={`https://image.tmdb.org/t/p/w342/${person?.profile_path}`}
+            src={`${
+              person?.profile_path
+                ? `https://image.tmdb.org/t/p/w342/${person?.profile_path}`
+                : `/profile-square.svg`
+            }`}
             alt={`${person?.name}`}
           />
           <div>
@@ -27,7 +31,7 @@ export const Person = () => {
         </div>
         <div className="col-span-3 lg:ml-9">
           <h3 className="text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
-            {person?.name}{" "}
+            {person?.name},{" "}
             <span style={{color: "#3B82F6"}}>
               {person?.known_for_department}
             </span>

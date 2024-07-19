@@ -44,7 +44,7 @@ Currently, two official plugins are available:
 - `Mejorar layout de cast` -- LISTO
 - `Mejorar layout de crew`
 - `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
-- `Cambiar foto de no foto`
+- `Cambiar foto de no foto` -- LISTO
 - `Upcoming now playing????`
 - `Validaciones`
 - `CSS foto page`

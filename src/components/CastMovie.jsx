@@ -31,7 +31,7 @@ export const CastMovie = ({id}) => {
           <img
             src={
               person.profile_path == null
-                ? "/thumbnail-cast.png"
+                ? "/profile-square.svg"
                 : `https://media.themoviedb.org/t/p/w138_and_h175_face/${person.profile_path}`
             }
             alt={`${person.name}`}
@@ -51,7 +51,11 @@ export const CastMovie = ({id}) => {
     )
   }
   return (
-    <div className="flex items-center justify-center bg-slate-900 h-auto">
+    <div
+      className={` items-center justify-center bg-slate-900 h-auto ${
+        cast?.cast?.length > 0 ? "flex" : "hidden"
+      }`}
+    >
       <div className="w-full bg-slate-900">
         <div className="">
           <h3 className="text-left text-white text-4xl mb-5 font-bold">Cast</h3>

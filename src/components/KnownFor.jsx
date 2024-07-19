@@ -66,13 +66,22 @@ export const KnownFor = ({id}) => {
           <span className="loader"></span>
         </div>
       ) : (
-        <div>
+        <div
+          className={`${
+            moviesSeries?.cast.length === 1
+              ? "flex"
+              : moviesSeries?.cast.length > 1
+              ? "block"
+              : "hidden"
+          }`}
+        >
           <Carousel
             value={moviesSeries.cast}
-            numVisible={5}
+            numVisible={moviesSeries.cast.length === 1 ? 1 : 5}
             numScroll={3}
             responsiveOptions={responsiveOptionsPerson()}
             itemTemplate={personTemplate}
+            showNavigators={moviesSeries.cast.length <= 1 ? false : true}
             circular
           />
         </div>

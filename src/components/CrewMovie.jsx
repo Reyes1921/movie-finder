@@ -44,10 +44,10 @@ export const CrewMovie = ({idMovie: id}) => {
                         <div className="flex flex-col ">
                           <img
                             alt=""
-                            className="self-center flex-shrink-0 w-14 hw-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500 mt-2"
+                            className="self-center flex-shrink-0 w-14 hw-14 object-cover mb-4 bg-center bg-cover rounded-full mt-2"
                             src={
                               item.profile_path == null
-                                ? "/thumbnail-cast.png"
+                                ? "/profile-rounded.svg"
                                 : `
                         https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${item.profile_path}
                       `
@@ -88,10 +88,10 @@ export const CrewMovie = ({idMovie: id}) => {
                         <div className="flex flex-col ">
                           <img
                             alt=""
-                            className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500 mt-2"
+                            className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full mt-2"
                             src={
                               item.profile_path == null
-                                ? "/thumbnail-cast.png"
+                                ? "/profile-rounded.svg"
                                 : `
                         https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${item.profile_path}
                       `
@@ -130,11 +130,11 @@ export const CrewMovie = ({idMovie: id}) => {
                 <div className="flex flex-col ">
                   <img
                     alt=""
-                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
+                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
                     src={
                       findInArrayImg(crew.crew, "Original Music Composer") ==
                       null
-                        ? "/thumbnail-cast.png"
+                        ? "/profile-rounded.svg"
                         : `
                         https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${findInArrayImg(
                           crew.crew,
@@ -163,7 +163,7 @@ export const CrewMovie = ({idMovie: id}) => {
                     findInArrayName(crew.crew, "Director of Photography")
                       ?.toLowerCase()
                       .split(" ")
-                      .join("-") || "/"
+                      .join("-") || "#"
                 }`}
                 key={
                   findInArrayId(crew.crew, "Director of Photography") ||
@@ -174,11 +174,11 @@ export const CrewMovie = ({idMovie: id}) => {
                 <div className="flex flex-col ">
                   <img
                     alt=""
-                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
+                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
                     src={
                       findInArrayImg(crew.crew, "Director of Photography") ==
                       null
-                        ? "/thumbnail-cast.png"
+                        ? "/profile-rounded.svg"
                         : `
                         https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${findInArrayImg(
                           crew.crew,
@@ -215,10 +215,10 @@ export const CrewMovie = ({idMovie: id}) => {
                 <div className="flex flex-col ">
                   <img
                     alt=""
-                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full dark:bg-gray-500"
+                    className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
                     src={
                       findInArrayImg(crew.crew, "Editor") == null
-                        ? "/thumbnail-cast.png"
+                        ? "/profile-rounded.svg"
                         : `
                         https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${findInArrayImg(
                           crew.crew,
