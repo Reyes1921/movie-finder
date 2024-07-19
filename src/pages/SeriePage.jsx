@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom"
 import {LayoutSingle} from "../layout"
 import {useGetMovieSerie} from "../hooks"
-import {CastSerie, SimilarSeries, StatsSerie, CrewSerie} from "../components"
+import {CastSerie, SimilarSeries, StatsSerie} from "../components"
 
 export const SeriePage = () => {
   const {serieId} = useParams()
@@ -34,7 +34,6 @@ export const SeriePage = () => {
 
       <div className="w-full m-0 overflow-hidden">
         <CastSerie id={serie?.id} />
-        <CrewSerie serieId={serie?.id} />
         <SimilarSeries serieId={serie?.id} />
       </div>
     </LayoutSingle>

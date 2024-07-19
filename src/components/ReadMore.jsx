@@ -1,7 +1,6 @@
 import {useState} from "react"
 
 export const ReadMore = ({children}) => {
-  console.log(children)
   const text = children
   const textLength = text.length
   const [isReadMore, setIsReadMore] = useState(true)

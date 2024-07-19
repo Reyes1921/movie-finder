@@ -6,7 +6,7 @@ import {useCustomFunctions, useGetMovieSerie} from "../hooks"
 export const KnownFor = ({id}) => {
   const [personId, setPersonId] = useState(id)
 
-  const {responsiveOptionsPerson, colorScore} = useCustomFunctions()
+  const {responsiveOptionsPerson} = useCustomFunctions()
   const {
     movieSerie: moviesSeries,
     loading,
@@ -24,10 +24,11 @@ export const KnownFor = ({id}) => {
         className="border-2 border-transparent hover:scale-105 rounded-xl transition-all p-1"
       >
         <Link
-          to={`/movie/${movieOrSerie.title
-            ?.toLowerCase()
-            .split(" ")
-            .join("-")}/${movieOrSerie.id}`}
+          to={`/${movieOrSerie.media_type === "movie" ? "movie" : "serie"}/${
+            movieOrSerie.title
+              ? movieOrSerie.title?.toLowerCase().split(" ").join("-")
+              : movieOrSerie.name?.toLowerCase().split(" ").join("-")
+          }/${movieOrSerie.id}`}
         >
           <div
             className="overflow-hidden rounded-xl relative text-white h-full"
@@ -51,7 +52,7 @@ export const KnownFor = ({id}) => {
             />
           </div>
           <h3 className="text-base text-white text-center min-h-[56px] mt-2">
-            {movieOrSerie.title}
+            {movieOrSerie.title || movieOrSerie.name}
           </h3>
         </Link>
       </div>
