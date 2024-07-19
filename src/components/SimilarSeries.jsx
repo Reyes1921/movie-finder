@@ -77,7 +77,11 @@ export const SimilarSeries = ({serieId}) => {
                     </div>
                     <img
                       className="absolute inset-0 transform w-full -translate-y-4"
-                      src={`https://image.tmdb.org/t/p/w342/${serie.poster_path}`}
+                      src={`${
+                        serie.poster_path
+                          ? `https://image.tmdb.org/t/p/w342/${serie.poster_path}`
+                          : "/movie-play.svg"
+                      }`}
                       style={{filter: "grayscale(0)"}}
                       alt={`${serie.name}`}
                     />

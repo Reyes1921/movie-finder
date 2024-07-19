@@ -14,7 +14,11 @@ export const SeriePage = () => {
         <div className=" md:w-full flex justify-center mb-5">
           <img
             className="rounded w-ful "
-            src={`https://image.tmdb.org/t/p/w342/${serie?.poster_path}`}
+            src={`${
+              serie.poster_path
+                ? `https://image.tmdb.org/t/p/w342/${serie.poster_path}`
+                : "/movie-play.svg"
+            }`}
             alt={`${serie?.name}`}
           />
         </div>

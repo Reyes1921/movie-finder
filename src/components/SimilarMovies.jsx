@@ -77,7 +77,11 @@ export const SimilarMovies = ({movieId}) => {
                     </div>
                     <img
                       className="absolute inset-0 transform w-full -translate-y-4"
-                      src={`https://image.tmdb.org/t/p/w342/${movie.poster_path}`}
+                      src={`${
+                        movie.poster_path
+                          ? `https://image.tmdb.org/t/p/w342/${movie.poster_path}`
+                          : "/movie-play.svg"
+                      }`}
                       alt={`${movie.title}`}
                     />
                   </div>

@@ -47,7 +47,11 @@ export const KnownFor = ({id}) => {
             </div>
             <img
               className="absolute inset-0 transform w-full -translate-y-4"
-              src={`https://image.tmdb.org/t/p/w342/${movieOrSerie.poster_path}`}
+              src={`${
+                movieOrSerie.poster_path
+                  ? `https://image.tmdb.org/t/p/w342/${movieOrSerie.poster_path}`
+                  : "/movie-play.svg"
+              }`}
               alt={`${movieOrSerie.title}`}
             />
           </div>
@@ -77,7 +81,7 @@ export const KnownFor = ({id}) => {
         >
           <Carousel
             value={moviesSeries.cast}
-            numVisible={moviesSeries.cast.length === 1 ? 1 : 5}
+            numVisible={moviesSeries?.cast.length === 1 ? 1 : 5}
             numScroll={3}
             responsiveOptions={responsiveOptionsPerson()}
             itemTemplate={personTemplate}

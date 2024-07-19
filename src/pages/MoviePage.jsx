@@ -20,7 +20,11 @@ export const MoviePage = () => {
         <div className="flex justify-center items-center mb-5">
           <img
             className="h-64 md:h-full max-w-full rounded object-contain bg-contain"
-            src={`https://image.tmdb.org/t/p/w342/${movie?.poster_path}`}
+            src={`${
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w342/${movie.poster_path}`
+                : "/movie-play.svg"
+            }`}
             alt={`${movie?.title}`}
           />
         </div>

@@ -46,7 +46,8 @@ Currently, two official plugins are available:
 - `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
 - `Cambiar foto de no foto` -- LISTO
 - `Upcoming now playing????`
-- `Validaciones`
+- `Videos`
+- `Validaciones de links not found`
 - `CSS foto page`
 - `Language???`
 - `DarkMode??`
