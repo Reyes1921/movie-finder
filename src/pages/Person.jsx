@@ -17,7 +17,7 @@ export const Person = () => {
       <div className="w-full h-auto bg-slate-900 shadow-md overflow-hidden mx-auto grid gap-1 grid-cols-1 md:grid-cols-4 m-10 p-5">
         <div className=" md:w-full flex flex-col justify-center mb-5 col-span-1 ">
           <img
-            className="h-72 md:h-auto max-w-full rounded-2xl object-contain bg-contain p-5"
+            className="h-72 md:h-auto max-w-full rounded-2xl object-contain bg-contain p-5 aspect-[16/20]"
             src={`${
               person?.profile_path
                 ? `https://image.tmdb.org/t/p/w342/${person?.profile_path}`

@@ -71,7 +71,7 @@ export const KnownFor = ({id}) => {
         </div>
       ) : (
         <div
-          className={`${
+          className={` aspect-[8]${
             moviesSeries?.cast.length === 1
               ? "flex"
               : moviesSeries?.cast.length > 1

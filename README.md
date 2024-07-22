@@ -45,6 +45,9 @@ Currently, two official plugins are available:
 - `Mejorar layout de crew`
 - `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
 - `Cambiar foto de no foto` -- LISTO
+
+EN PAUSA 19-07-2024
+
 - `Upcoming now playing????`
 - `Videos`
 - `Validaciones de links not found`

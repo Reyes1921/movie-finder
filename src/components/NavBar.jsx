@@ -49,7 +49,7 @@ export const NavBar = () => {
         >
           <img
             src="/cinema-film-movie-svgrepo-com.svg"
-            className="h-12"
+            className="h-12 aspect-square"
             alt="Movie Finder Logo"
           />
           <span className="text-left text-white text-xl md:text-3xl font-bold">
