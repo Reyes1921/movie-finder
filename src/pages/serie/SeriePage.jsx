@@ -3,6 +3,7 @@ import {LayoutSingle} from "../../layout"
 import {useGetMovieSerie} from "../../hooks"
 import {
   CastSerie,
+  Companies,
   Loading,
   RecommendationsSeries,
   StatsSerie,
@@ -48,6 +49,7 @@ export const SeriePage = () => {
 
           <div className="w-full m-0 overflow-hidden">
             <CastSerie id={serie.id} />
+            <Companies companies={serie.production_companies} />
             <RecommendationsSeries serieId={serie.id} />
           </div>
         </div>

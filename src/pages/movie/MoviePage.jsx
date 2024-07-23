@@ -7,6 +7,7 @@ import {
   StatsMovie,
   CrewMovie,
   Loading,
+  Companies,
 } from "../../components"
 import {Accordion, AccordionTab} from "primereact/accordion"
 import {FaUserGroup} from "react-icons/fa6"
@@ -64,6 +65,7 @@ export const MoviePage = () => {
           </div>
           <div className="w-full m-0 overflow-hidden">
             <CastMovie id={movie.id} />
+            <Companies companies={movie.production_companies} />
             <div className="flex items-center justify-center bg-slate-900 h-auto">
               <div className="w-full bg-slate-900">
                 <div className="">

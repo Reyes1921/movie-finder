@@ -40,9 +40,10 @@ Currently, two official plugins are available:
 - `Redirects` -- LISTO
 - `Mejorar similares` -- LISTO
 - `Sticky header????`
-- `Header`
+- `Header` -- LISTO
+- `Nav`
 - `Footer`
-- `Pagina de las personas individual` (falta info personal, y conocidos por galería)
+- `Pagina de las personas individual` - LISTO
 - `Mejorar layout de crew`
 - `Mas info de películas y series`
 - `Paginación en popular, top rated de movies y series`

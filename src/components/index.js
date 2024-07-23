@@ -30,5 +30,6 @@ export * from "./error/Error"
 export * from "./loading/Loading"
 //General
 export * from "./MovieGridRest"
+export * from "./Companies"
 export * from "./Pagination"
 export * from "./Footer"
