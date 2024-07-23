@@ -48,7 +48,7 @@ export const ModalTrailer = ({dataId, type}) => {
               ? "#"
               : "https://www.youtube.com/embed/" +
                 serie.results[serie.results.length - 1]?.key +
-                "?enablejsapi=1&origin=https://movie-finder-3000.netlify.app/"
+                "?autoplay=1&mute=0&enablejsapi=1&origin=https://movie-finder-3000.netlify.app"
           }
           autoPlay="1"
           controls="2"
