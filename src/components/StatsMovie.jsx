@@ -9,7 +9,7 @@ export const StatsMovie = ({data}) => {
         <div
           className={`border rounded-md p-3 m-2 w-[100px] ${colorScore(
             data.vote_average?.toFixed(1)
-          )} w-full`}
+          )}`}
         >
           <div className=" text-3xl text-center font-bold text-black">
             {data.vote_average?.toFixed(1)}
