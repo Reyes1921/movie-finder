@@ -6,17 +6,30 @@ export const ModalTrailer = ({dataId, type}) => {
   const [visible, setVisible] = useState(false)
 
   const {
-    movieSerie: serie,
+    movieSerie: data,
     loading,
     error,
   } = useGetMovieSerie(`/${type}/${dataId}/videos`)
 
-  console.log(serie)
+  loading
+    ? console.log("loading")
+    : console.log(
+        data?.results[
+          data?.results.findIndex(
+            (item) =>
+              item.name.includes("trailer") || item.name.includes("Trailer")
+          )
+        ]?.name
+      )
+
+  console.log(data.results)
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center animated fadeIn">
       <button
-        className="flex items-center hover:opacity-80 hover:scale-105 transition-all border-2 border-blue-500 rounded-2xl p-5"
+        className={`flex items-center hover:opacity-80 hover:scale-105 transition-all border-2 border-blue-500 rounded-2xl p-5 ${
+          data.results?.length > 0 ? "block" : "hidden"
+        }`}
         onClick={() => setVisible(true)}
       >
         <img
@@ -32,7 +45,7 @@ export const ModalTrailer = ({dataId, type}) => {
       <Dialog
         visible={visible}
         modal={false}
-        className="transition-all p-5 h-96 md:w-[1100px] md:h-[650px]"
+        className="transition-all p-5 w-full h-full md:w-[1100px] md:h-[650px]"
         onHide={() => {
           if (!visible) return
           setVisible(false)
@@ -44,16 +57,21 @@ export const ModalTrailer = ({dataId, type}) => {
           style={{backgroundColor: "#000"}}
           width="100%"
           height="100%"
-          title={loading ? "" : serie.results[serie.results.length - 1]?.name}
+          title={loading ? "" : data.results[data.results.length - 1]?.name}
           src={
             loading
               ? "#"
               : "https://www.youtube.com/embed/" +
-                serie?.results[0]?.key +
+                data?.results[
+                  data?.results.findIndex(
+                    (item) =>
+                      item.name.includes("trailer") ||
+                      item.name.includes("Trailer")
+                  ) || 0
+                ]?.key +
                 "?autoplay=1&mute=0&enablejsapi=1&origin=https://movie-finder-3000.netlify.app"
           }
-          autoPlay="1"
-          controls="2"
+          frameBorder={0}
           onError={error}
           allowFullScreen={true}
         ></iframe>
