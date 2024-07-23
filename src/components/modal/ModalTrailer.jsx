@@ -47,11 +47,11 @@ export const ModalTrailer = ({dataId, type}) => {
             loading
               ? "#"
               : "http://www.youtube.com/embed/" +
-                serie.results[serie.results.length - 1]?.key
+                serie.results[serie.results.length - 1]?.key +
+                "?enablejsapi=1&origin=https://movie-finder-3000.netlify.app/"
           }
           autoPlay="1"
           controls="2"
-          origin={"https://movie-finder-3000.netlify.app/"}
           allowFullScreen={true}
         ></iframe>
       </Dialog>
