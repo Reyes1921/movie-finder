@@ -1,7 +1,12 @@
 import {useParams} from "react-router-dom"
 import {LayoutSingle} from "../layout"
 import {useGetMovieSerie} from "../hooks"
-import {CastMovie, SimilarMovies, StatsMovie, CrewMovie} from "../components"
+import {
+  CastMovie,
+  RecommendationsMovies,
+  StatsMovie,
+  CrewMovie,
+} from "../components"
 import {Accordion, AccordionTab} from "primereact/accordion"
 import {FaUserGroup} from "react-icons/fa6"
 
@@ -69,7 +74,7 @@ export const MoviePage = () => {
             </div>
           </div>
         </div>
-        <SimilarMovies movieId={movie?.id} />
+        <RecommendationsMovies movieId={movie?.id} />
       </div>
     </LayoutSingle>
   )

@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 import {useCustomFunctions, useGetMovieSerie} from "../hooks"
 
-export const SimilarMovies = ({movieId}) => {
+export const RecommendationsMovies = ({movieId}) => {
   const {movieSerie, loading, error} = useGetMovieSerie(
     `/movie/${movieId}/recommendations`
   )
@@ -22,7 +22,7 @@ export const SimilarMovies = ({movieId}) => {
             return (
               <div
                 key={movie.id}
-                className="border-2 border-transparent hover:border-[#2074F6] rounded-xl"
+                className="border-2 border-transparent hover:border-[#2074F6] rounded-xl h-[450px]"
               >
                 <Link
                   to={`/movie/${movie.title
@@ -34,11 +34,11 @@ export const SimilarMovies = ({movieId}) => {
                     className="overflow-hidden rounded-xl relative text-white h-full"
                     data-movie-id={movie.id}
                   >
-                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-gray-900 to-transparent" />
+                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-[#1d273d2b] to-transparent" />
 
                     <div className="relative cursor-pointer group z-10 p-5 space-y-6">
                       <div className=" align-self-end w-full mt-10">
-                        <div className="h-16" />
+                        <div className="h-52" />
                         <div className="space-y-6">
                           <div className="flex flex-col space-y-2 inner mt-3">
                             <h3 className="text-xl font-bold text-white min-h-[56px]">
@@ -65,12 +65,12 @@ export const SimilarMovies = ({movieId}) => {
                             </div>
                           </div>
                           <div className="flex flex-col">
-                            <div className="text-xs text-gray-400 mb-2">
+                            {/* <div className="text-xs text-gray-400 mb-2">
                               Overview:
                             </div>
                             <p className="text-xs text-gray-100 mb-6">
                               {movie?.overview.substr(0, 40) + "..."}
-                            </p>
+                            </p> */}
                           </div>
                         </div>
                       </div>
@@ -83,6 +83,9 @@ export const SimilarMovies = ({movieId}) => {
                           : "/movie-play.svg"
                       }`}
                       alt={`${movie.title}`}
+                      style={{
+                        maskImage: "linear-gradient(black 60%, transparent)",
+                      }}
                     />
                   </div>
                 </Link>

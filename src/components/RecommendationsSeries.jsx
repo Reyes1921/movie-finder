@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom"
 import {useCustomFunctions, useGetMovieSerie} from "../hooks"
 
-export const SimilarSeries = ({serieId}) => {
+export const RecommendationsSeries = ({serieId}) => {
   const {movieSerie, loading, error} = useGetMovieSerie(
     `/tv/${serieId}/recommendations`
   )
@@ -34,11 +34,11 @@ export const SimilarSeries = ({serieId}) => {
                     className="overflow-hidden rounded-xl relative text-white h-full"
                     data-movie-id={serie.id}
                   >
-                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-gray-900 to-transparent" />
+                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-[#1d273d2b] to-transparent" />
 
                     <div className="relative cursor-pointer group z-10 p-5 space-y-6">
                       <div className=" align-self-end w-full mt-10">
-                        <div className="h-16" />
+                        <div className="h-52" />
                         <div className="space-y-6">
                           <div className="flex flex-col space-y-2 inner mt-3">
                             <h3 className="text-xl font-bold text-white min-h-[56px]">
@@ -64,14 +64,14 @@ export const SimilarSeries = ({serieId}) => {
                               </div>
                             </div>
                           </div>
-                          <div className="flex flex-col">
+                          {/* <div className="flex flex-col">
                             <div className="text-xs text-gray-400 mb-2">
                               Overview:
                             </div>
                             <p className="text-xs text-gray-100 mb-6">
                               {serie?.overview.substr(0, 40) + "..."}
                             </p>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>
@@ -82,7 +82,9 @@ export const SimilarSeries = ({serieId}) => {
                           ? `https://image.tmdb.org/t/p/w342/${serie.poster_path}`
                           : "/movie-play.svg"
                       }`}
-                      style={{filter: "grayscale(0)"}}
+                      style={{
+                        maskImage: "linear-gradient(black 60%, transparent)",
+                      }}
                       alt={`${serie.name}`}
                     />
                   </div>

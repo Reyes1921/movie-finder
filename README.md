@@ -49,7 +49,7 @@ Currently, two official plugins are available:
 EN PAUSA 19-07-2024
 
 - `Upcoming now playing????`
-- `Videos`
+- `Videos` -- LISTO CASI
 - `Validaciones de links not found`
 - `CSS foto page`
 - `Language???`
@@ -59,9 +59,15 @@ EN PAUSA 19-07-2024
 - `Remate`
 - `Hacer readme a github`
 - `Agregar a portfolio`
+- `Error con el slider`
+- `Quitar overview de recommendations` -- LISTO
+- `Por géneros`
+- `Próximos estrenos`
+- `Fondo con el otro fondo`
+- `Mas info de peliculas y series`
 
 FUTURO
 
 - `Video de trailer con modal`
-- `Transicion al cargar los elementos` -- LISTO
-- `Ver lo de la peticion rapida al hacer scroll`
+- `Transición al cargar los elementos` -- LISTO
+- `Ver lo de la petición rápida al hacer scroll`

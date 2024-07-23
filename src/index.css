@@ -43,6 +43,16 @@
   padding: 1rem 1rem;
 }
 
+.p-dialog-mask {
+  background-color: rgba(0, 0, 0, 0.819);
+}
+
+.p-dialog-header,
+.p-dialog-content {
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .btn:active {
   scale: 0.92;
 }

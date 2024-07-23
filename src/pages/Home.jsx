@@ -27,7 +27,7 @@ export const Home = () => {
         setItems(res.data.results)
         setTimeout(() => {
           setLoading(false)
-        }, 300)
+        }, 1000)
       })
       .catch((err) => {
         console.log(err)
@@ -49,7 +49,7 @@ export const Home = () => {
         .catch((err) => console.log(err))
       setIndex((prevIndex) => prevIndex + 1)
     } else {
-      setLoadingMessage("")
+      setLoading(true)
     }
   }
 
