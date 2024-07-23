@@ -1,6 +1,6 @@
-import {Layout} from "../layout/Layout"
-import {SearchGrid} from "../components"
-import {useGetMovieSerie} from "../hooks"
+import {Layout} from "../../layout/Layout"
+import {SearchGrid} from "../../components"
+import {useGetMovieSerie} from "../../hooks"
 import {useParams} from "react-router-dom"
 
 export const Search = () => {

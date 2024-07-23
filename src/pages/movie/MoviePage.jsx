@@ -1,13 +1,13 @@
 import {useParams} from "react-router-dom"
-import {LayoutSingle} from "../layout"
-import {useGetMovieSerie} from "../hooks"
+import {LayoutSingle} from "../../layout"
+import {useGetMovieSerie} from "../../hooks"
 import {
   CastMovie,
   RecommendationsMovies,
   StatsMovie,
   CrewMovie,
   Loading,
-} from "../components"
+} from "../../components"
 import {Accordion, AccordionTab} from "primereact/accordion"
 import {FaUserGroup} from "react-icons/fa6"
 

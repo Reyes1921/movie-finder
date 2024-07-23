@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom"
-import {LayoutSingle} from "../layout"
-import {useGetMovieSerie} from "../hooks"
-import {KnownFor, PersonInfo, ReadMore} from "../components"
+import {LayoutSingle} from "../../layout"
+import {useGetMovieSerie} from "../../hooks"
+import {KnownFor, PersonInfo, ReadMore} from "../../components"
 
 export const Person = () => {
   const {idPerson} = useParams()

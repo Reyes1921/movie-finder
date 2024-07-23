@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom"
-import {LayoutSingle} from "../layout"
-import {useGetMovieSerie} from "../hooks"
-import {CastSerie, RecommendationsSeries, StatsSerie} from "../components"
+import {LayoutSingle} from "../../layout"
+import {useGetMovieSerie} from "../../hooks"
+import {CastSerie, RecommendationsSeries, StatsSerie} from "../../components"
 
 export const SeriePage = () => {
   const {serieId} = useParams()

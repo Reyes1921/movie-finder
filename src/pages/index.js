@@ -1,9 +1,13 @@
 export * from "./Home"
-export * from "./PopularMovies"
-export * from "./PopularSeries"
-export * from "./TopRatedMovies"
-export * from "./TopRatedSeries"
-export * from "./MoviePage"
-export * from "./SeriePage"
-export * from "./Search"
-export * from "./Person"
+//Movie
+export * from "./movie/MoviePage"
+export * from "./movie/PopularMovies"
+export * from "./movie/TopRatedMovies"
+//Person
+export * from "./person/Person"
+//Search
+export * from "./search/Search"
+//Serie
+export * from "./serie/PopularSeries"
+export * from "./serie/TopRatedSeries"
+export * from "./serie/SeriePage"
