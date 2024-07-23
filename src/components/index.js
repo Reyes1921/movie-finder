@@ -1,23 +1,34 @@
-export * from "./NavBar"
-export * from "./SearchBar"
-export * from "./MovieGrid"
-export * from "./SerieGrid"
-export * from "./ItemGridMovies"
-export * from "./ItemsGridSeries"
-export * from "./CastMovie"
-export * from "./CastSerie"
-export * from "./CrewMovie"
-export * from "./RecommendationsSeries"
-export * from "./RecommendationsMovies"
-export * from "./StatsMovie"
-export * from "./StatsSerie"
-export * from "./Footer"
-export * from "./SearchGrid"
-export * from "./ItemGridSearch"
-export * from "./MovieGridRest"
-export * from "./Error"
-export * from "./Pagination"
-export * from "./ReadMore"
-export * from "./KnownFor"
-export * from "./PersonInfo"
+//Header
+export * from "./header/Header"
+export * from "./header/SearchBar"
+//Modal
 export * from "./modal/ModalTrailer"
+//Movie
+export * from "./movie/CastMovie"
+export * from "./movie/CrewMovie"
+export * from "./movie/ItemGridMovies"
+export * from "./movie/MovieGrid"
+export * from "./movie/StatsMovie"
+//Person
+export * from "./person/KnownFor"
+export * from "./person/PersonInfo"
+export * from "./person/ReadMore"
+//Recommendations
+export * from "./recommendations/RecommendationsMovies"
+export * from "./recommendations/RecommendationsSeries"
+//Search
+export * from "./search/ItemGridSearch"
+export * from "./search/SearchGrid"
+//Serie
+export * from "./serie/CastSerie"
+export * from "./serie/ItemsGridSeries"
+export * from "./serie/SerieGrid"
+export * from "./serie/StatsSerie"
+//Error
+export * from "./error/Error"
+//Loading
+export * from "./loading/Loading"
+//General
+export * from "./MovieGridRest"
+export * from "./Pagination"
+export * from "./Footer"

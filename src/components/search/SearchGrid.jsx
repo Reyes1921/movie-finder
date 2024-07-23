@@ -1,4 +1,4 @@
-import {ItemGridSearch} from "./"
+import {ItemGridSearch} from "./ItemGridSearch"
 
 export const SearchGrid = ({data}) => {
   return (

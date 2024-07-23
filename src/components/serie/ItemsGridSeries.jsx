@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 
-import {useCustomFunctions} from "../hooks"
+import {useCustomFunctions} from "../../hooks"
 
 export const ItemsGridSeries = ({serie}) => {
   const {time_convert, colorScore} = useCustomFunctions()
@@ -69,7 +69,7 @@ export const ItemsGridSeries = ({serie}) => {
           <img
             alt={`${serie.name}`}
             className="absolute inset-0 transform w-full -translate-y-4"
-            src={`https://image.tmdb.org/t/p/w342/${serie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w780/${serie.poster_path}`}
             style={{maskImage: "linear-gradient(black 30%, transparent)"}}
           />
 

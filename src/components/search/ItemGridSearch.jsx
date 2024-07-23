@@ -1,15 +1,10 @@
-import {useEffect, useState} from "react"
 import {Link} from "react-router-dom"
-import {useGetMovieSerie} from "../hooks/"
-import {useCustomFunctions} from "../hooks"
 
 export const ItemGridSearch = ({movieSerie}) => {
   let movieOrSerie = movieSerie.media_type === "movie" ? "movie" : "serie"
   let titleOrName = movieSerie.media_type === "movie" ? "title" : "name"
   let releasedOrAired =
     movieSerie.media_type === "movie" ? "release_date" : "first_air_date"
-
-  const {colorScore} = useCustomFunctions()
 
   return (
     <div className="flex max-w-sm w-full bg-slate-900 shadow-md rounded-lg overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
@@ -62,7 +57,7 @@ export const ItemGridSearch = ({movieSerie}) => {
           <img
             alt={`${movieSerie[titleOrName]}`}
             className="absolute inset-0 transform w-full -translate-y-4"
-            src={`https://image.tmdb.org/t/p/w342/${movieSerie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w780/${movieSerie.poster_path}`}
             style={{maskImage: "linear-gradient(black 30%, transparent)"}}
           />
         </div>

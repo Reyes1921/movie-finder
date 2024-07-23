@@ -1,6 +1,6 @@
 import InfiniteScroll from "react-infinite-scroll-component"
 import {useEffect, useState} from "react"
-import {MovieGrid} from "../components"
+import {Loading, MovieGrid} from "../components"
 import {Layout} from "../layout/Layout"
 import axios from "axios"
 const apiBearer = import.meta.env.VITE_API_BEARER
@@ -56,9 +56,7 @@ export const Home = () => {
   return (
     <>
       {loading ? (
-        <div className="flex bg-slate-900 justify-center items-center h-screen">
-          <span className="loader"></span>
-        </div>
+        <Loading />
       ) : (
         <InfiniteScroll
           dataLength={items.length}

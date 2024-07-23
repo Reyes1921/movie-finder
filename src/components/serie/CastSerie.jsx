@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react"
-import {useCustomFunctions, useGetMovieSerie} from "../hooks"
+import {useCustomFunctions, useGetMovieSerie} from "../../hooks"
 import {Link} from "react-router-dom"
 import {Carousel} from "primereact/carousel"
 
-export const CastMovie = ({id}) => {
+export const CastSerie = ({id}) => {
   const [movieId, setMovieId] = useState(id)
 
   const {responsiveOptions} = useCustomFunctions()
@@ -12,7 +12,7 @@ export const CastMovie = ({id}) => {
     movieSerie: cast,
     loading,
     error,
-  } = useGetMovieSerie(`/movie/${movieId}/credits`)
+  } = useGetMovieSerie(`/tv/${movieId}/credits`)
 
   useEffect(() => {
     setMovieId(id)

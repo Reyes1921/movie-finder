@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-import {useCustomFunctions, useGetMovieSerie} from "../hooks"
+import {useCustomFunctions, useGetMovieSerie} from "../../hooks"
 import {Link} from "react-router-dom"
 
 export const CrewMovie = ({idMovie: id}) => {

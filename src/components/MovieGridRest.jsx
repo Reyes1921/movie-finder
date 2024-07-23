@@ -1,4 +1,4 @@
-import {ItemGridMovies} from "./"
+import {ItemGridMovies} from "./movie/ItemGridMovies"
 
 export const MovieGridRest = ({movieData}) => {
   return (

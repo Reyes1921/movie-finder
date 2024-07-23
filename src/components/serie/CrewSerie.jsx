@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-import {useCustomFunctions, useGetMovieSerie} from "../hooks"
+import {useCustomFunctions, useGetMovieSerie} from "../../hooks"
 
 export const CrewSerie = ({serieId: id}) => {
   const [serieId, setSerieId] = useState(id)

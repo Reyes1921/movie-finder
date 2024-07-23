@@ -11,19 +11,6 @@ export const ModalTrailer = ({dataId, type}) => {
     error,
   } = useGetMovieSerie(`/${type}/${dataId}/videos`)
 
-  loading
-    ? console.log("loading")
-    : console.log(
-        data?.results[
-          data?.results.findIndex(
-            (item) =>
-              item.name.includes("trailer") || item.name.includes("Trailer")
-          )
-        ]?.name
-      )
-
-  console.log(data.results)
-
   return (
     <div className="flex justify-center items-center animated fadeIn">
       <button

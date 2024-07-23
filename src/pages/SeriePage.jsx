@@ -16,7 +16,7 @@ export const SeriePage = () => {
             className="rounded w-ful "
             src={`${
               serie.poster_path
-                ? `https://image.tmdb.org/t/p/w342/${serie.poster_path}`
+                ? `https://image.tmdb.org/t/p/w780/${serie.poster_path}`
                 : "/movie-play.svg"
             }`}
             alt={`${serie?.name}`}

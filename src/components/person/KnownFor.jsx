@@ -1,7 +1,7 @@
+import {useEffect, useState} from "react"
 import {Link} from "react-router-dom"
 import {Carousel} from "primereact/carousel"
-import {useEffect, useState} from "react"
-import {useCustomFunctions, useGetMovieSerie} from "../hooks"
+import {useCustomFunctions, useGetMovieSerie} from "../../hooks"
 
 export const KnownFor = ({id}) => {
   const [personId, setPersonId] = useState(id)
@@ -49,7 +49,7 @@ export const KnownFor = ({id}) => {
               className="absolute inset-0 transform w-full -translate-y-4"
               src={`${
                 movieOrSerie.poster_path
-                  ? `https://image.tmdb.org/t/p/w342/${movieOrSerie.poster_path}`
+                  ? `https://image.tmdb.org/t/p/w780/${movieOrSerie.poster_path}`
                   : "/movie-play.svg"
               }`}
               alt={`${movieOrSerie.title}`}

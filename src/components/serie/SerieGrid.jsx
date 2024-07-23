@@ -1,4 +1,4 @@
-import {ItemsGridSeries} from "./"
+import {ItemsGridSeries} from "./ItemsGridSeries"
 
 export const SerieGrid = ({serieData}) => {
   return (

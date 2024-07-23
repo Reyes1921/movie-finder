@@ -40,31 +40,33 @@ Currently, two official plugins are available:
 - `Redirects` -- LISTO
 - `Mejorar similares` -- LISTO
 - `Sticky header????`
+- `Header`
+- `Footer`
 - `Pagina de las personas individual` (falta info personal, y conocidos por galería)
-- `Mejorar layout de cast` -- LISTO
 - `Mejorar layout de crew`
+- `Mas info de películas y series`
+- `Paginación en popular, top rated de movies y series`
+- `Mejorar layout de cast` -- LISTO
 - `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
 - `Cambiar foto de no foto` -- LISTO
 
 EN PAUSA 19-07-2024
 
 - `Upcoming now playing????`
-- `Videos` -- LISTO CASI
+- `Videos` -- LISTO
 - `Validaciones de links not found`
 - `CSS foto page`
 - `Language???`
 - `DarkMode??`
-- `Paginación en popular, top rated de movies y series`
-- `Reducir css`
-- `Remate`
-- `Hacer readme a github`
-- `Agregar a portfolio`
-- `Error con el slider`
 - `Quitar overview de recommendations` -- LISTO
 - `Por géneros`
-- `Próximos estrenos`
 - `Fondo con el otro fondo`
-- `Mas info de peliculas y series`
+- `Reducir css`
+- `Remate`
+- `Error con el slider`
+- `Flicker`
+- `Agregar a portfolio`
+- `Hacer readme a github`
 
 FUTURO
 

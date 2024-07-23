@@ -1,19 +1,11 @@
-import {Error, Footer, NavBar} from "../components"
+import {Header, Footer} from "../components"
 
-export const LayoutSingle = ({loading, children, error}) => {
+export const LayoutSingle = ({children}) => {
   return (
-    <div className="bg-slate-900 ">
-      <NavBar />
-      {error != null ? (
-        <Error />
-      ) : loading ? (
-        <div className="flex justify-center items-center h-screen">
-          <span className="loader"></span>
-        </div>
-      ) : (
-        <div className="m-10 animated fadeIn">{children}</div>
-      )}
+    <>
+      <Header />
+      <div className="bg-slate-900">{children}</div>
       <Footer />
-    </div>
+    </>
   )
 }

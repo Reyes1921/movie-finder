@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react"
 import {Link} from "react-router-dom"
-import {useGetRuntime} from "../hooks/"
-import {useCustomFunctions} from "../hooks"
+import {useGetRuntime, useCustomFunctions} from "../../hooks"
 
 export const ItemGridMovies = ({movie}) => {
   const param = `movie/${movie.id}`
   const [runTimes, setRuntimes] = useState(param)
   const {runtime, loading} = useGetRuntime(runTimes)
+
   useEffect(() => {
     setRuntimes(param)
   }, [loading])
@@ -69,7 +69,7 @@ export const ItemGridMovies = ({movie}) => {
           <img
             alt={`${movie.title}`}
             className="absolute inset-0 transform w-full -translate-y-4"
-            src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
             style={{maskImage: "linear-gradient(black 30%, transparent)"}}
           />
         </div>
