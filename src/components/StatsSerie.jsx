@@ -26,7 +26,7 @@ export const StatsSerie = ({data}) => {
           return (
             <span
               key={genres.id}
-              className="bg-blue-900 text-white inline-block text-center px-2 py-1 rounded text-md font-semibold"
+              className="bg-blue-900 text-white inline-block text-center px-2 py-1 rounded text-md font-semibold m-2"
             >
               {genres.name}
             </span>

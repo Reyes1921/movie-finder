@@ -11,8 +11,10 @@ export const ModalTrailer = ({dataId, type}) => {
     error,
   } = useGetMovieSerie(`/${type}/${dataId}/videos`)
 
+  console.log(serie)
+
   return (
-    <div>
+    <div className="flex justify-center items-center">
       <button
         className="flex hover:opacity-80 hover:scale-105 transition-all border-2 border-blue-500 rounded-2xl p-5"
         onClick={() => setVisible(true)}
@@ -47,11 +49,12 @@ export const ModalTrailer = ({dataId, type}) => {
             loading
               ? "#"
               : "https://www.youtube.com/embed/" +
-                serie.results[serie.results.length - 1]?.key +
+                serie?.results[0]?.key +
                 "?autoplay=1&mute=0&enablejsapi=1&origin=https://movie-finder-3000.netlify.app"
           }
           autoPlay="1"
           controls="2"
+          onError={error}
           allowFullScreen={true}
         ></iframe>
       </Dialog>
