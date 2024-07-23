@@ -25,7 +25,7 @@ export const StatsMovie = ({data}) => {
           return (
             <span
               key={genres.id}
-              className="bg-blue-900 text-white inline-block text-center px-2 py-1 m-1 rounded text-md font-semibold m-2"
+              className="bg-blue-900 text-white inline-block text-center px-2 py-1 rounded text-md font-semibold m-2"
             >
               {genres.name}
             </span>

@@ -16,7 +16,7 @@ export const ModalTrailer = ({dataId, type}) => {
   return (
     <div className="flex justify-center items-center">
       <button
-        className="flex hover:opacity-80 hover:scale-105 transition-all border-2 border-blue-500 rounded-2xl p-5"
+        className="flex items-center hover:opacity-80 hover:scale-105 transition-all border-2 border-blue-500 rounded-2xl p-5"
         onClick={() => setVisible(true)}
       >
         <img
