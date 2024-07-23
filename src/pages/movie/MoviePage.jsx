@@ -19,7 +19,6 @@ export const MoviePage = () => {
     loading,
     error,
   } = useGetMovieSerie(`/movie/${movieId}`)
-
   error ? console.log(error) : ""
 
   return (

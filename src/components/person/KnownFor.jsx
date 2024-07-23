@@ -12,10 +12,11 @@ export const KnownFor = ({id}) => {
     loading,
     error,
   } = useGetMovieSerie(`/person/${personId}/combined_credits`)
+  error ? console.log(error) : ""
 
   useEffect(() => {
     setPersonId(id)
-  }, [])
+  }, [id])
 
   const personTemplate = (movieOrSerie) => {
     return (
