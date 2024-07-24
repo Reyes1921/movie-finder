@@ -35,7 +35,7 @@ export const SeriePage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-4 pp">
               <div className="col-span-1 flex justify-center">
                 <img
-                  className="h-64 md:h-full max-w-full rounded object-contain bg-contain p-5"
+                  className="h-64 md:h-full max-w-full rounded object-contain bg-contain p-5 aspect-[16/9]"
                   src={`${
                     serie.poster_path
                       ? `https://image.tmdb.org/t/p/w780/${serie.poster_path}`

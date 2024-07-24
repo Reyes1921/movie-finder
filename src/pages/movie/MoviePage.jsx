@@ -42,7 +42,7 @@ export const MoviePage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-4 pp">
               <div className="col-span-1 flex justify-center">
                 <img
-                  className="h-64 md:h-full max-w-full rounded object-contain bg-contain p-5"
+                  className="h-64 md:h-full max-w-full rounded p-5 object-contain  aspect-[16/9]"
                   loading="lazy"
                   src={`${
                     movie.poster_path
@@ -53,7 +53,7 @@ export const MoviePage = () => {
                 />
               </div>
               <div className="col-span-3 md:pl-9 p-5">
-                <h3 className="text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
+                <h3 className="text-left text-white text-xl md:text-4xl lg:text-4xl mb-5 font-bold">
                   {movie.title}
                   {" - "}
                   <span style={{color: "#3B82F6"}}>
@@ -72,7 +72,7 @@ export const MoviePage = () => {
             <div className="flex items-center justify-center bg-slate-900 h-auto">
               <div className="w-full bg-slate-900">
                 <div className="">
-                  <h3 className="text-left text-white text-4xl mb-5 font-bold my-5">
+                  <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold my-5">
                     Crew
                   </h3>
                   <div className="md:w-full">
@@ -80,7 +80,7 @@ export const MoviePage = () => {
                       <AccordionTab
                         header={
                           <span className="flex items-center gap-2 w-full">
-                            <FaUserGroup className=" text-2xl" />
+                            <FaUserGroup className=" text-xl md:text-2xl" />
                             <span className="font-bold white-space-nowrap ml-2 text-center">
                               Crew
                             </span>

@@ -59,7 +59,7 @@ EN PAUSA 19-07-2024
 
 - `Upcoming, now playing????`
 - `Validaciones de links not found`
-- `CSS foto page`
+- `CSS foto page` -- LISTO
 - `Por géneros`
 - `Language???`
 - `DarkMode??`

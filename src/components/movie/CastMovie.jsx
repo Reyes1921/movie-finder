@@ -57,7 +57,9 @@ export const CastMovie = ({id}) => {
     >
       <div className="w-full bg-slate-900">
         <div className="">
-          <h3 className="text-left text-white text-4xl mb-5 font-bold">Cast</h3>
+          <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold">
+            Cast
+          </h3>
         </div>
         <div className="bg-[#1B2335] rounded-2xl py-3">
           {loading ? (

@@ -46,7 +46,7 @@ export const Companies = ({companies}) => {
     >
       <div className="w-full bg-slate-900">
         <div className="">
-          <h3 className="text-left text-white text-4xl mb-5 font-bold">
+          <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold">
             Production Companies
           </h3>
         </div>
