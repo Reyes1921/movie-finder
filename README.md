@@ -39,27 +39,27 @@ Currently, two official plugins are available:
 - `Ver lo del loader que sale muy rápido` -- LISTO
 - `Redirects` -- LISTO
 - `Mejorar similares` -- LISTO
-- `Sticky header????`
+- `Sticky header????` -- LISTO
 - `Header` -- LISTO
-- `Nav`
-- `Footer`
 - `Pagina de las personas individual` - LISTO
-- `Mejorar layout de crew`
-- `Mas info de películas y series`
-- `Paginación en popular, top rated de movies y series`
 - `Mejorar layout de cast` -- LISTO
 - `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
 - `Cambiar foto de no foto` -- LISTO
+- `Videos` -- LISTO
+- `Quitar overview de recommendations` -- LISTO
+- `Mas info de películas y series` -- LISTO
+- `Nav`
+- `Footer`
+- `Mejorar layout de crew`
+- `Paginación en popular, top rated de movies y series`
 
 EN PAUSA 19-07-2024
 
-- `Upcoming now playing????`
-- `Videos` -- LISTO
+- `Upcoming, now playing????`
 - `Validaciones de links not found`
 - `CSS foto page`
 - `Language???`
 - `DarkMode??`
-- `Quitar overview de recommendations` -- LISTO
 - `Por géneros`
 - `Fondo con el otro fondo`
 - `Reducir css`
@@ -71,6 +71,6 @@ EN PAUSA 19-07-2024
 
 FUTURO
 
-- `Video de trailer con modal`
+- `Video de trailer con modal` -- LISTO
 - `Transición al cargar los elementos` -- LISTO
 - `Ver lo de la petición rápida al hacer scroll`

@@ -52,7 +52,8 @@ export const MoviePage = () => {
             </div>
             <div className="col-span-3 lg:ml-9">
               <h3 className="text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
-                {movie.title}{" "}
+                {movie.title}
+                {" - "}
                 <span style={{color: "#3B82F6"}}>
                   {movie.release_date.substr(0, 4)}
                 </span>
@@ -65,7 +66,6 @@ export const MoviePage = () => {
           </div>
           <div className="w-full m-0 overflow-hidden">
             <CastMovie id={movie.id} />
-            <Companies companies={movie.production_companies} />
             <div className="flex items-center justify-center bg-slate-900 h-auto">
               <div className="w-full bg-slate-900">
                 <div className="">
@@ -91,6 +91,7 @@ export const MoviePage = () => {
                 </div>
               </div>
             </div>
+            <Companies companies={movie.production_companies} />
             <RecommendationsMovies movieId={movie.id} />
           </div>
         </div>

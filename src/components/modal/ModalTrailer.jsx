@@ -12,12 +12,15 @@ export const ModalTrailer = ({dataId, type}) => {
   } = useGetMovieSerie(`/${type}/${dataId}/videos`)
 
   return (
-    <div className="flex justify-center items-center animated fadeIn">
+    <div className="flex justify-center items-center">
       <button
-        className={`flex items-center hover:opacity-80 hover:scale-105 transition-all border-2 border-blue-500 rounded-2xl p-5 ${
-          data.results?.length > 0 ? "block" : "hidden"
-        }`}
+        className={`${
+          data.results?.length > 0
+            ? "opacity-1 hover:opacity-80 hover:scale-105 transition-all"
+            : "opacity-50"
+        } flex items-center  border-2 border-blue-500 rounded-2xl p-5`}
         onClick={() => setVisible(true)}
+        disabled={data.results?.length > 0 ? false : true}
       >
         <img
           src="/play-svg.svg"

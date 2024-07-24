@@ -1,5 +1,6 @@
 import {Carousel} from "primereact/carousel"
 import {useCustomFunctions} from "../hooks"
+import {languages} from "../helpers/languages"
 
 export const Companies = ({companies}) => {
   const {responsiveOptions} = useCustomFunctions()
@@ -25,7 +26,11 @@ export const Companies = ({companies}) => {
               {company.name}
             </p>
             <span className="text-[10px] sm:text-xs md:text-sm text-black text-center sm:text-left">
-              {company.origin_country}
+              {
+                languages.filter(
+                  (lang) => lang.iso_3166_1 === company.origin_country
+                )[0]?.english_name
+              }
             </span>
           </div>
         </div>

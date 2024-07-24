@@ -35,7 +35,8 @@ export const SeriePage = () => {
             </div>
             <div className="col-span-3 lg:ml-10">
               <h3 className="text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
-                {serie.name}{" "}
+                {serie.name}
+                {" - "}
                 <span style={{color: "#3B82F6"}}>
                   {serie.first_air_date.substr(0, 4)}
                 </span>
