@@ -1,22 +1,17 @@
-import {useEffect, useState} from "react"
 import {useCustomFunctions, useGetMovieSerie} from "../../hooks"
 import {Link} from "react-router-dom"
 import {Carousel} from "primereact/carousel"
 
 export const CastSerie = ({id}) => {
-  const [movieId, setMovieId] = useState(id)
-
   const {responsiveOptions} = useCustomFunctions()
 
   const {
     movieSerie: cast,
     loading,
     error,
-  } = useGetMovieSerie(`/tv/${movieId}/credits`)
+  } = useGetMovieSerie(`/tv/${id}/credits`)
 
-  useEffect(() => {
-    setMovieId(id)
-  }, [])
+  error ? console.log(error) : ""
 
   const personTemplate = (person) => {
     return (
@@ -37,7 +32,6 @@ export const CastSerie = ({id}) => {
             alt={`${person.name}`}
             className="rounded-lg w-16 h-16 md:w-32 md:h-32 object-cover mx-auto"
           />
-
           <div className="mt-2">
             <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center sm:text-left">
               {person.name}

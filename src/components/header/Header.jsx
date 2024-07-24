@@ -42,7 +42,7 @@ export const Header = () => {
     },
   ]
   return (
-    <header className="w-full md:fixed md:top-0 md:left-0 md:z-20 bg-slate-900">
+    <header className="w-full md:fixed md:top-0 md:left-0 md:z-20 bg-[#0F172A] animated fadeIn">
       <div className="flex flex-wrap items-center justify-between p-4">
         <Link
           to={"/"}
@@ -60,7 +60,10 @@ export const Header = () => {
         <div className="hidden sm:flex">
           <SearchBar />
         </div>
-        <Menubar model={items} className="bg-[#111827] menu-mobile" />
+        <Menubar
+          model={items}
+          className="bg-[#0F172A] menu-mobile lg:min-w-[322.38px] z-10"
+        />
       </div>
       <div className="flex sm:hidden">
         <SearchBar />

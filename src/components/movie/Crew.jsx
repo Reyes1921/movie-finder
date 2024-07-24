@@ -6,7 +6,7 @@ export const Crew = ({crewData, job}) => {
   const {findInArrayName, findInArrayNameTwo, findInArrayImg, findInArrayId} =
     useCustomFunctions()
   return (
-    <div>
+    <>
       {findInArrayNameTwo(crewData, job).length === 0 ? (
         "Not Found"
       ) : (
@@ -45,6 +45,6 @@ export const Crew = ({crewData, job}) => {
           </div>
         </Link>
       )}
-    </div>
+    </>
   )
 }

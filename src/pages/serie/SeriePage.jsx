@@ -2,11 +2,11 @@ import {useParams} from "react-router-dom"
 import {LayoutSingle} from "../../layout"
 import {useGetMovieSerie} from "../../hooks"
 import {
-  CastSerie,
   Companies,
   Loading,
   RecommendationsSeries,
   StatsSerie,
+  Cast,
 } from "../../components"
 
 export const SeriePage = () => {
@@ -61,7 +61,8 @@ export const SeriePage = () => {
           </div>
 
           <div className="w-full m-0 overflow-hidden">
-            <CastSerie id={serie.id} />
+            {/* <CastSerie id={serie.id} /> */}
+            <Cast type={"tv"} id={serie.id} />
             <Companies companies={serie.production_companies} />
             <RecommendationsSeries serieId={serie.id} />
           </div>

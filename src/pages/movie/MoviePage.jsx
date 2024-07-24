@@ -2,12 +2,12 @@ import {useParams} from "react-router-dom"
 import {LayoutSingle} from "../../layout"
 import {useGetMovieSerie} from "../../hooks"
 import {
-  CastMovie,
   RecommendationsMovies,
   StatsMovie,
   CrewMovie,
   Loading,
   Companies,
+  Cast,
 } from "../../components"
 import {Accordion, AccordionTab} from "primereact/accordion"
 import {FaUserGroup} from "react-icons/fa6"
@@ -70,7 +70,8 @@ export const MoviePage = () => {
             </div>
           </div>
           <div className="w-full m-0 overflow-hidden">
-            <CastMovie id={movie.id} />
+            <Cast type={"movie"} id={movie.id} />
+            {/* <CastMovie id={movie.id} /> */}
             <div className="flex items-center justify-center bg-slate-900 h-auto">
               <div className="w-full bg-slate-900">
                 <div className="">

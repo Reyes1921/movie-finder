@@ -26,6 +26,8 @@ export * from "./serie/CastSerie"
 export * from "./serie/ItemsGridSeries"
 export * from "./serie/SerieGrid"
 export * from "./serie/StatsSerie"
+//Cast
+export * from "./cast/Cast"
 //Companies
 export * from "./companies/Companies"
 //Pagination

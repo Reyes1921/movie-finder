@@ -2,14 +2,14 @@ import {useCustomFunctions, useGetMovieSerie} from "../../hooks"
 import {Link} from "react-router-dom"
 import {Carousel} from "primereact/carousel"
 
-export const CastMovie = ({id}) => {
+export const Cast = ({type, id}) => {
   const {responsiveOptions} = useCustomFunctions()
 
   const {
     movieSerie: cast,
     loading,
     error,
-  } = useGetMovieSerie(`/movie/${id}/credits`)
+  } = useGetMovieSerie(`/${type}/${id}/credits`)
 
   error ? console.log(error) : ""
 
