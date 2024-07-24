@@ -79,67 +79,67 @@ export const StatsSerie = ({data}) => {
       </div>
 
       <dl className="mt-8 grid grid-cols-2 gap-0.5 overflow-hidden rounded-2xl text-center md:grid-cols-2 lg:grid-cols-4">
-        <div className="flex flex-col bg-white/5 p-8">
+        <div className="flex flex-col bg-white/5 p-5">
           <dt className="text-sm font-semibold leading-6 text-gray-300">
             {data.status}
           </dt>
-          <dd className="order-first text-1xl lg:text-2xl  md:text-2xl  font-semibold tracking-tight text-blue-500">
+          <dd className="order-first text-base font-bold tracking-tight text-blue-500">
             Status
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-8">
+        <div className="flex flex-col bg-white/5 p-5">
           <dt className="text-sm font-semibold leading-6 text-gray-300">
             {data.first_air_date}
           </dt>
-          <dd className="order-first text-1xl lg:text-2xl  md:text-2xl  font-semibold tracking-tight text-blue-500">
+          <dd className="order-first text-base font-bold tracking-tight text-blue-500">
             Release Date
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-8">
+        <div className="flex flex-col bg-white/5 p-5">
           <dt className="text-sm font-semibold leading-6 text-gray-300">
             {data.number_of_seasons}
           </dt>
-          <dd className="order-first text-1xl lg:text-2xl  md:text-2xl  font-semibold tracking-tight text-blue-500">
+          <dd className="order-first text-base font-bold tracking-tight text-blue-500">
             Seasons
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-8">
+        <div className="flex flex-col bg-white/5 p-5">
           <dt className="text-sm font-semibold leading-6 text-gray-300">
             {data.number_of_episodes}
           </dt>
-          <dd className="order-first text-1xl lg:text-2xl  md:text-2xl  font-semibold tracking-tight text-blue-500">
+          <dd className="order-first text-base font-bold tracking-tight text-blue-500">
             Episodes
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-8">
+        <div className="flex flex-col bg-white/5 p-5">
           <dt className="text-sm font-semibold leading-6 text-gray-300">
             {data.popularity}
           </dt>
-          <dd className="order-first text-1xl lg:text-2xl  md:text-2xl  font-semibold tracking-tight text-blue-500">
+          <dd className="order-first text-base font-bold tracking-tight text-blue-500">
             Popularity
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-8">
+        <div className="flex flex-col bg-white/5 p-5">
           <dt className="text-sm font-semibold leading-6 text-gray-300">
             {data.last_air_date}
           </dt>
-          <dd className="order-first text-1xl lg:text-2xl  md:text-2xl  font-semibold tracking-tight text-blue-500">
+          <dd className="order-first text-base font-bold tracking-tight text-blue-500">
             Last Air Date
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-8">
+        <div className="flex flex-col bg-white/5 p-5">
           <dt className="text-sm font-semibold leading-6 text-gray-300">
             {data.tagline}
           </dt>
-          <dd className="order-first text-1xl lg:text-2xl  md:text-2xl  font-semibold tracking-tight text-blue-500">
+          <dd className="order-first text-base font-bold tracking-tight text-blue-500">
             Tagline
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-8">
+        <div className="flex flex-col bg-white/5 p-5">
           <dt className="text-sm font-semibold leading-6 text-gray-300">
             {data.vote_count}
           </dt>
-          <dd className="order-first text-1xl lg:text-2xl  md:text-2xl  font-semibold tracking-tight text-blue-500">
+          <dd className="order-first text-base font-bold tracking-tight text-blue-500">
             Vote Count
           </dd>
         </div>

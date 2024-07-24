@@ -31,7 +31,7 @@ export const MoviePage = () => {
           <div
             className="md:gg w-full h-auto shadow-md overflow-hidden bg-cover my-5 rounded-2xl"
             style={{
-              // maskImage: "linear-gradient(black 10%, transparent)",
+              // maskImage: "linear-gradient(black 97%, transparent)",
               backgroundImage: `url(${
                 movie.poster_path
                   ? `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${movie.backdrop_path}`
@@ -43,6 +43,7 @@ export const MoviePage = () => {
               <div className="col-span-1 flex justify-center">
                 <img
                   className="h-64 md:h-full max-w-full rounded object-contain bg-contain p-5"
+                  loading="lazy"
                   src={`${
                     movie.poster_path
                       ? `https://image.tmdb.org/t/p/w780/${movie.poster_path}`

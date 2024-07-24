@@ -49,23 +49,24 @@ Currently, two official plugins are available:
 - `Quitar overview de recommendations` -- LISTO
 - `Mas info de películas y series` -- LISTO
 - `Nav`
-- `Footer`
+- `Error con el slider`
 - `Mejorar layout de crew`
+- `Footer`
 - `Paginación en popular, top rated de movies y series`
+- `Velocidad de carga de todo`
 
 EN PAUSA 19-07-2024
 
 - `Upcoming, now playing????`
 - `Validaciones de links not found`
 - `CSS foto page`
+- `Por géneros`
 - `Language???`
 - `DarkMode??`
-- `Por géneros`
+- `Flicker`
 - `Fondo con el otro fondo` -- LISTO
 - `Reducir css`
 - `Remate`
-- `Error con el slider`
-- `Flicker`
 - `Agregar a portfolio`
 - `Hacer readme a github`
 

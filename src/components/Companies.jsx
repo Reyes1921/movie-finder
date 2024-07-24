@@ -50,7 +50,7 @@ export const Companies = ({companies}) => {
             Production Companies
           </h3>
         </div>
-        <div className="bg-[#3B82F6] rounded-2xl py-3">
+        <div className="bg-[#3B82F6] bg-opacity-80 rounded-2xl py-3">
           <div>
             <Carousel
               value={companies}

@@ -60,9 +60,9 @@
 .pp {
   background-image: linear-gradient(
     to right,
-    rgba(17, 11, 32, 0.889) calc((50vw - 170px) - 340px),
-    rgba(17, 11, 32, 0.889) 50%,
-    rgba(17, 11, 32, 0.889) 100%
+    rgba(17, 11, 32, 0.829) calc((50vw - 170px) - 340px),
+    rgba(17, 11, 32, 0.829) 50%,
+    rgba(17, 11, 32, 0.829) 100%
   );
 }
 
