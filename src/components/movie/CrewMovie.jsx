@@ -1,5 +1,6 @@
 import {useCustomFunctions} from "../../hooks"
 import {Link} from "react-router-dom"
+import {Crew} from "./Crew"
 
 export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
   error ? console.log(error) : ""
@@ -117,144 +118,161 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
                   <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
                     Music by
                   </p>
-                  <Link
-                    to={`/person/${
-                      findInArrayId(crew.crew, "Original Music Composer") +
-                        "/" +
-                        findInArrayName(crew.crew, "Original Music Composer")
-                          ?.toLowerCase()
-                          .split(" ")
-                          .join("-") || "/"
-                    }`}
-                    key={
-                      findInArrayId(crew.crew, "Original Music Composer") ||
-                      Math.random(0, 1)
-                    }
-                    className="hover:scale-110 transition-all"
-                  >
-                    <div className="flex flex-col ">
-                      <img
-                        alt=""
-                        className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
-                        src={
-                          findInArrayImg(
-                            crew.crew,
-                            "Original Music Composer"
-                          ) == null
-                            ? "/profile-rounded.svg"
-                            : `
+                  <Crew crewData={crew.crew} job={"Original Music Composer"} />
+                  {/* {findInArrayNameTwo(crew.crew, "Original Music Composer")
+                    .length === 0 ? (
+                    "Not Found "
+                  ) : (
+                    <Link
+                      to={`/person/${
+                        findInArrayId(crew.crew, "Original Music Composer") +
+                          "/" +
+                          findInArrayName(crew.crew, "Original Music Composer")
+                            ?.toLowerCase()
+                            .split(" ")
+                            .join("-") || "/"
+                      }`}
+                      key={
+                        findInArrayId(crew.crew, "Original Music Composer") ||
+                        Math.random(0, 1)
+                      }
+                      className="hover:scale-110 transition-all"
+                    >
+                      <div className="flex flex-col ">
+                        <img
+                          alt=""
+                          className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
+                          src={
+                            findInArrayImg(
+                              crew.crew,
+                              "Original Music Composer"
+                            ) == null
+                              ? "/profile-rounded.svg"
+                              : `
                         https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${findInArrayImg(
                           crew.crew,
                           "Original Music Composer"
                         )}
                       `
-                        }
-                      />
-                      <p className="text-white">
-                        {findInArrayName(
-                          crew.crew,
-                          "Original Music Composer"
-                        ) == null
-                          ? "Not Found"
-                          : findInArrayName(
-                              crew.crew,
-                              "Original Music Composer"
-                            )}
-                      </p>
-                    </div>
-                  </Link>
+                          }
+                        />
+                        <p className="text-white">
+                          {findInArrayName(
+                            crew.crew,
+                            "Original Music Composer"
+                          ) == null
+                            ? "Not Found"
+                            : findInArrayName(
+                                crew.crew,
+                                "Original Music Composer"
+                              )}
+                        </p>
+                      </div>
+                    </Link>
+                  )} */}
                 </div>
                 <div className="flex flex-col justify-center m-1 text-center p-5">
                   <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
                     Cinematography by
                   </p>
-                  <Link
-                    to={`/person/${
-                      findInArrayId(crew.crew, "Director of Photography") +
-                        "/" +
-                        findInArrayName(crew.crew, "Director of Photography")
-                          ?.toLowerCase()
-                          .split(" ")
-                          .join("-") || "#"
-                    }`}
-                    key={
-                      findInArrayId(crew.crew, "Director of Photography") ||
-                      Math.random(0, 1)
-                    }
-                    className="hover:scale-110 transition-all"
-                  >
-                    <div className="flex flex-col ">
-                      <img
-                        alt=""
-                        className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
-                        src={
-                          findInArrayImg(
-                            crew.crew,
-                            "Director of Photography"
-                          ) == null
-                            ? "/profile-rounded.svg"
-                            : `
+                  <Crew crewData={crew.crew} job={"Director of Photography"} />
+                  {/* {findInArrayNameTwo(crew.crew, "Director of Photography")
+                    .length === 0 ? (
+                    "Not Found"
+                  ) : (
+                    <Link
+                      to={`/person/${
+                        findInArrayId(crew.crew, "Director of Photography") +
+                          "/" +
+                          findInArrayName(crew.crew, "Director of Photography")
+                            ?.toLowerCase()
+                            .split(" ")
+                            .join("-") || "#"
+                      }`}
+                      key={
+                        findInArrayId(crew.crew, "Director of Photography") ||
+                        Math.random(0, 1)
+                      }
+                      className="hover:scale-110 transition-all"
+                    >
+                      <div className="flex flex-col ">
+                        <img
+                          alt=""
+                          className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
+                          src={
+                            findInArrayImg(
+                              crew.crew,
+                              "Director of Photography"
+                            ) == null
+                              ? "/profile-rounded.svg"
+                              : `
                         https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${findInArrayImg(
                           crew.crew,
                           "Director of Photography"
                         )}
                       `
-                        }
-                      />
-                      <p className="text-white">
-                        {findInArrayName(
-                          crew.crew,
-                          "Director of Photography"
-                        ) == null
-                          ? "Not Found"
-                          : findInArrayName(
-                              crew.crew,
-                              "Director of Photography"
-                            )}
-                      </p>
-                    </div>
-                  </Link>
+                          }
+                        />
+                        <p className="text-white">
+                          {findInArrayName(
+                            crew.crew,
+                            "Director of Photography"
+                          ) == null
+                            ? "Not Found"
+                            : findInArrayName(
+                                crew.crew,
+                                "Director of Photography"
+                              )}
+                        </p>
+                      </div>
+                    </Link>
+                  )} */}
                 </div>
                 <div className="flex flex-col justify-center m-1 text-center p-5">
                   <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
                     Editing by
                   </p>
-                  <Link
-                    to={`/person/${
-                      findInArrayId(crew.crew, "Editor") +
-                        "/" +
-                        findInArrayName(crew.crew, "Editor")
-                          ?.toLowerCase()
-                          .split(" ")
-                          .join("-") || "/"
-                    }`}
-                    key={
-                      findInArrayId(crew.crew, "Editor") || Math.random(0, 1)
-                    }
-                    className="hover:scale-110 transition-all"
-                  >
-                    <div className="flex flex-col ">
-                      <img
-                        alt=""
-                        className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
-                        src={
-                          findInArrayImg(crew.crew, "Editor") == null
-                            ? "/profile-rounded.svg"
-                            : `
+                  <Crew crewData={crew.crew} job={"Editor"} />
+                  {/* {findInArrayNameTwo(crew.crew, "Editor").length === 0 ? (
+                    "Not Found"
+                  ) : (
+                    <Link
+                      to={`/person/${
+                        findInArrayId(crew.crew, "Editor") +
+                          "/" +
+                          findInArrayName(crew.crew, "Editor")
+                            ?.toLowerCase()
+                            .split(" ")
+                            .join("-") || "/"
+                      }`}
+                      key={
+                        findInArrayId(crew.crew, "Editor") || Math.random(0, 1)
+                      }
+                      className="hover:scale-110 transition-all"
+                    >
+                      <div className="flex flex-col ">
+                        <img
+                          alt=""
+                          className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
+                          src={
+                            findInArrayImg(crew.crew, "Editor") == null
+                              ? "/profile-rounded.svg"
+                              : `
                         https://media.themoviedb.org/t/p/w300_and_h450_bestv2/${findInArrayImg(
                           crew.crew,
                           "Editor"
                         )}
                       `
-                        }
-                      />
-                      <p className="text-white">
-                        {findInArrayName(crew.crew, "Editor") == null
-                          ? "Not Found"
-                          : findInArrayName(crew.crew, "Editor")}
-                      </p>
-                    </div>
-                  </Link>
+                          }
+                        />
+                        <p className="text-white">
+                          {findInArrayName(crew.crew, "Editor") == null
+                            ? "Not Found"
+                            : findInArrayName(crew.crew, "Editor")}
+                        </p>
+                      </div>
+                    </Link>
+                  )} */}
                 </div>
               </div>
             </div>
@@ -269,13 +287,20 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
                 "Executive Producer",
                 "Producer",
                 "Co-Producer"
-              ).map((producer, index) => {
-                return (
-                  <span className="text-white " key={index}>
-                    {producer}&nbsp;
-                  </span>
-                )
-              })}
+              ).length === 0
+                ? "Not Found"
+                : findInArrayProducers(
+                    crew.crew,
+                    "Executive Producer",
+                    "Producer",
+                    "Co-Producer"
+                  ).map((producer, index) => {
+                    return (
+                      <span className="text-white " key={index}>
+                        {producer}&nbsp;
+                      </span>
+                    )
+                  })}
             </div>
           </section>
         </div>

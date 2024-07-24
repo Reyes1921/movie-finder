@@ -5,6 +5,7 @@ export * from "./header/SearchBar"
 export * from "./modal/ModalTrailer"
 //Movie
 export * from "./movie/CastMovie"
+export * from "./movie/Crew"
 export * from "./movie/CrewMovie"
 export * from "./movie/ItemGridMovies"
 export * from "./movie/MovieGrid"
