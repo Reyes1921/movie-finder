@@ -15,7 +15,7 @@ export const Search = () => {
         <Loading />
       ) : (
         <>
-          <h2 className="text-4xl p-4 ml-5 text-center md:text-left font-bold text-[#3b82f6]">
+          <h2 className="text-3xl md:text-4xl pt-8 md:pt-5 p-5 text-center md:text-left font-bold text-[#3b82f6]">
             Results for: <span className="text-white">{data}</span>
           </h2>
           {movieSerie?.results?.length === 0 ? (

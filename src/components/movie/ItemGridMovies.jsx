@@ -69,7 +69,11 @@ export const ItemGridMovies = ({movie}) => {
           <img
             alt={`${movie.title}`}
             className="absolute inset-0 transform w-full -translate-y-4"
-            src={`https://image.tmdb.org/t/p/w780${movie.poster_path}`}
+            src={`${
+              movie.poster_path
+                ? `https://image.tmdb.org/t/p/w780/${movie.poster_path}`
+                : "/movie-play.svg"
+            }`}
             style={{maskImage: "linear-gradient(black 30%, transparent)"}}
           />
         </div>

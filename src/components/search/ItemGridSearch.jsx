@@ -7,7 +7,7 @@ export const ItemGridSearch = ({movieSerie}) => {
     movieSerie.media_type === "movie" ? "release_date" : "first_air_date"
 
   return (
-    <div className="flex max-w-sm w-full bg-slate-900 shadow-md rounded-lg overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
+    <div className=" w-full min-w-[500] min-h-[500]  max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
       <Link
         to={`/${movieOrSerie}/${movieSerie[titleOrName]
           .toLowerCase()
@@ -57,7 +57,11 @@ export const ItemGridSearch = ({movieSerie}) => {
           <img
             alt={`${movieSerie[titleOrName]}`}
             className="absolute inset-0 transform w-full -translate-y-4"
-            src={`https://image.tmdb.org/t/p/w780/${movieSerie.poster_path}`}
+            src={`${
+              movieSerie.poster_path
+                ? `https://image.tmdb.org/t/p/w780/${movieSerie.poster_path}`
+                : "/movie-play.svg"
+            }`}
             style={{maskImage: "linear-gradient(black 30%, transparent)"}}
           />
         </div>
