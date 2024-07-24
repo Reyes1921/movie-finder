@@ -61,7 +61,7 @@ EN PAUSA 19-07-2024
 - `Language???`
 - `DarkMode??`
 - `Por géneros`
-- `Fondo con el otro fondo`
+- `Fondo con el otro fondo` -- LISTO
 - `Reducir css`
 - `Remate`
 - `Error con el slider`
