@@ -1,9 +1,7 @@
 import {useCustomFunctions} from "../../hooks"
 import {Link} from "react-router-dom"
 
-export const CrewMovie = ({movieSerie: crew, loading, error}) => {
-  console.log(crew)
-
+export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
   error ? console.log(error) : ""
 
   const {
@@ -20,10 +18,17 @@ export const CrewMovie = ({movieSerie: crew, loading, error}) => {
           <span className="loader"></span>
         </div>
       ) : (
-        <div className="md:w-full bg-slate-900 px-1 py-1 m-1 rounded-2xl">
-          <section className="py-6 rounded-xl text-white">
+        <div
+          className="md:w-full bg-slate-900 m-1 rounded-2xl bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: `url(${
+              img ? `https://image.tmdb.org/t/p/w780/${img}` : "/movie-play.svg"
+            })`,
+          }}
+        >
+          <section className="py-6 rounded-xl text-white pp">
             <div className="grid grid-cols-1  lg:gap-2 md:gap-4 gap-8 px-5 ">
-              <div className="flex flex-col justify-center m-1 text-center">
+              <div className="flex flex-col justify-center m-1 text-center border-b-2 border-blue-500">
                 <p className="text-xl font-semibold leading-tight text-blue-500">
                   Directed By
                 </p>
@@ -62,7 +67,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error}) => {
                       })}
                 </div>
               </div>
-              <div className="flex flex-col justify-center m-1 text-center">
+              <div className="flex flex-col justify-center m-1 text-center border-b-2 border-blue-500">
                 <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
                   Writed By
                 </p>
@@ -107,7 +112,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error}) => {
                       })}
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row justify-around">
+              <div className="flex flex-col md:flex-row justify-around border-b-2 border-blue-500">
                 <div className="flex flex-col justify-center m-1 text-center p-5">
                   <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
                     Music by

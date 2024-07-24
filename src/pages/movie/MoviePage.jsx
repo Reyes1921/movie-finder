@@ -23,8 +23,6 @@ export const MoviePage = () => {
 
   const dataCrew = useGetMovieSerie(`/movie/${movieId}/credits`)
 
-  console.log(dataCrew)
-
   error ? console.log(error) : ""
   window.scrollTo(0, 0)
   return (
@@ -91,7 +89,7 @@ export const MoviePage = () => {
                           </span>
                         }
                       >
-                        <CrewMovie {...dataCrew} />
+                        <CrewMovie {...dataCrew} img={movie.poster_path} />
                       </AccordionTab>
                     </Accordion>
                   </div>

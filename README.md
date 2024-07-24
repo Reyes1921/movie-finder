@@ -50,7 +50,7 @@ Currently, two official plugins are available:
 - `Mas info de películas y series` -- LISTO
 - `Nav`
 - `Error con el slider`
-- `Mejorar layout de crew`
+- `Mejorar layout de crew` -- LISTO
 - `Footer`
 - `Paginación en popular, top rated de movies y series`
 - `Velocidad de carga de todo`
