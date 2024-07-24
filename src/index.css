@@ -53,6 +53,19 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+.gg {
+  background-position: left calc((50vw - 170px) - 340px) top;
+}
+
+.pp {
+  background-image: linear-gradient(
+    to right,
+    rgba(31.5, 10.5, 10.5, 1),
+    rgba(31.5, 10.5, 10.5, 0.84) 50%,
+    rgba(31.5, 10.5, 10.5, 0.84) 100%
+  );
+}
+
 .btn:active {
   scale: 0.92;
 }

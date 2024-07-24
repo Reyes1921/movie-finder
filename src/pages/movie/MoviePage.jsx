@@ -29,39 +29,41 @@ export const MoviePage = () => {
       ) : (
         <div className="p-5">
           <div
-            className="w-full h-auto shadow-md overflow-hidden mx-auto grid gap-1 grid-cols-1 lg:grid-cols-4"
-            // style={{
-            //   maskImage: "linear-gradient(black 10%, transparent)",
-            //   backgroundImage: `url(${
-            //     movie.poster_path
-            //       ? `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
-            //       : "/movie-play.svg"
-            //   })`,
-            // }}
+            className="md:gg w-full h-auto shadow-md overflow-hidden bg-cover my-5 rounded-2xl"
+            style={{
+              // maskImage: "linear-gradient(black 10%, transparent)",
+              backgroundImage: `url(${
+                movie.poster_path
+                  ? `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${movie.backdrop_path}`
+                  : "/movie-play.svg"
+              })`,
+            }}
           >
-            <div className="flex justify-center items-center mb-5">
-              <img
-                className="h-64 md:h-full max-w-full rounded object-contain bg-contain"
-                src={`${
-                  movie.poster_path
-                    ? `https://image.tmdb.org/t/p/w780/${movie.poster_path}`
-                    : "/movie-play.svg"
-                }`}
-                alt={`${movie.title}`}
-              />
-            </div>
-            <div className="col-span-3 lg:ml-9">
-              <h3 className="text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
-                {movie.title}
-                {" - "}
-                <span style={{color: "#3B82F6"}}>
-                  {movie.release_date.substr(0, 4)}
-                </span>
-              </h3>
-              <p className="text-white text-justify mb-5 text-1xl ">
-                {movie.overview}
-              </p>
-              <StatsMovie data={movie} />
+            <div className="grid grid-cols-1 lg:grid-cols-4 pp">
+              <div className="col-span-1 flex justify-center">
+                <img
+                  className="h-64 md:h-full max-w-full rounded object-contain bg-contain p-5"
+                  src={`${
+                    movie.poster_path
+                      ? `https://image.tmdb.org/t/p/w780/${movie.poster_path}`
+                      : "/movie-play.svg"
+                  }`}
+                  alt={`${movie.title}`}
+                />
+              </div>
+              <div className="col-span-3 md:pl-9 p-5">
+                <h3 className="text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
+                  {movie.title}
+                  {" - "}
+                  <span style={{color: "#3B82F6"}}>
+                    {movie.release_date.substr(0, 4)}
+                  </span>
+                </h3>
+                <p className="text-white text-justify mb-5 text-1xl">
+                  {movie.overview}
+                </p>
+                <StatsMovie data={movie} />
+              </div>
             </div>
           </div>
           <div className="w-full m-0 overflow-hidden">

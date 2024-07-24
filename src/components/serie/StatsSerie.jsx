@@ -23,7 +23,7 @@ export const StatsSerie = ({data}) => {
         </div>
         <div className="m-2">
           <div className="flex justify-around">
-            <div className="flex flex-col py-2 md:py-0 px-5">
+            <div className="flex flex-col py-2 md:py-0 pr-2 md:px-5">
               <p className="text-base tracking-tight text-blue-500">
                 Origin Country
               </p>
@@ -44,7 +44,7 @@ export const StatsSerie = ({data}) => {
                 ))}
               </span>
             </div>
-            <div className="flex flex-col py-2 md:py-0 px-5">
+            <div className="flex flex-col py-2 md:py-0 pl-2 md:px-5">
               <p className="text-base tracking-tight text-blue-500">
                 Spoken Languages
               </p>

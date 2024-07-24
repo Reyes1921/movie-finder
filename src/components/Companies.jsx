@@ -8,7 +8,7 @@ export const Companies = ({companies}) => {
   const personTemplate = (company) => {
     return (
       <div className="flex justify-center p-0 m-0">
-        <div>
+        <div className="flex flex-col justify-center items-center">
           <img
             src={
               company.logo_path == null
@@ -22,10 +22,10 @@ export const Companies = ({companies}) => {
           />
 
           <div className="mt-2">
-            <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center sm:text-left">
+            <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center">
               {company.name}
             </p>
-            <span className="text-[10px] sm:text-xs md:text-sm text-black text-center sm:text-left">
+            <span className="text-[10px] sm:text-xs md:text-sm text-black text-center">
               {
                 languages.filter(
                   (lang) => lang.iso_3166_1 === company.origin_country
