@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 import {useCustomFunctions} from "../../hooks"
 
 export const ItemsGridSeries = ({serie}) => {
-  const {time_convert, colorScore} = useCustomFunctions()
+  const {colorScore} = useCustomFunctions()
 
   return (
     <div className=" w-full min-w-[500] min-h-[500]  max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
@@ -47,18 +47,8 @@ export const ItemsGridSeries = ({serie}) => {
                     <div className="release">{serie.first_air_date}</div>
                     <div className="text-sm text-gray-400">Release date:</div>
                   </div>
-                  {/* <div className="flex flex-col ">
-                    <div className="release">
-                      {loading
-                        ? "1h 33min"
-                        : time_convert(runTime.episode_run_time)}
-                    </div>
-                    <div className="text-sm text-gray-400">Runtime:</div>
-                  </div> */}
                 </div>
                 <div className="flex flex-col overview min-w-[277.8px]">
-                  {/* <div className="flex flex-col" />
-                  <div className="text-xs text-gray-400 mb-2">Overview:</div> */}
                   <p className="text-xs text-gray-400 mb-5 mt-0 min-h-[56px]">
                     {serie?.overview.substr(0, 120) + "..."}
                   </p>
@@ -72,25 +62,6 @@ export const ItemsGridSeries = ({serie}) => {
             src={`https://image.tmdb.org/t/p/w780/${serie.poster_path}`}
             style={{maskImage: "linear-gradient(black 30%, transparent)"}}
           />
-
-          {/* <div className="poster__footer flex justify-center flex-row relative pb-10 space-x-4 z-10 ">
-            <div className=" w-20">
-              <div
-                className={`flex flex-col border rounded-md p-1 ${colorScore(
-                  serie.vote_average.toFixed(1)
-                )} w-full`}
-              >
-                <div className=" text-3xl text-center font-bold text-black">
-                  {serie.vote_average.toFixed(1)}
-                </div>
-                <div className=" text-center text-black">moviedb</div>
-                <div className="imdb-voted text-xs text-black">
-                  {serie.vote_count} votes
-                </div>
-              </div>
-            </div>
-            <button className="btn ">More Info</button>
-          </div> */}
         </div>
       </Link>
     </div>

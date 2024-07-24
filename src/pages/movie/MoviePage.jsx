@@ -20,8 +20,13 @@ export const MoviePage = () => {
     loading,
     error,
   } = useGetMovieSerie(`/movie/${movieId}`)
-  error ? console.log(error) : ""
 
+  const dataCrew = useGetMovieSerie(`/movie/${movieId}/credits`)
+
+  console.log(dataCrew)
+
+  error ? console.log(error) : ""
+  window.scrollTo(0, 0)
   return (
     <LayoutSingle>
       {loading ? (
@@ -31,7 +36,6 @@ export const MoviePage = () => {
           <div
             className="md:gg w-full h-auto shadow-md overflow-hidden bg-cover my-5 rounded-2xl"
             style={{
-              // maskImage: "linear-gradient(black 97%, transparent)",
               backgroundImage: `url(${
                 movie.poster_path
                   ? `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${movie.backdrop_path}`
@@ -42,7 +46,7 @@ export const MoviePage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-4 pp">
               <div className="col-span-1 flex justify-center">
                 <img
-                  className="h-64 md:h-full max-w-full rounded p-5 object-contain  aspect-[16/9]"
+                  className="h-64 md:h-full max-w-full rounded p-5 object-contain aspect-[16/9]"
                   loading="lazy"
                   src={`${
                     movie.poster_path
@@ -87,7 +91,7 @@ export const MoviePage = () => {
                           </span>
                         }
                       >
-                        <CrewMovie idMovie={movie.id} />
+                        <CrewMovie {...dataCrew} />
                       </AccordionTab>
                     </Accordion>
                   </div>

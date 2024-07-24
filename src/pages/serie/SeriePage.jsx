@@ -14,7 +14,7 @@ export const SeriePage = () => {
 
   const {movieSerie: serie, loading, error} = useGetMovieSerie(`/tv/${serieId}`)
   error ? console.log(error) : ""
-
+  window.scrollTo(0, 0)
   return (
     <LayoutSingle>
       {loading ? (

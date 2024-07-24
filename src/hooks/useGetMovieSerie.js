@@ -6,7 +6,7 @@ export const useGetMovieSerie = (param) => {
   const [movieSerie, setMovieSerie] = useState({})
   const [error, setError] = useState(null)
 
-  const getPopularMovie = async () => {
+  const getDataMovieSerie = async () => {
     setLoading(true)
     setError(null)
     const {data, error} = await getMovieSerie(param)
@@ -19,8 +19,7 @@ export const useGetMovieSerie = (param) => {
   }
 
   useEffect(() => {
-    getPopularMovie()
-    window.scrollTo(0, 0)
+    getDataMovieSerie()
   }, [param])
 
   return {
