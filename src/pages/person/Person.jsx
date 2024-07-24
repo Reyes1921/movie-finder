@@ -12,7 +12,7 @@ export const Person = () => {
     error,
   } = useGetMovieSerie(`/person/${idPerson}`)
   error ? console.log(error) : ""
-
+  window.scrollTo(0, 0)
   return (
     <LayoutSingle>
       {loading ? (

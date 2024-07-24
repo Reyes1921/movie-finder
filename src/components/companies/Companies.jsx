@@ -1,6 +1,6 @@
 import {Carousel} from "primereact/carousel"
-import {useCustomFunctions} from "../hooks"
-import {languages} from "../helpers/languages"
+import {useCustomFunctions} from "../../hooks"
+import {languages} from "../../helpers/languages"
 
 export const Companies = ({companies}) => {
   const {responsiveOptions} = useCustomFunctions()

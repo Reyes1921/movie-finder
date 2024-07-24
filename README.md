@@ -51,16 +51,16 @@ Currently, two official plugins are available:
 - `Nav`
 - `Error con el slider`
 - `Mejorar layout de crew` -- LISTO
-- `Footer`
+- `Footer` -- LISTO
 - `Paginación en popular, top rated de movies y series`
+- `Upcoming, now playing????`
+- `Por géneros`
 - `Velocidad de carga de todo`
 
 EN PAUSA 19-07-2024
 
-- `Upcoming, now playing????`
 - `Validaciones de links not found`
 - `CSS foto page` -- LISTO
-- `Por géneros`
 - `Language???`
 - `DarkMode??`
 - `Flicker`
