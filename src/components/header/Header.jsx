@@ -1,48 +1,11 @@
 import {Link} from "react-router-dom"
 import {SearchBar} from "./SearchBar"
-import {Menubar} from "primereact/menubar"
 import "primereact/resources/themes/lara-dark-cyan/theme.css"
+import {Nav} from "./Nav"
 
 export const Header = () => {
-  const items = [
-    {
-      label: "Home",
-      url: "/",
-      active: true,
-    },
-    {
-      label: "Movies",
-      items: [
-        {
-          label: "Popular",
-          shortcut: "⌘+S",
-          url: "/movies",
-        },
-        {
-          label: "Top Rated",
-          shortcut: "⌘+B",
-          url: "/top-rated-movies",
-        },
-      ],
-    },
-    {
-      label: "Series",
-      items: [
-        {
-          label: "Popular",
-          shortcut: "⌘+S",
-          url: "/series",
-        },
-        {
-          label: "Top Rated",
-          shortcut: "⌘+B",
-          url: "/top-rated-series",
-        },
-      ],
-    },
-  ]
   return (
-    <header className="w-full md:fixed md:top-0 md:left-0 md:z-20 bg-[#0F172A] animated fadeIn">
+    <header className="w-full md:fixed md:top-0 md:left-0 z-20 bg-[#0F172A] animated fadeIn">
       <div className="flex flex-wrap items-center justify-between p-4">
         <Link
           to={"/"}
@@ -57,17 +20,14 @@ export const Header = () => {
             Movie Finder
           </span>
         </Link>
-        <div className="hidden sm:flex">
+        <div className="">
           <SearchBar />
         </div>
-        <Menubar
-          model={items}
-          className="bg-[#0F172A] menu-mobile lg:min-w-[322.38px] z-10"
-        />
+        <Nav />
       </div>
-      <div className="flex sm:hidden">
+      {/* <div className="flex sm:hidden">
         <SearchBar />
-      </div>
+      </div> */}
     </header>
   )
 }

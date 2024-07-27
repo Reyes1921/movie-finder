@@ -74,6 +74,18 @@ html {
   display: none;
 }
 
+.p-menubar .p-menubar-button:focus {
+  box-shadow: none;
+}
+
+.p-menubar .p-menubar-button:hover {
+  background: rgb(255 255 255 / 0%);
+}
+
+.p-menubar-root-list {
+  z-index: 9999;
+}
+
 @media (max-width: 960px) {
   .p-menubar-button {
     display: block;
