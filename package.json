@@ -22,7 +22,8 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-paginate": "^8.2.0",
     "react-router-dom": "^6.23.0",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "swiper": "^11.1.9"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
