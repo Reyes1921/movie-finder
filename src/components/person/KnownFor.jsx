@@ -63,7 +63,7 @@ export const KnownFor = ({id}) => {
           >
             {moviesSeries.cast.map((movieOrSerie) => {
               return (
-                <SwiperSlide key={movieOrSerie.id}>
+                <SwiperSlide key={Math.random(0, movieOrSerie.id)}>
                   <div className="border-2 border-transparent hover:scale-105 rounded-xl transition-all p-1">
                     <Link
                       to={`/${

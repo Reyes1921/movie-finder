@@ -26,7 +26,7 @@ export const Footer = () => {
   return (
     <footer
       className={` border-gray-200 w-full ${
-        location.pathname === "/" ? "fixed bottom-0" : ""
+        location.pathname === "/" ? "fixed bottom-0" : "hidden"
       }`}
       style={{backgroundColor: "#0F172A"}}
     >

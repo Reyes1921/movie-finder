@@ -2,6 +2,7 @@ export * from "./Home"
 //Movie
 export * from "./movie/MoviePage"
 export * from "./movie/PopularMovies"
+export * from "./movie/UpcomingMovies"
 export * from "./movie/TopRatedMovies"
 //Person
 export * from "./person/Person"

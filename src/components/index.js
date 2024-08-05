@@ -3,6 +3,8 @@ export * from "./header/Header"
 export * from "./header/SearchBar"
 //Modal
 export * from "./modal/ModalTrailer"
+//Infinite
+export * from "./infiniteScroll/InfiniteMovies"
 //Movie
 export * from "./movie/Crew"
 export * from "./movie/CrewMovie"
@@ -28,8 +30,6 @@ export * from "./serie/StatsSerie"
 export * from "./cast/Cast"
 //Companies
 export * from "./companies/Companies"
-//Pagination
-export * from "./pagination/Pagination"
 //Error
 export * from "./error/Error"
 //Loading

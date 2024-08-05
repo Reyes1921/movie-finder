@@ -4,6 +4,7 @@ import {
   Home,
   PopularMovies,
   PopularSeries,
+  UpcomingMovies,
   TopRatedMovies,
   TopRatedSeries,
   MoviePage,
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/series",
     element: <PopularSeries />,
+  },
+  {
+    path: "/upcoming-movies",
+    element: <UpcomingMovies />,
   },
   {
     path: "/search/:data",

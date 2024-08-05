@@ -20,16 +20,12 @@ export const Nav = () => {
       link: "/movies",
     },
     {
-      title: "Top Rated",
-      link: "/top-rated-movies",
-    },
-    {
       title: "Upcoming",
       link: "/upcoming-movies",
     },
     {
-      title: "Playing now",
-      link: "/playing-movies",
+      title: "Top Rated",
+      link: "/top-rated-movies",
     },
   ]
 
@@ -39,16 +35,12 @@ export const Nav = () => {
       link: "/series",
     },
     {
-      title: "Top Rated",
-      link: "/top-rated-series",
-    },
-    {
       title: "Upcoming",
       link: "/upcoming-series",
     },
     {
-      title: "Playing now",
-      link: "/playing-series",
+      title: "Top Rated",
+      link: "/top-rated-series",
     },
   ]
 

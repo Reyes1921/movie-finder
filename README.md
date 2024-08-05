@@ -75,3 +75,5 @@ FUTURO
 - `Video de trailer con modal` -- LISTO
 - `Transición al cargar los elementos` -- LISTO
 - `Ver lo de la petición rápida al hacer scroll`
+
+//https://swiperjs.com/
