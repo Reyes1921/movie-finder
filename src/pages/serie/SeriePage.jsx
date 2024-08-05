@@ -61,7 +61,6 @@ export const SeriePage = () => {
           </div>
 
           <div className="w-full m-0 overflow-hidden">
-            {/* <CastSerie id={serie.id} /> */}
             <Cast type={"tv"} id={serie.id} />
             <Companies companies={serie.production_companies} />
             <RecommendationsSeries serieId={serie.id} />

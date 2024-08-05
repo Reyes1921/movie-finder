@@ -19,7 +19,7 @@ export const Companies = ({companies}) => {
           </h3>
         </div>
         <div className="bg-[#3B82F6] bg-opacity-80 rounded-2xl py-3">
-          <div>
+          <div className="swiper-white">
             <Swiper
               loop={true}
               breakpoints={{

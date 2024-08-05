@@ -33,7 +33,7 @@ export const Cast = ({type, id}) => {
               <span className="loader"></span>
             </div>
           ) : (
-            <div>
+            <div className="swiper-white">
               <Swiper
                 loop={true}
                 breakpoints={{
