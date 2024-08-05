@@ -1,13 +1,8 @@
 import {languages} from "../../helpers/languages"
-
-// Import Swiper React components
 import {Swiper, SwiperSlide} from "swiper/react"
-
-// Import Swiper styles
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-
 import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper/modules"
 
 export const Companies = ({companies}) => {

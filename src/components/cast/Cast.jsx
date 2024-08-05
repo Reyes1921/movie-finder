@@ -1,10 +1,12 @@
-import {useCustomFunctions, useGetMovieSerie} from "../../hooks"
+import {useGetMovieSerie} from "../../hooks"
 import {Link} from "react-router-dom"
-import {Carousel} from "primereact/carousel"
+import {Swiper, SwiperSlide} from "swiper/react"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper/modules"
 
 export const Cast = ({type, id}) => {
-  const {responsiveOptions} = useCustomFunctions()
-
   const {
     movieSerie: cast,
     loading,
@@ -13,37 +15,6 @@ export const Cast = ({type, id}) => {
 
   error ? console.log(error) : ""
 
-  const personTemplate = (person) => {
-    return (
-      <div className="flex justify-center p-0 m-0 hover:scale-110 transition-all">
-        <Link
-          className="rounded-sm p-1"
-          to={`/person/${person.id}/${person?.name
-            .toLowerCase()
-            .split(" ")
-            .join("-")}`}
-        >
-          <img
-            src={
-              person.profile_path == null
-                ? "/profile-square.svg"
-                : `https://media.themoviedb.org/t/p/w138_and_h175_face/${person.profile_path}`
-            }
-            alt={`${person.name}`}
-            className="rounded-lg w-16 h-16 md:w-32 md:h-32 object-cover mx-auto"
-          />
-          <div className="mt-2">
-            <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center sm:text-left">
-              {person.name}
-            </p>
-            <span className="text-[10px] sm:text-xs md:text-sm text-[#3b82f6] text-center sm:text-left">
-              {person.character}
-            </span>
-          </div>
-        </Link>
-      </div>
-    )
-  }
   return (
     <div
       className={` items-center justify-center bg-slate-900 h-auto ${
@@ -63,14 +34,63 @@ export const Cast = ({type, id}) => {
             </div>
           ) : (
             <div>
-              <Carousel
-                value={cast.cast}
-                numVisible={8}
-                numScroll={3}
-                responsiveOptions={responsiveOptions()}
-                itemTemplate={personTemplate}
-                circular
-              />
+              <Swiper
+                loop={true}
+                breakpoints={{
+                  640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 30,
+                  },
+                }}
+                cssMode={true}
+                navigation={true}
+                mousewheel={true}
+                keyboard={true}
+                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                className="mySwiper"
+              >
+                {cast.cast.map((person) => {
+                  return (
+                    <SwiperSlide key={person.id}>
+                      <div className="flex justify-center p-0 m-0 hover:scale-110 transition-all">
+                        <Link
+                          className="rounded-sm p-1"
+                          to={`/person/${person.id}/${person?.name
+                            .toLowerCase()
+                            .split(" ")
+                            .join("-")}`}
+                        >
+                          <img
+                            src={
+                              person.profile_path == null
+                                ? "/profile-square.svg"
+                                : `https://media.themoviedb.org/t/p/w138_and_h175_face/${person.profile_path}`
+                            }
+                            alt={`${person.name}`}
+                            className="rounded-lg w-16 h-16 md:w-32 md:h-32 object-cover mx-auto"
+                          />
+                          <div className="mt-2">
+                            <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center sm:text-left">
+                              {person.name}
+                            </p>
+                            <span className="text-[10px] sm:text-xs md:text-sm text-[#3b82f6] text-center sm:text-left break-all">
+                              {person.character}
+                            </span>
+                          </div>
+                        </Link>
+                      </div>
+                    </SwiperSlide>
+                  )
+                })}
+              </Swiper>
             </div>
           )}
         </div>

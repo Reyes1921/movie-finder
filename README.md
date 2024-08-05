@@ -49,7 +49,7 @@ Currently, two official plugins are available:
 - `Quitar overview de recommendations` -- LISTO
 - `Mas info de películas y series` -- LISTO
 - `Nav`
-- `Error con el slider`
+- `Error con el slider` -- LISTO
 - `Mejorar layout de crew` -- LISTO
 - `Footer` -- LISTO
 - `Paginación en popular, top rated de movies y series`
