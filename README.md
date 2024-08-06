@@ -55,7 +55,7 @@ Currently, two official plugins are available:
 - `Paginación en popular, top rated de movies y series` -- LISTO
 - `Upcoming, now playing????` -- LISTO
 - `Por géneros` -- LISTO
-- `Watch providers`
+- `Watch providers` -- LISTO
 - `Velocidad de carga de todo`
 
 EN PAUSA 19-07-2024
@@ -66,7 +66,7 @@ EN PAUSA 19-07-2024
 - `DarkMode??`
 - `Flicker`
 - `Fondo con el otro fondo` -- LISTO
-- `Reducir css`
+- `Reducir css` -- LISTO
 - `Remate`
 - `Agregar a portfolio`
 - `Hacer readme a github`

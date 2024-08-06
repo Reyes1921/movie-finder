@@ -1,7 +1,7 @@
-import {Layout} from "../../layout/Layout"
 import {Loading, SearchGrid} from "../../components"
 import {useGetMovieSerie} from "../../hooks"
 import {useParams} from "react-router-dom"
+import {LayoutSingle} from "../../layout/LayoutSingle"
 
 export const Search = () => {
   const {data} = useParams()
@@ -10,7 +10,7 @@ export const Search = () => {
   )
   error ? console.log(error) : ""
   return (
-    <Layout loading={loading} search={movieSerie}>
+    <LayoutSingle loading={loading} search={movieSerie}>
       {loading ? (
         <Loading />
       ) : (
@@ -30,6 +30,6 @@ export const Search = () => {
           )}
         </>
       )}
-    </Layout>
+    </LayoutSingle>
   )
 }

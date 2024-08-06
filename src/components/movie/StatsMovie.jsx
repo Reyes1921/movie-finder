@@ -2,10 +2,20 @@ import {Link} from "react-router-dom"
 import {languages} from "../../helpers"
 import {useCustomFunctions} from "../../hooks/useCustomFunctions"
 import {ModalTrailer} from "../modal/ModalTrailer"
+import {useState} from "react"
+import {useGetMovieSerie} from "../../hooks"
 
 export const StatsMovie = ({data}) => {
   const {numberFormater, time_convert, colorScore} = useCustomFunctions()
+  const [stream, setStream] = useState("US")
 
+  const {movieSerie, loading} = useGetMovieSerie(
+    `movie/${data.id}/watch/providers`
+  )
+
+  const selectChange = (event) => {
+    setStream(event.target.value)
+  }
   return (
     <div className="mx-auto max-w-2xl lg:max-w-none">
       <div className="flex justify-center md:justify-start items-center flex-wrap">
@@ -66,7 +76,7 @@ export const StatsMovie = ({data}) => {
           </div>
         </div>
       </div>
-      <div className=" mt-5">
+      <div className="mt-5 md:flex justify-start items-center">
         {data.genres.map((genres) => {
           return (
             <Link
@@ -82,6 +92,53 @@ export const StatsMovie = ({data}) => {
             </Link>
           )
         })}
+        <div className="space-x-3 mt-5 md:ml-5 animated fadeIn">
+          <div className="font-bold flex">
+            {loading ? (
+              ""
+            ) : (
+              <div
+                className={`flex ${
+                  Object.entries(movieSerie?.results).length > 0 || "hidden"
+                }`}
+              >
+                <span className="font-bold text-blue-500">Streaming:</span>
+                <select
+                  name="select"
+                  className="ml-2 text-blue-500 pl-3 min-w-[80px] text-sm rounded"
+                  onChange={selectChange}
+                >
+                  {Object.entries(movieSerie.results).map((item) => (
+                    <option
+                      value={item[0]}
+                      className="text-blue-500"
+                      key={item[0]}
+                    >
+                      {item[0]}
+                    </option>
+                  ))}
+                </select>
+                <div className="flex ml-3">
+                  {movieSerie?.results[stream]?.flatrate?.map((item) => {
+                    return (
+                      <img
+                        key={item.provider_name}
+                        src={
+                          loading
+                            ? "/movie-play.svg"
+                            : `https://image.tmdb.org/t/p/w780//` +
+                              item.logo_path
+                        }
+                        alt={item.provider_name}
+                        className="w-16 h-12 p-1"
+                      />
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
 
       <dl className="mt-8 grid grid-cols-2 gap-0.5 overflow-hidden rounded-2xl text-center md:grid-cols-2 lg:grid-cols-4">

@@ -39,6 +39,7 @@ export const KnownFor = ({id}) => {
         >
           <Swiper
             centeredSlides={true}
+            loop={moviesSeries.cast.length > 5 ? true : false}
             breakpoints={{
               640: {
                 slidesPerView:
