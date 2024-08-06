@@ -24,15 +24,15 @@ export const Companies = ({companies}) => {
               loop={true}
               breakpoints={{
                 640: {
-                  slidesPerView: 1,
+                  slidesPerView: companies.length > 1 ? 1 : companies.length,
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: 3,
+                  slidesPerView: companies.length > 3 ? 3 : companies.length,
                   spaceBetween: 40,
                 },
                 1024: {
-                  slidesPerView: 5,
+                  slidesPerView: companies.length > 5 ? 5 : companies.length,
                   spaceBetween: 30,
                 },
               }}

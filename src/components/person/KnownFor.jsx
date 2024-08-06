@@ -42,15 +42,18 @@ export const KnownFor = ({id}) => {
             centeredSlides={true}
             breakpoints={{
               640: {
-                slidesPerView: 1,
+                slidesPerView:
+                  moviesSeries.cast.length > 1 ? 1 : moviesSeries.cast.length,
                 spaceBetween: 20,
               },
               768: {
-                slidesPerView: 3,
+                slidesPerView:
+                  moviesSeries.cast.length > 3 ? 3 : moviesSeries.cast.length,
                 spaceBetween: 40,
               },
               1024: {
-                slidesPerView: 5,
+                slidesPerView:
+                  moviesSeries.cast.length > 5 ? 5 : moviesSeries.cast.length,
                 spaceBetween: 30,
               },
             }}

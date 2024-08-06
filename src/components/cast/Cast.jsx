@@ -38,15 +38,15 @@ export const Cast = ({type, id}) => {
                 loop={true}
                 breakpoints={{
                   640: {
-                    slidesPerView: 2,
+                    slidesPerView: cast.cast.length > 2 ? 2 : cast.cast.length,
                     spaceBetween: 20,
                   },
                   768: {
-                    slidesPerView: 3,
+                    slidesPerView: cast.cast.length > 3 ? 3 : cast.cast.length,
                     spaceBetween: 40,
                   },
                   1024: {
-                    slidesPerView: 6,
+                    slidesPerView: cast.cast.length > 6 ? 6 : cast.cast.length,
                     spaceBetween: 30,
                   },
                 }}

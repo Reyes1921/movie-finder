@@ -52,8 +52,8 @@ Currently, two official plugins are available:
 - `Error con el slider` -- LISTO
 - `Mejorar layout de crew` -- LISTO
 - `Footer` -- LISTO
-- `Paginación en popular, top rated de movies y series`
-- `Upcoming, now playing????`
+- `Paginación en popular, top rated de movies y series` -- LISTO
+- `Upcoming, now playing????` -- LISTO
 - `Por géneros`
 - `Velocidad de carga de todo`
 

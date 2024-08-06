@@ -48,7 +48,7 @@ export const ItemsGridSeries = ({serie}) => {
                     <div className="text-sm text-gray-400">Release date:</div>
                   </div>
                 </div>
-                <div className="flex flex-col overview min-w-[277.8px]">
+                <div className="flex flex-col overview ">
                   <p className="text-xs text-gray-400 mb-5 mt-0 min-h-[56px]">
                     {serie?.overview.substr(0, 120) + "..."}
                   </p>
