@@ -5,7 +5,7 @@ export const LayoutSingle = ({children}) => {
     <>
       <Header />
       <div className="md:mt-20">{children}</div>
-      <Footer />
+      <Footer type={"single"} />
     </>
   )
 }

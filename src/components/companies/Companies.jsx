@@ -21,7 +21,6 @@ export const Companies = ({companies}) => {
         <div className="bg-[#3B82F6] bg-opacity-80 rounded-2xl py-3">
           <div className="swiper-white">
             <Swiper
-              loop={true}
               breakpoints={{
                 640: {
                   slidesPerView: companies.length > 1 ? 1 : companies.length,

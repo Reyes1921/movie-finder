@@ -1,5 +1,6 @@
 export * from "./Home"
 //Movie
+export * from "./movie/CategoryMovie"
 export * from "./movie/MoviePage"
 export * from "./movie/PopularMovies"
 export * from "./movie/UpcomingMovies"
@@ -9,6 +10,7 @@ export * from "./person/Person"
 //Search
 export * from "./search/Search"
 //Serie
+export * from "./serie/CategorySerie"
 export * from "./serie/PopularSeries"
 export * from "./serie/UpcomingSeries"
 export * from "./serie/TopRatedSeries"

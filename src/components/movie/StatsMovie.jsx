@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 import {languages} from "../../helpers"
 import {useCustomFunctions} from "../../hooks/useCustomFunctions"
 import {ModalTrailer} from "../modal/ModalTrailer"
@@ -68,12 +69,17 @@ export const StatsMovie = ({data}) => {
       <div className=" mt-5">
         {data.genres.map((genres) => {
           return (
-            <span
+            <Link
               key={genres.id}
-              className="bg-blue-900 text-white inline-block text-center px-2 py-1 rounded text-md font-semibold m-2"
+              to={`/movie/category/${genres.name
+                .toLowerCase()
+                .split(" ")
+                .join("-")}/${genres.id}`}
             >
-              {genres.name}
-            </span>
+              <span className="inline-flex bg-blue-900 text-white text-center px-2 py-1 rounded text-md font-semibold m-2 hover:scale-110 transition-all">
+                {genres.name}
+              </span>
+            </Link>
           )
         })}
       </div>

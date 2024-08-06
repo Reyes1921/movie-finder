@@ -1,6 +1,6 @@
 import {Link, useLocation} from "react-router-dom"
 
-export const Footer = () => {
+export const Footer = ({type}) => {
   let location = useLocation()
 
   const icons = [
@@ -26,14 +26,12 @@ export const Footer = () => {
   return (
     <footer
       className={` border-gray-200 w-full ${
-        location.pathname === "/" ? "fixed bottom-0" : "hidden"
+        type === "no single" ? "fixed bottom-0" : "block"
       }`}
       style={{backgroundColor: "#0F172A"}}
     >
       <div
-        className={`flex flex-wrap justify-center md:justify-evenly items-center ${
-          location.pathname === "/" ? "p-3" : "p-6"
-        }`}
+        className={`flex flex-wrap justify-center md:justify-evenly items-center p-3`}
       >
         <div className="flex justify-center md:justify-start pt-2 md:pt-0 md:mt-0">
           <h3 className="text-white text-sm md:text-base">Powered By &nbsp;</h3>

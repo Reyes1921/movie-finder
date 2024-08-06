@@ -54,7 +54,8 @@ Currently, two official plugins are available:
 - `Footer` -- LISTO
 - `Paginación en popular, top rated de movies y series` -- LISTO
 - `Upcoming, now playing????` -- LISTO
-- `Por géneros`
+- `Por géneros` -- LISTO
+- `Watch providers`
 - `Velocidad de carga de todo`
 
 EN PAUSA 19-07-2024
