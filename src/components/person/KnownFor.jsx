@@ -55,7 +55,7 @@ export const KnownFor = ({id}) => {
               },
             }}
             cssMode={true}
-            navigation={true}
+            navigation={"true"}
             mousewheel={true}
             keyboard={true}
             modules={[Navigation, Pagination, Mousewheel, Keyboard]}

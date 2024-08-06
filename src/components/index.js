@@ -5,6 +5,7 @@ export * from "./header/SearchBar"
 export * from "./modal/ModalTrailer"
 //Infinite
 export * from "./infiniteScroll/InfiniteMovies"
+export * from "./infiniteScroll/InfiniteSeries"
 //Movie
 export * from "./movie/Crew"
 export * from "./movie/CrewMovie"

@@ -7,12 +7,12 @@ import {
 } from "../../components"
 // import {useGetMovieSerie} from "../../hooks"
 
-export const PopularSeries = () => {
+export const UpcomingSeries = () => {
   // const {movieSerie, loading, error} = useGetMovieSerie("/tv/popular")
   // error ? console.log(error) : ""
 
   return (
-    <InfiniteSeries media_type={"popular"} title={"Popular Series"} />
+    <InfiniteSeries media_type={"on_the_air"} title={"On The Air Series"} />
     // <Layout>
     //   {loading ? (
     //     <Loading />

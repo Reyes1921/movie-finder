@@ -1,11 +1,11 @@
 import InfiniteScroll from "react-infinite-scroll-component"
 import {useEffect, useState} from "react"
-import {Loading, MovieGrid} from "../../components"
+import {Loading, SerieGrid} from "../../components"
 import {Layout} from "../../layout/Layout"
 import axios from "axios"
 const apiBearer = import.meta.env.VITE_API_BEARER
 
-export const InfiniteMovies = ({media_type, title}) => {
+export const InfiniteSeries = ({media_type, title}) => {
   const [hasMore, setHasMore] = useState(true)
   const [index, setIndex] = useState(2)
   const [items, setItems] = useState([])
@@ -18,7 +18,7 @@ export const InfiniteMovies = ({media_type, title}) => {
 
   useEffect(() => {
     axios
-      .get(`https://api.themoviedb.org/3/movie/${media_type}`, {
+      .get(`https://api.themoviedb.org/3/tv/${media_type}`, {
         headers: {
           Authorization: apiBearer,
         },
@@ -37,7 +37,7 @@ export const InfiniteMovies = ({media_type, title}) => {
   const fetchMoreData = () => {
     if (index <= 100) {
       axios
-        .get(`https://api.themoviedb.org/3/movie/${media_type}?page=${index}`, {
+        .get(`https://api.themoviedb.org/3/tv/${media_type}?page=${index}`, {
           headers: {
             Authorization: apiBearer,
           },
@@ -68,7 +68,7 @@ export const InfiniteMovies = ({media_type, title}) => {
             <h2 className="text-3xl md:text-4xl pt-8 md:pt-5 p-5 text-center md:text-left font-bold text-[#3b82f6]">
               {title}
             </h2>
-            <MovieGrid movieData={items} />
+            <SerieGrid serieData={items} />
           </Layout>
         </InfiniteScroll>
       )}

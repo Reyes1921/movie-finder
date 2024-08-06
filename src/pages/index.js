@@ -10,5 +10,6 @@ export * from "./person/Person"
 export * from "./search/Search"
 //Serie
 export * from "./serie/PopularSeries"
+export * from "./serie/UpcomingSeries"
 export * from "./serie/TopRatedSeries"
 export * from "./serie/SeriePage"

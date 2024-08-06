@@ -17,7 +17,7 @@ export const Nav = () => {
   const navListMenuItemsMovies = [
     {
       title: "Popular",
-      link: "/movies",
+      link: "/popular-movies",
     },
     {
       title: "Upcoming",
@@ -32,11 +32,11 @@ export const Nav = () => {
   const navListMenuItemsSeries = [
     {
       title: "Popular",
-      link: "/series",
+      link: "/popular-series",
     },
     {
-      title: "Upcoming",
-      link: "/upcoming-series",
+      title: "On The Air",
+      link: "/on-the-air-series",
     },
     {
       title: "Top Rated",

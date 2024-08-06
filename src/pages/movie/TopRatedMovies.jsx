@@ -9,7 +9,7 @@ export const TopRatedMovies = () => {
   // error ? console.log(error) : ""
 
   return (
-    <InfiniteMovies media_type={"top_rated"} />
+    <InfiniteMovies media_type={"top_rated"} title={"Top Rated Movies"} />
     // <Layout>
     //   {loading ? (
     //     <Loading />

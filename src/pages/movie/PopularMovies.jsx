@@ -58,7 +58,7 @@ export const PopularMovies = () => {
   // error ? console.log(error) : ""
 
   return (
-    <InfiniteMovies media_type={"popular"} />
+    <InfiniteMovies media_type={"popular"} title={"Popular Movies"} />
     // <>
     //   {loading ? (
     //     <Loading />
