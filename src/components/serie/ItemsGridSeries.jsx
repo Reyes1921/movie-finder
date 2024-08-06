@@ -30,7 +30,7 @@ export const ItemsGridSeries = ({serie}) => {
                 <div className="flex justify-around mb-0 pb-0">
                   <div className="relative text-sm">
                     <div
-                      className={`flex justify-center border rounded-md min-w-[53px] ${colorScore(
+                      className={`flex justify-center border rounded-md  ${colorScore(
                         serie?.vote_average.toFixed(1)
                       )}`}
                     >
@@ -40,12 +40,14 @@ export const ItemsGridSeries = ({serie}) => {
                     </div>
                   </div>
                   <div className="flex flex-col p-1">
-                    <div className="popularity">{serie.popularity}</div>
-                    <div className="text-sm text-gray-400">Popularity:</div>
+                    <div className="popularity text-xs">{serie.popularity}</div>
+                    <div className="text-xs text-gray-400">Popularity:</div>
                   </div>
                   <div className="flex flex-col p-1">
-                    <div className="release">{serie.first_air_date}</div>
-                    <div className="text-sm text-gray-400">Release date:</div>
+                    <div className="release text-xs">
+                      {serie.first_air_date}
+                    </div>
+                    <div className="text-xs text-gray-400">Release date:</div>
                   </div>
                 </div>
                 <div className="flex flex-col overview ">

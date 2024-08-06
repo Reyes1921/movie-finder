@@ -48,11 +48,11 @@ export const ItemGridMovies = ({movie}) => {
                     </div>
                   </div>
                   <div className="flex flex-col p-1">
-                    <div className="text-sm">{movie?.release_date}</div>
+                    <div className="text-xs">{movie?.release_date}</div>
                     <div className="text-xs text-gray-400">Release date</div>
                   </div>
                   <div className="flex flex-col p-1 min-w-[76px]">
-                    <div className="text-sm">
+                    <div className="text-xs">
                       {loading ? "1h 33min" : time_convert(runtime?.runtime)}
                     </div>
                     <div className="text-xs text-gray-400">Runtime</div>
