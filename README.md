@@ -55,7 +55,7 @@ Currently, two official plugins are available:
 - `Upcoming, now playing????` -- LISTO
 - `Por géneros` -- LISTO
 - `Watch providers` -- LISTO
-- `Nav`
+- `Nav` -- LISTO
 - `Velocidad de carga de todo`
 - `Validaciones de links not found`
 

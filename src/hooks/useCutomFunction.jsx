@@ -48,7 +48,7 @@ export const useCustomFunction = () => {
   ]
 
   const renderItemsMovies = navListMenuItemsMovies.map(({title, link}) => (
-    <a href={link} key={title}>
+    <Link to={link} key={title}>
       <MenuItem>
         <Typography
           variant="h6"
@@ -58,10 +58,10 @@ export const useCustomFunction = () => {
           {title}
         </Typography>
       </MenuItem>
-    </a>
+    </Link>
   ))
   const renderItemsSeries = navListMenuItemsSeries.map(({title, link}) => (
-    <a href={link} key={title}>
+    <Link to={link} key={title}>
       <MenuItem>
         <Typography
           variant="h6"
@@ -71,7 +71,7 @@ export const useCustomFunction = () => {
           {title}
         </Typography>
       </MenuItem>
-    </a>
+    </Link>
   ))
 
   const navList = (
@@ -79,7 +79,7 @@ export const useCustomFunction = () => {
       <Menu>
         <MenuItem>
           <Typography
-            as="a"
+            as="li"
             variant="small"
             color="blue-gray"
             className="font-medium"
@@ -143,18 +143,18 @@ export const useCustomFunction = () => {
   const navListMobile = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 outline-0">
       <Menu>
-        <ListItem className="hover:bg-blue-500 py-2 mt-3">
-          <Typography
-            as="a"
-            variant="small"
-            color="blue-gray"
-            className="font-medium"
-          >
-            <Link to="/" className="flex items-center hover:text-blue-500">
+        <Link to="/" className="flex items-center">
+          <ListItem className="hover:bg-blue-500 py-2 mt-3">
+            <Typography
+              as="li"
+              variant="small"
+              color="blue-gray"
+              className="font-medium"
+            >
               Home
-            </Link>
-          </Typography>
-        </ListItem>
+            </Typography>
+          </ListItem>
+        </Link>
       </Menu>
       <Menu open={isMenuOpenMobile} handler={setIsMenuOpenMobile}>
         <MenuHandler>
