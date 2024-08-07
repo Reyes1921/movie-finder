@@ -1,5 +1,5 @@
-import {useCustomFunctions} from "../../hooks"
 import {Link} from "react-router-dom"
+import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 
 export const Crew = ({crewData, job}) => {
   console.log(crewData)

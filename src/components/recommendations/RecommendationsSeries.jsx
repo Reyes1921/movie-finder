@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
-import {useCustomFunctions, useGetMovieSerie} from "../../hooks"
+import {useGetMovieSerie} from "../../hooks"
+import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 
 export const RecommendationsSeries = ({serieId}) => {
   const {movieSerie, loading, error} = useGetMovieSerie(

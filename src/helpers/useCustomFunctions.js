@@ -109,6 +109,36 @@ export const useCustomFunctions = () => {
     ]
   }
 
+  // nav list menu
+  const navListMenuItemsMovies = [
+    {
+      title: "Popular",
+      link: "/popular-movies",
+    },
+    {
+      title: "Upcoming",
+      link: "/upcoming-movies",
+    },
+    {
+      title: "Top Rated",
+      link: "/top-rated-movies",
+    },
+  ]
+  const navListMenuItemsSeries = [
+    {
+      title: "Popular",
+      link: "/popular-series",
+    },
+    {
+      title: "On The Air",
+      link: "/on-the-air-series",
+    },
+    {
+      title: "Top Rated",
+      link: "/top-rated-series",
+    },
+  ]
+
   return {
     numberFormater,
     time_convert,
@@ -120,5 +150,7 @@ export const useCustomFunctions = () => {
     findInArrayId,
     responsiveOptions,
     responsiveOptionsPerson,
+    navListMenuItemsMovies,
+    navListMenuItemsSeries,
   }
 }

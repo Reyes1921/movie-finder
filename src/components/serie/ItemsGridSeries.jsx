@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom"
-
-import {useCustomFunctions} from "../../hooks"
+import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 
 export const ItemsGridSeries = ({serie}) => {
   const {colorScore} = useCustomFunctions()

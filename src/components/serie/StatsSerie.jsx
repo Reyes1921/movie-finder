@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom"
 import {languages} from "../../helpers"
-import {useCustomFunctions} from "../../hooks/useCustomFunctions"
 import {ModalTrailer} from "../modal/ModalTrailer"
 import {useGetMovieSerie} from "../../hooks"
 import {useState} from "react"
+import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 
 export const StatsSerie = ({data}) => {
   const {colorScore} = useCustomFunctions()

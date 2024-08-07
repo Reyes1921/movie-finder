@@ -1,6 +1,6 @@
-import {useCustomFunctions} from "../../hooks"
 import {Link} from "react-router-dom"
 import {Crew} from "./Crew"
+import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 
 export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
   error ? console.log(error) : ""
