@@ -48,7 +48,6 @@ Currently, two official plugins are available:
 - `Videos` -- LISTO
 - `Quitar overview de recommendations` -- LISTO
 - `Mas info de películas y series` -- LISTO
-- `Nav`
 - `Error con el slider` -- LISTO
 - `Mejorar layout de crew` -- LISTO
 - `Footer` -- LISTO
@@ -56,15 +55,16 @@ Currently, two official plugins are available:
 - `Upcoming, now playing????` -- LISTO
 - `Por géneros` -- LISTO
 - `Watch providers` -- LISTO
+- `Nav`
 - `Velocidad de carga de todo`
+- `Validaciones de links not found`
 
 EN PAUSA 19-07-2024
 
-- `Validaciones de links not found`
-- `CSS foto page` -- LISTO
 - `Language???`
 - `DarkMode??`
 - `Flicker`
+- `CSS foto page` -- LISTO
 - `Fondo con el otro fondo` -- LISTO
 - `Reducir css` -- LISTO
 - `Remate`

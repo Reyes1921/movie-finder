@@ -14,7 +14,7 @@ export const ItemGridMovies = ({movie}) => {
   const {time_convert, colorScore} = useCustomFunctions()
 
   return (
-    <div className=" w-full min-w-[500] min-h-[500] max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
+    <div className="w-full min-w-[500] min-h-[500]  max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
       <Link
         to={`/movie/${movie.title.toLowerCase().split(" ").join("-")}/${
           movie?.id
@@ -38,11 +38,11 @@ export const ItemGridMovies = ({movie}) => {
                 <div className="flex justify-around mb-0 pb-0">
                   <div className="relative text-sm">
                     <div
-                      className={`flex justify-center border rounded-md min-w-[53px] ${colorScore(
+                      className={`flex justify-center border rounded-md min-w-[40px] ${colorScore(
                         movie?.vote_average.toFixed(1)
                       )}`}
                     >
-                      <div className="text-2xl text-center font-bold text-black p-2">
+                      <div className="text-base text-center font-bold text-black p-1">
                         {movie?.vote_average.toFixed(1)}
                       </div>
                     </div>
@@ -52,7 +52,7 @@ export const ItemGridMovies = ({movie}) => {
                     <div className="text-xs text-gray-400">Release date</div>
                   </div>
                   <div className="flex flex-col p-1 min-w-[76px]">
-                    <div className="text-xs">
+                    <div className="text-xs min-w-[68px] min-h-[16px]">
                       {loading ? "1h 33min" : time_convert(runtime?.runtime)}
                     </div>
                     <div className="text-xs text-gray-400">Runtime</div>

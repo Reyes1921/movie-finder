@@ -6,7 +6,7 @@ export const ItemsGridSeries = ({serie}) => {
   const {colorScore} = useCustomFunctions()
 
   return (
-    <div className=" w-full min-w-[500] min-h-[500]  max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
+    <div className="w-full min-w-[500] min-h-[500]  max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
       <Link
         to={`/serie/${serie.name.toLowerCase().split(" ").join("-")}/${
           serie?.id
@@ -30,11 +30,11 @@ export const ItemsGridSeries = ({serie}) => {
                 <div className="flex justify-around mb-0 pb-0">
                   <div className="relative text-sm">
                     <div
-                      className={`flex justify-center border rounded-md  ${colorScore(
+                      className={`flex justify-center border rounded-md min-w-[40px]  ${colorScore(
                         serie?.vote_average.toFixed(1)
                       )}`}
                     >
-                      <div className="text-2xl text-center font-bold text-black p-2">
+                      <div className="text-base text-center font-bold text-black p-1">
                         {serie?.vote_average.toFixed(1)}
                       </div>
                     </div>
