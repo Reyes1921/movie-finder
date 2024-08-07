@@ -12,6 +12,7 @@
 
 * {
   font-family: "Sarala", sans-serif;
+  color: #fff;
 }
 
 html {
@@ -101,6 +102,72 @@ html {
 
 .btn:active {
   scale: 0.92;
+}
+
+/*Button Language*/
+
+.p-selectbutton .p-button {
+  background: #1f2937;
+  border: 1px solid #424b57;
+  color: rgba(255, 255, 255, 0.87);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.p-button {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  vertical-align: bottom;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+}
+
+.p-selectbutton .p-button.p-highlight {
+  background: #2074f6;
+  border-color: #2074f6;
+  color: #030712;
+}
+
+div.p-selectbutton div.p-button {
+  padding: 8px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #101726;
+}
+
+.p-button-group .p-button:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.p-button-group .p-button:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.p-button .p-button-label {
+  transition-duration: 0.2s;
+  font-weight: 700;
+}
+
+.p-button-group .p-button:focus {
+  position: relative;
+  color: #030712;
+  z-index: 1;
+  background: #2074f6;
+  border-color: #2074f6;
+}
+
+.p-button:focus {
+  box-shadow: 0 0 0 2px #1c2127, 0 0 0 4px #2074f6, 0 1px 2px 0 rgba(0, 0, 0, 0);
+  outline: 0 none;
+  outline-offset: 0;
 }
 
 /*SPINER*/

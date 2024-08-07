@@ -11,17 +11,33 @@ import {
 } from "../../components"
 import {Accordion, AccordionTab} from "primereact/accordion"
 import {FaUserGroup} from "react-icons/fa6"
+import {useTranslation} from "react-i18next"
+import {useEffect, useState} from "react"
 
 export const MoviePage = () => {
+  const {i18n} = useTranslation()
   const {movieId} = useParams()
+  const [language, setLanguage] = useState(i18n.language)
+
+  useEffect(() => {
+    setLanguage(i18n.language)
+  }, [i18n.language])
 
   const {
     movieSerie: movie,
     loading,
     error,
-  } = useGetMovieSerie(`/movie/${movieId}`)
+  } = useGetMovieSerie(
+    `/movie/${movieId}?${
+      language === "en" ? "language=en-US" : "language=es-ES"
+    }`
+  )
 
-  const dataCrew = useGetMovieSerie(`/movie/${movieId}/credits`)
+  const dataCrew = useGetMovieSerie(
+    `/movie/${movieId}/credits?${
+      language === "en" ? "language=en-US" : "language=es-ES"
+    }`
+  )
 
   error ? console.log(error) : ""
   window.scrollTo(0, 0)
@@ -71,7 +87,6 @@ export const MoviePage = () => {
           </div>
           <div className="w-full m-0 overflow-hidden">
             <Cast type={"movie"} id={movie.id} />
-            {/* <CastMovie id={movie.id} /> */}
             <div className="flex items-center justify-center bg-slate-900 h-auto">
               <div className="w-full bg-slate-900">
                 <div className="">
@@ -79,7 +94,7 @@ export const MoviePage = () => {
                     Crew
                   </h3>
                   <div className="md:w-full">
-                    <Accordion className="bg-[#1B2335] rounded-2xl">
+                    <Accordion className="bg-[#1B2335] rounded-2xl p-5">
                       <AccordionTab
                         header={
                           <span className="flex items-center gap-2 w-full">

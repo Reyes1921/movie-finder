@@ -8,11 +8,25 @@ import {
   StatsSerie,
   Cast,
 } from "../../components"
+import {useTranslation} from "react-i18next"
+import {useEffect, useState} from "react"
 
 export const SeriePage = () => {
+  const {i18n} = useTranslation()
   const {serieId} = useParams()
+  const [language, setLanguage] = useState(i18n.language)
 
-  const {movieSerie: serie, loading, error} = useGetMovieSerie(`/tv/${serieId}`)
+  useEffect(() => {
+    setLanguage(i18n.language)
+  }, [i18n.language])
+
+  const {
+    movieSerie: serie,
+    loading,
+    error,
+  } = useGetMovieSerie(
+    `/tv/${serieId}?${language === "en" ? "language=en-US" : "language=es-ES"}`
+  )
   error ? console.log(error) : ""
   window.scrollTo(0, 0)
   return (

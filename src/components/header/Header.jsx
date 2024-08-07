@@ -9,10 +9,31 @@ import {
 } from "@material-tailwind/react"
 import {useNavigate} from "react-router-dom"
 import {useCustomFunction} from "../../hooks/useCutomFunction"
+import {useTranslation} from "react-i18next"
+import {SelectButton} from "primereact/selectbutton"
 
 export function Header() {
   const [openNav, setOpenNav] = useState(false)
   const navigate = useNavigate()
+
+  const {t, i18n} = useTranslation()
+  const options = ["en", "es"]
+  const [value, setValue] = useState(options[0])
+  const onChangeLang = (e) => {
+    const lang_code = e.target.value
+    i18n.changeLanguage(lang_code)
+    setValue(e.target.value)
+    localStorage.setItem("language", e.target.value)
+  }
+
+  useEffect(() => {
+    const lang = localStorage.getItem("language")
+    if (!!lang) {
+      i18n.changeLanguage(lang)
+      setValue(lang)
+    }
+  }, [])
+
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -49,11 +70,11 @@ export function Header() {
             <form action="" onSubmit={submit} id="searchBar">
               <Input
                 type="search"
-                placeholder="Search"
+                placeholder={t("Search")}
                 containerProps={{
                   className: "min-w-[288px]",
                 }}
-                className=" !border-t-blue-gray-300 pl-9 placeholder:text-blue-gray-300 focus:!border-blue-gray-300 rounded-xl"
+                className=" !border-t-blue-gray-300 pl-9 placeholder:text-blue-gray-300 focus:!border-[#2074F6] rounded-xl"
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
@@ -87,10 +108,16 @@ export function Header() {
             type="submit"
             form="searchBar"
           >
-            Search
+            {t("Search")}
           </Button>
         </div>
         <div className="hidden lg:block">{navList}</div>
+        <SelectButton
+          value={value}
+          onChange={onChangeLang}
+          options={options}
+          className="hidden lg:block"
+        />
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -142,7 +169,7 @@ export function Header() {
               <div className="relative w-full gap-2 md:w-max">
                 <Input
                   type="search"
-                  placeholder="Search"
+                  placeholder={t("Search")}
                   containerProps={{
                     className: "min-w-[288px]",
                   }}
@@ -179,9 +206,15 @@ export function Header() {
                 type="submit"
                 form="searchBarMobile"
               >
-                Search
+                {t("Search")}
               </Button>
             </form>
+            <SelectButton
+              value={value}
+              onChange={onChangeLang}
+              options={options}
+              className=" lg:hidden m-4 flex justify-center"
+            />
           </div>
         </div>
       </Collapse>

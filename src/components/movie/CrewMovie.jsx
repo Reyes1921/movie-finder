@@ -21,7 +21,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
             })`,
           }}
         >
-          <section className="py-6 rounded-xl text-white pp">
+          <section className="py-6 rounded-xl text-white pp mt-4">
             <div className="grid grid-cols-1  lg:gap-2 md:gap-4 gap-8 px-5 ">
               <div className="flex flex-col justify-center m-1 text-center border-b-2 border-blue-500">
                 <p className="text-xl font-semibold leading-tight text-blue-500">

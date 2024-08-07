@@ -10,6 +10,7 @@ import {
 } from "@material-tailwind/react"
 import {useState} from "react"
 import {Link} from "react-router-dom"
+import {useTranslation} from "react-i18next"
 
 export const useCustomFunction = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,32 +18,34 @@ export const useCustomFunction = () => {
   const [isMenuOpenMobile, setIsMenuOpenMobile] = useState(false)
   const [isMenuOpenTwoMobile, setIsMenuOpenTwoMobile] = useState(false)
 
+  const {t, i18n} = useTranslation()
+
   // nav list menu
   const navListMenuItemsMovies = [
     {
-      title: "Popular",
+      title: t("Popular"),
       link: "/popular-movies",
     },
     {
-      title: "Upcoming",
+      title: t("Upcoming"),
       link: "/upcoming-movies",
     },
     {
-      title: "Top Rated",
+      title: t("Top Rated"),
       link: "/top-rated-movies",
     },
   ]
   const navListMenuItemsSeries = [
     {
-      title: "Popular",
+      title: t("Popular"),
       link: "/popular-series",
     },
     {
-      title: "On The Air",
+      title: t("On The Air"),
       link: "/on-the-air-series",
     },
     {
-      title: "Top Rated",
+      title: t("Top Rated"),
       link: "/top-rated-series",
     },
   ]
@@ -85,7 +88,7 @@ export const useCustomFunction = () => {
             className="font-medium"
           >
             <Link to="/" className="flex items-center hover:text-blue-500 ">
-              Home
+              {t("Home")}
             </Link>
           </Typography>
         </MenuItem>
@@ -96,7 +99,7 @@ export const useCustomFunction = () => {
             <MenuItem
               className={`hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full hover:text-blue-500`}
             >
-              Movies
+              {t("Movies")}
               <ChevronDownIcon
                 strokeWidth={2}
                 className={`h-3 w-3 transition-transform  ${
@@ -121,7 +124,7 @@ export const useCustomFunction = () => {
             <MenuItem
               className={` items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full hover:text-blue-500`}
             >
-              Series
+              {t("Series")}
               <ChevronDownIcon
                 strokeWidth={2}
                 className={`hidden lg:flex h-3 w-3 transition-transform  ${
@@ -151,7 +154,7 @@ export const useCustomFunction = () => {
               color="blue-gray"
               className="font-medium"
             >
-              Home
+              {t("Home")}
             </Typography>
           </ListItem>
         </Link>
@@ -164,7 +167,7 @@ export const useCustomFunction = () => {
                 isMenuOpenMobile ? "bg-blue-500" : ""
               }`}
             >
-              Movies
+              {t("Movies")}
               <ChevronDownIcon
                 strokeWidth={2}
                 className={`h-3 w-3 transition-transform flex  ${
@@ -186,7 +189,7 @@ export const useCustomFunction = () => {
                 isMenuOpenTwoMobile ? "bg-blue-500" : ""
               }`}
             >
-              Series
+              {t("Series")}
               <ChevronDownIcon
                 strokeWidth={2}
                 className={`h-3 w-3 transition-transform flex  ${
