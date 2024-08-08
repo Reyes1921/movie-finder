@@ -5,6 +5,8 @@ import {Layout} from "../../layout/Layout"
 import axios from "axios"
 const apiBearer = import.meta.env.VITE_API_BEARER
 import {useTranslation} from "react-i18next"
+import {useGetMovieSerie} from "../../hooks"
+import {Link} from "react-router-dom"
 
 export const InfiniteCategoryMovies = ({media_type, title, id}) => {
   const {t, i18n} = useTranslation()
@@ -17,6 +19,18 @@ export const InfiniteCategoryMovies = ({media_type, title, id}) => {
       <span className="loader"></span>
     </div>
   )
+
+  const {
+    movieSerie: genre,
+    loading: loadingGenre,
+    error,
+  } = useGetMovieSerie(
+    `genre/movie/list?${
+      language === "en" ? "language=en-US" : "language=es-ES"
+    }`
+  )
+
+  error ? console.log(error) : ""
 
   useEffect(() => {
     setLanguage(i18n.language)
@@ -86,6 +100,27 @@ export const InfiniteCategoryMovies = ({media_type, title, id}) => {
             <h2 className="text-3xl md:text-4xl pt-8 md:pt-5 p-5 text-center md:text-left font-bold text-[#3b82f6]">
               {title[0].toUpperCase() + title.substring(1)} {t("movies")}
             </h2>
+            {loadingGenre ? (
+              <Loading />
+            ) : (
+              <div className="flex justify-center items-center flex-wrap animated fadeIn px-5">
+                {genre.genres.map((genres) => {
+                  return (
+                    <Link
+                      key={genres.id}
+                      to={`/movie/category/${genres.name
+                        .toLowerCase()
+                        .split(" ")
+                        .join("-")}/${genres.id}`}
+                    >
+                      <span className="inline-flex bg-blue-900 text-white text-center px-2 py-1 rounded text-md font-semibold m-2 hover:scale-110 transition-all">
+                        {genres.name}
+                      </span>
+                    </Link>
+                  )
+                })}
+              </div>
+            )}
             <MovieCategoryGrid movieData={items} idCat={id} />
           </Layout>
         </InfiniteScroll>

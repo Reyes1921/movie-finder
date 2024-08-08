@@ -62,7 +62,7 @@ Currently, two official plugins are available:
 - `DarkMode??` -- NO
 - `Tamaño del select de streaming` -- LISTO
 - `Language???` -- LISTO
-- `Todos los generos`
+- `Todos los generos` -- LISTO
 
 EN PAUSA 19-07-2024
 
