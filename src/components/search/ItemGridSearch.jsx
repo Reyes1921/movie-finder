@@ -27,11 +27,11 @@ export const ItemGridSearch = ({movieSerie}) => {
               <div className="h-64 md:h-64" />
               <div className="space-y-3">
                 <div className="flex flex-col space-y-2 inner">
-                  <h3 className="text-xl font-bold text-white min-h-[56px]">
+                  <h3 className="text-xl font-bold text-white min-h-[56px] pb-5 md:pb-0">
                     {movieSerie[titleOrName]}
                   </h3>
                 </div>
-                <div className="flex justify-around mb-0 pb-0">
+                <div className="hidden md:flex justify-around mb-0 pb-0">
                   <div className="relative text-sm">
                     <div className="popularity">{movieSerie.popularity}</div>
                     <div className="text-xs text-gray-400">
@@ -54,7 +54,7 @@ export const ItemGridSearch = ({movieSerie}) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col overview">
+                <div className="hidden md:flex flex-col overview">
                   <p className="text-xs text-gray-100 mb-6">
                     {movieSerie?.overview?.substr(0, 120) + "..."}
                   </p>

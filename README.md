@@ -59,10 +59,10 @@ Currently, two official plugins are available:
 - `Validaciones de links not found` -- LISTO
 - `Slider que pase mas items a la vez` -- LISTO
 - `Hueco en person` -- LISTO
-- `Todos los generos`
 - `DarkMode??` -- NO
 - `Tamaño del select de streaming` -- LISTO
 - `Language???` -- LISTO
+- `Todos los generos`
 
 EN PAUSA 19-07-2024
 

@@ -24,11 +24,11 @@ export const ItemsGridSeries = ({serie}) => {
               <div className="h-64 md:h-64" />
               <div className="space-y-3">
                 <div className="flex flex-col space-y-2 inner">
-                  <h3 className="text-xl font-bold text-white min-h-[56px]">
+                  <h3 className="text-base md:text-xl font-bold text-white min-h-[56px] pb-5 md:pb-0">
                     {serie?.name}
                   </h3>
                 </div>
-                <div className="flex justify-around mb-0 pb-0">
+                <div className="hidden md:flex justify-around mb-0 pb-0">
                   <div className="relative text-sm">
                     <div
                       className={`flex justify-center border rounded-md min-w-[40px]  ${colorScore(
@@ -55,7 +55,7 @@ export const ItemsGridSeries = ({serie}) => {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col overview ">
+                <div className="hidden md:flex flex-col overview ">
                   <p className="text-xs text-gray-400 mb-5 mt-0 min-h-[56px]">
                     {serie?.overview.substr(0, 120) + "..."}
                   </p>
