@@ -1,17 +1,17 @@
-import {Link, useLocation} from "react-router-dom"
+import {Link} from "react-router-dom"
+import {useTranslation} from "react-i18next"
 
 export const Footer = ({type}) => {
-  let location = useLocation()
-
+  const {t} = useTranslation()
   const icons = [
     {
-      path: "https://github.com/Reyes1921/movie-finder",
+      path: t("github"),
       src: "/github.svg",
       title: "Github",
       alt: '"github logo',
     },
     {
-      path: "https://www.linkedin.com/in/reyes-rondon/",
+      path: t("linkedin"),
       src: "/linkedin.svg",
       title: "Linkedin",
       alt: '"linkedin logo',
@@ -25,12 +25,14 @@ export const Footer = ({type}) => {
   ]
   return (
     <footer
-      className={` border-gray-200 w-full ${
+      className={` border-gray-200 w-full z-20 ${
         type === "no single" ? "fixed bottom-0" : "block"
       }`}
       style={{backgroundColor: "#0F172A"}}
     >
-      <div className={`flex justify-evenly md:justify-evenly items-center p-3`}>
+      <div
+        className={`flex justify-evenly md:justify-evenly items-center p-3 pt-1`}
+      >
         <div className="flex justify-left md:justify-start pt-2 md:pt-0 md:mt-0">
           <h3 className="text-white text-xs md:text-base">Powered By &nbsp;</h3>
           <img
