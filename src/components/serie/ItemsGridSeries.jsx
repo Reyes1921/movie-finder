@@ -1,7 +1,9 @@
 import {Link} from "react-router-dom"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
+import {useTranslation} from "react-i18next"
 
 export const ItemsGridSeries = ({serie}) => {
+  const {t} = useTranslation()
   const {colorScore} = useCustomFunctions()
 
   return (
@@ -40,13 +42,17 @@ export const ItemsGridSeries = ({serie}) => {
                   </div>
                   <div className="flex flex-col p-1">
                     <div className="popularity text-xs">{serie.popularity}</div>
-                    <div className="text-xs text-gray-400">Popularity:</div>
+                    <div className="text-xs text-gray-400">
+                      {t("Popularity")}:
+                    </div>
                   </div>
                   <div className="flex flex-col p-1">
                     <div className="release text-xs">
                       {serie.first_air_date}
                     </div>
-                    <div className="text-xs text-gray-400">Release date:</div>
+                    <div className="text-xs text-gray-400">
+                      {t("Release Date")}:
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col overview ">

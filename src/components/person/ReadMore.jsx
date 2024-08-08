@@ -1,6 +1,8 @@
 import {useState} from "react"
+import {useTranslation} from "react-i18next"
 
 export const ReadMore = ({children}) => {
+  const {t} = useTranslation()
   const text = children
   const textLength = text.length
   const [isReadMore, setIsReadMore] = useState(true)
@@ -16,7 +18,7 @@ export const ReadMore = ({children}) => {
           textLength > 1000 ? "inline-block" : "hidden"
         }`}
       >
-        {isReadMore ? " ...read more" : " show less"}
+        {isReadMore ? ` ...${t("read more")}` : ` ${t("show less")}`}
       </span>
     </p>
   )

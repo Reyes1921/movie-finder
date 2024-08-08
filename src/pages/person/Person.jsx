@@ -2,15 +2,27 @@ import {useParams} from "react-router-dom"
 import {LayoutSingle} from "../../layout"
 import {useGetMovieSerie} from "../../hooks"
 import {KnownFor, Loading, PersonInfo, ReadMore} from "../../components"
+import {useTranslation} from "react-i18next"
+import {useEffect, useState} from "react"
 
 export const Person = () => {
   const {idPerson} = useParams()
+  const {t, i18n} = useTranslation()
+  const [language, setLanguage] = useState(i18n.language)
+
+  useEffect(() => {
+    setLanguage(i18n.language)
+  }, [i18n.language])
 
   const {
     movieSerie: person,
     loading,
     error,
-  } = useGetMovieSerie(`/person/${idPerson}`)
+  } = useGetMovieSerie(
+    `/person/${idPerson}?${
+      language === "en" ? "language=en-US" : "language=es-ES"
+    }`
+  )
   error ? console.log(error) : ""
   window.scrollTo(0, 0)
   return (
@@ -41,13 +53,13 @@ export const Person = () => {
               </span>
             </h3>
             <h3 className="text-left text-white text-2xl mb-5 mt-5 font-bold">
-              Biography
+              {t("Biography")}
             </h3>
             <div className="text-gray-400 text-justify mb-5 text-1xl ">
               <ReadMore>{person.biography}</ReadMore>
               <div>
-                <h3 className="text-left text-white text-4xl mb-10 mt-10 font-bold">
-                  Known For
+                <h3 className="text-left text-white text-2xl mb-10 mt-10 font-bold">
+                  {t("Known For")}
                 </h3>
                 <KnownFor id={person.id} />
               </div>

@@ -58,6 +58,8 @@ Currently, two official plugins are available:
 - `Nav` -- LISTO
 - `Velocidad de carga de todo`
 - `Validaciones de links not found`
+- `Hueco en person`
+- `Slider que pase mas items a la vez`
 
 EN PAUSA 19-07-2024
 

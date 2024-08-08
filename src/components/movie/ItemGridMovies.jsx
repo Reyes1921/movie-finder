@@ -2,8 +2,10 @@ import {useEffect, useState} from "react"
 import {Link} from "react-router-dom"
 import {useGetRuntime} from "../../hooks"
 import {useCustomFunctions} from "../../helpers"
+import {useTranslation} from "react-i18next"
 
 export const ItemGridMovies = ({movie}) => {
+  const {t} = useTranslation()
   const param = `movie/${movie.id}`
   const [runTimes, setRuntimes] = useState(param)
   const {runtime, loading} = useGetRuntime(runTimes)
@@ -50,13 +52,15 @@ export const ItemGridMovies = ({movie}) => {
                   </div>
                   <div className="flex flex-col p-1">
                     <div className="text-xs">{movie?.release_date}</div>
-                    <div className="text-xs text-gray-400">Release date</div>
+                    <div className="text-xs text-gray-400">
+                      {t("Release Date")}
+                    </div>
                   </div>
                   <div className="flex flex-col p-1 min-w-[76px]">
                     <div className="text-xs min-w-[68px] min-h-[16px]">
                       {loading ? "1h 33min" : time_convert(runtime?.runtime)}
                     </div>
-                    <div className="text-xs text-gray-400">Runtime</div>
+                    <div className="text-xs text-gray-400">{t("Runtime")}</div>
                   </div>
                 </div>
                 <div className="flex flex-col overview">

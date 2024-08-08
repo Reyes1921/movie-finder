@@ -6,15 +6,26 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper/modules"
+import {useTranslation} from "react-i18next"
 
 export const KnownFor = ({id}) => {
+  const {i18n} = useTranslation()
+  const [language, setLanguage] = useState(i18n.language)
   const [personId, setPersonId] = useState(id)
+
+  useEffect(() => {
+    setLanguage(i18n.language)
+  }, [i18n.language])
 
   const {
     movieSerie: moviesSeries,
     loading,
     error,
-  } = useGetMovieSerie(`/person/${personId}/combined_credits`)
+  } = useGetMovieSerie(
+    `/person/${personId}/combined_credits?${
+      language === "en" ? "language=en-US" : "language=es-ES"
+    }`
+  )
   error ? console.log(error) : ""
 
   useEffect(() => {
