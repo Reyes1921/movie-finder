@@ -3,7 +3,7 @@
 
 # Movie Finder
 
-Aplicación para ver información sobre películas y series de todo el mundo. Echa un vistazo [movie-finder](https://movie-finder-3000.netlify.app/)
+Aplicación para ver información sobre películas y series de todo el mundo utilizando la increíble API de The Movie Database (TMDB). Echa un vistazo [movie-finder](https://movie-finder-3000.netlify.app/)
 
 ## ⚙️ Funcionalidades
 
@@ -17,10 +17,11 @@ Aplicación para ver información sobre películas y series de todo el mundo. Ec
 
 - [**React 18**](https://react.dev/) - La biblioteca para interfaces de usuario nativas y web.
 - [**Tailwindcss**](https://tailwindcss.com/) - Framework de CSS para el diseño de páginas web.
+- [**The Movie Database (TMDB) API**](https://www.themoviedb.org/) - Aquí encontrará la lista definitiva de métodos disponibles actualmente para nuestra API de películas, televisión, actores e imágenes.
 - [**Prettier**](https://prettier.io/) + [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) - Formateador CSS.
-- [**i18next**](https://react.i18next.com/) - Marco de internacionalización para React / React Native.
+- [**i18next 23.12.2**](https://react.i18next.com/) - Marco de internacionalización para React / React Native.
 - [**react-router-dom 6.23**](https://reactrouter.com/en/main) - Permite el "enrutamiento del lado del cliente".
-- [**Axios**](https://axios-http.com/) - Un sencillo cliente HTTP basado en promesas para el navegador y node.js.
+- [**Axios ^1.6.8**](https://axios-http.com/) - Un sencillo cliente HTTP basado en promesas para el navegador y node.js.
 - [**Swiperjs**](https://swiperjs.com/) - El deslizador táctil móvil más moderno.
 - [**react-infinite-scroll-component**](https://www.npmjs.com/package/react-infinite-scroll-component) - Un componente para que desaparezcan todos tus problemas de desplazamiento infinito con sólo 4,15 kB.
 - [**primereact**](https://primereact.org/) - Mejore sus aplicaciones web con el completo conjunto de componentes de interfaz de usuario personalizables y repletos de funciones de PrimeReact.
@@ -41,6 +42,9 @@ La aplicación se abre en el puerto 3000
 
 ![Static Badge](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=ffffff)
 ![Static Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/themoviedatabase-01B4E4?style=flat&logo=themoviedatabase&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/swiper-6332F6?style=flat&logo=swiper&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/i18next-26A69A?style=flat&logo=i18next&logoColor=ffffff)
 
 </div>
 
