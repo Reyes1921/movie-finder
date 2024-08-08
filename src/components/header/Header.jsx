@@ -46,6 +46,7 @@ export function Header() {
   const submit = (event) => {
     event.preventDefault()
     const value = event.target[0].value
+    if (value.length <= 0) return
     navigate(`/search/${value}`)
   }
 

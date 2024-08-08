@@ -19,9 +19,11 @@ export const Search = () => {
       language === "en" ? "language=en-US" : "language=es-ES"
     }&include_adult=true`
   )
+
   error ? console.log(error) : ""
+
   return (
-    <LayoutSingle loading={loading} search={movieSerie}>
+    <LayoutSingle>
       {loading ? (
         <Loading />
       ) : (

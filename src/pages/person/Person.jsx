@@ -32,6 +32,12 @@ export const Person = () => {
       ) : (
         <div className="w-full h-auto bg-slate-900 shadow-md overflow-hidden mx-auto grid gap-1 grid-cols-1 md:grid-cols-4 p-5">
           <div className=" md:w-full flex flex-col mb-5 col-span-1 ">
+            <h3 className="block md:hidden text-white text-center text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
+              {person.name} -{" "}
+              <span style={{color: "#3B82F6"}}>
+                {person.known_for_department}
+              </span>
+            </h3>
             <img
               className="h-72 md:h-auto max-w-full rounded-2xl object-contain bg-contain p-5 aspect-[16/20]"
               src={`${
@@ -46,7 +52,7 @@ export const Person = () => {
             </div>
           </div>
           <div className="col-span-3 lg:ml-9">
-            <h3 className="text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
+            <h3 className="hidden md:block text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
               {person.name} -{" "}
               <span style={{color: "#3B82F6"}}>
                 {person.known_for_department}

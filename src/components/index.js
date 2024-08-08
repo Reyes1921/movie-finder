@@ -1,6 +1,5 @@
 //Header
 export * from "./header/Header"
-export * from "./header/SearchBar"
 //Modal
 export * from "./modal/ModalTrailer"
 //Infinite
@@ -41,4 +40,3 @@ export * from "./error/Error"
 export * from "./loading/Loading"
 //Footer
 export * from "./footer/Footer"
-//General

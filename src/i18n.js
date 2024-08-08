@@ -56,7 +56,7 @@ const resources = {
       Birthday: "Birthday",
       "show less": "show less",
       "read more": "read more",
-      github: "https://github.com/Reyes1921/movie-finder",
+      github: "https://github.com/Reyes1921/movie-finder/blob/main/README.md",
       linkedin: "https://www.linkedin.com/in/reyes-rondon/?locale=en_US/",
     },
   },
@@ -114,7 +114,8 @@ const resources = {
       Birthday: "Fecha de nacimiento",
       "show less": "ver menos",
       "read more": "leer más",
-      github: "https://github.com/Reyes1921/movie-finder",
+      github:
+        "https://github.com/Reyes1921/movie-finder/blob/main/README.es.md",
       linkedin: "https://www.linkedin.com/in/reyes-rondon/",
     },
   },

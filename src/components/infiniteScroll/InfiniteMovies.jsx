@@ -24,6 +24,7 @@ export const InfiniteMovies = ({media_type, title}) => {
   }, [i18n.language])
 
   useEffect(() => {
+    setLoading(true)
     axios
       .get(
         `https://api.themoviedb.org/3/movie/${media_type}?${
@@ -39,7 +40,7 @@ export const InfiniteMovies = ({media_type, title}) => {
         setItems(res.data.results)
         setTimeout(() => {
           setLoading(false)
-        }, 1000)
+        }, 500)
       })
       .catch((err) => {
         console.log(err)

@@ -36,6 +36,7 @@ export const InfiniteCategorySerie = ({media_type, title, id}) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    setLoading(true)
     axios
       .get(
         `https://api.themoviedb.org/3/tv/${media_type}?${
@@ -51,7 +52,7 @@ export const InfiniteCategorySerie = ({media_type, title, id}) => {
         setItems(res.data.results)
         setTimeout(() => {
           setLoading(false)
-        }, 1000)
+        }, 500)
       })
       .catch((err) => {
         console.log(err)
