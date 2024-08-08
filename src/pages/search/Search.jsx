@@ -17,7 +17,7 @@ export const Search = () => {
   const {movieSerie, loading, error} = useGetMovieSerie(
     `/search/multi?query=${data}&${
       language === "en" ? "language=en-US" : "language=es-ES"
-    }`
+    }&include_adult=true`
   )
   error ? console.log(error) : ""
   return (

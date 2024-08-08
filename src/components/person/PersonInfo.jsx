@@ -1,12 +1,85 @@
 import {useTranslation} from "react-i18next"
+import {Link} from "react-router-dom"
+import {useGetMovieSerie} from "../../hooks"
 
 export const PersonInfo = ({info}) => {
+  const {
+    movieSerie: infoLinks,
+    loading,
+    error,
+  } = useGetMovieSerie(`person/${info.id}/external_ids`)
+
   const {t} = useTranslation()
+
+  error ? console.log(error) : ""
+
   return (
     <div>
       <h3 className=" text-white text-2xl mb-5 mt-5 font-bold text-center">
         {t("Personal Info")}
       </h3>
+      {loading ? (
+        <div className="flex bg-slate-900 justify-center items-center h-screen">
+          <span className="loader"></span>
+        </div>
+      ) : (
+        <div className="flex flex-wrap justify-center p-5 pt-0">
+          {!infoLinks?.facebook_id || (
+            <a
+              href={`https://www.facebook.com/${infoLinks?.facebook_id}/`}
+              className="p-2"
+              target="_blank"
+            >
+              <img src="/icons/facebook.svg" alt="" className="w-6 h-6" />
+            </a>
+          )}
+          {!infoLinks?.instagram_id || (
+            <a
+              href={`https://www.instagram.com/${infoLinks?.instagram_id}/`}
+              className="p-2"
+              target="_blank"
+            >
+              <img src="/icons/instagram.svg" alt="" className="w-6 h-6" />
+            </a>
+          )}
+          {!infoLinks?.twitter_id || (
+            <a
+              href={`https://x.com/${infoLinks?.twitter_id}/`}
+              className="p-2"
+              target="_blank"
+            >
+              <img src="/icons/x.svg" alt="" className="w-6 h-6" />
+            </a>
+          )}
+          {!infoLinks?.tiktok_id || (
+            <a
+              href={`https://www.tiktok.com/@${infoLinks?.tiktok_id}/`}
+              className="p-2"
+              target="_blank"
+            >
+              <img src="/icons/tiktok.svg" alt="" className="w-6 h-6" />
+            </a>
+          )}
+          {!infoLinks?.youtube_id || (
+            <a
+              href={`https://www.youtube.com/${infoLinks?.youtube_id}/`}
+              className="p-2"
+              target="_blank"
+            >
+              <img src="/icons/youtube.svg" alt="" className="w-6 h-6" />
+            </a>
+          )}
+          {!infoLinks?.imdb_id || (
+            <a
+              href={`https://www.imdb.com/name/${infoLinks?.imdb_id}/`}
+              className="p-2"
+              target="_blank"
+            >
+              <img src="/icons/imdb.svg" alt="" className="w-6 h-6" />
+            </a>
+          )}
+        </div>
+      )}
       <div className="text-left">
         <div className="p-2">
           <h2 className="text-left text-white text-lg font-bold">
@@ -32,7 +105,13 @@ export const PersonInfo = ({info}) => {
           {t("Gender")}
         </h2>
         <p className="text-gray-400 text-base">
-          {info.gender === 2 ? t("Male") : t("Female")}
+          {info.gender === 0
+            ? t("Not set / not specified")
+            : info.gender === 1
+            ? t("Female")
+            : info.gender === 2
+            ? t("Male")
+            : t("Non-binary")}
         </p>
       </div>
     </div>
