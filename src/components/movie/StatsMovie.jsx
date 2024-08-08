@@ -100,7 +100,7 @@ export const StatsMovie = ({data}) => {
               ""
             ) : (
               <div
-                className={`flex ${
+                className={`flex flex-wrap ${
                   Object.entries(movieSerie?.results).length > 0 || "hidden"
                 }`}
               >
@@ -109,7 +109,7 @@ export const StatsMovie = ({data}) => {
                 </span>
                 <select
                   name="select"
-                  className="ml-2 text-blue-500 pl-3 min-w-[80px] text-sm rounded"
+                  className="ml-2 text-blue-500 pl-3 min-w-[80px] min-h-[40px] text-sm rounded"
                   onChange={selectChange}
                 >
                   {Object.entries(movieSerie.results).map((item) => (

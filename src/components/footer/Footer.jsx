@@ -30,19 +30,17 @@ export const Footer = ({type}) => {
       }`}
       style={{backgroundColor: "#0F172A"}}
     >
-      <div
-        className={`flex flex-wrap justify-center md:justify-evenly items-center p-3`}
-      >
-        <div className="flex justify-center md:justify-start pt-2 md:pt-0 md:mt-0">
-          <h3 className="text-white text-sm md:text-base">Powered By &nbsp;</h3>
+      <div className={`flex justify-evenly md:justify-evenly items-center p-3`}>
+        <div className="flex justify-left md:justify-start pt-2 md:pt-0 md:mt-0">
+          <h3 className="text-white text-xs md:text-base">Powered By &nbsp;</h3>
           <img
             src="/themoviedb.svg"
             alt="themoviedb logo"
             className="w-5/12 lg:w-4/12 md:w-4/12 "
           />
         </div>
-        <div className="flex items-center justify-center md:justify-end mt-2 md:mt-0">
-          <h3 className="text-white text-sm md:text-base flex justify-center">
+        <div className="flex items-center justify-left md:justify-end mt-2 md:mt-0">
+          <h3 className="text-white text-xs md:text-base flex justify-center">
             Reyes Rondón
           </h3>
           {icons.map((icon) => (

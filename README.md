@@ -61,7 +61,7 @@ Currently, two official plugins are available:
 - `Hueco en person`
 - `DarkMode??`
 - `Todos los generos`
-- `Tamaño del select de streaming`
+- `Tamaño del select de streaming` -- LISTO
 - `Language???` -- LISTO
 
 EN PAUSA 19-07-2024
