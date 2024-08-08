@@ -1,84 +1,53 @@
-# React + Vite
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Reyes1921/movie-finder/blob/main/README.md)
+[![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/Reyes1921/movie-finder/blob/main/README.es.md)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Movie Finder
 
-Currently, two official plugins are available:
+Application to view information about movies and series from all over the world. Take a look [movie-finder](https://movie-finder-3000.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Features
 
-# `TODO`
+- Learn about the movies and series of the moment
 
-- `Infinite Scroll Home` -- LISTO
-- `Router` -- LISTO
-- `Upcomming movies (Home)` -- LISTO
-- `Popular Series` -- LISTO
-- `Popular Movies` -- LISTO
-- `Top rated movie` -- LISTO
-- `Top rated series` -- LISTO
-- `Crew movie` -- LISTO
-- `Search bar` -- LISTO
-- `Single movie` -- LISTO
-- `Single Serie` -- LISTO
-- `Arreglar el link en los single` -- LISTO
-- `Mismo nivel todas las cards` -- LISTO
-- `Detalles con los numeros` -- LISTO
-- `Errores` -- LISTO
-- `Pagina not found serach` -- LISTO
-- `Pagina 404 (REDIRECCION AL HOME)` -- LISTO
-- `Responsive` -- LISTO
-- `Dropdown aveces no funciona` -- LISTO
-- `Estilo al scroll` -- LISTO
-- `Fonts` -- LISTO Sarala
-- `Quitar runtime de series` -- LISTO
-- `Hover a películas y series` -- LISTO
-- `SEO` -- LISTO
-- `Responsive tags` -- LISTO
-- `Imagen mas resolución` -- LISTO
-- `Header???` -- LISTO
-- `Ver lo del loader que sale muy rápido` -- LISTO
-- `Redirects` -- LISTO
-- `Mejorar similares` -- LISTO
-- `Sticky header????` -- LISTO
-- `Header` -- LISTO
-- `Pagina de las personas individual` - LISTO
-- `Mejorar layout de cast` -- LISTO
-- `Ver lo de runtime - suspense??` -- LISTO CREO QUE YA
-- `Cambiar foto de no foto` -- LISTO
-- `Videos` -- LISTO
-- `Quitar overview de recommendations` -- LISTO
-- `Mas info de películas y series` -- LISTO
-- `Error con el slider` -- LISTO
-- `Mejorar layout de crew` -- LISTO
-- `Footer` -- LISTO
-- `Paginación en popular, top rated de movies y series` -- LISTO
-- `Upcoming, now playing????` -- LISTO
-- `Por géneros` -- LISTO
-- `Watch providers` -- LISTO
-- `Nav` -- LISTO
-- `Validaciones de links not found` -- LISTO
-- `Slider que pase mas items a la vez` -- LISTO
-- `Hueco en person` -- LISTO
-- `DarkMode??` -- NO
-- `Tamaño del select de streaming` -- LISTO
-- `Language???` -- LISTO
-- `Todos los generos` -- LISTO
+- Learn about the actors and actresses of the moment
 
-EN PAUSA 19-07-2024
+- To know about the productions behind each film and TV project
 
-- `Velocidad de carga de todo`
-- `Flicker`
-- `CSS foto page` -- LISTO
-- `Fondo con el otro fondo` -- LISTO
-- `Reducir css` -- LISTO
-- `Remate`
-- `Agregar a portfolio`
-- `Hacer readme a github`
+## 👨‍💻 Technologies used
 
-FUTURO
+- [**React 18**](https://react.dev/) - The library for web and native user interfaces.
+- [**Tailwindcss**](https://tailwindcss.com/) - A utility-first CSS framework.
+- [**Prettier**](https://prettier.io/) + [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) - CSS formatter.
+- [**i18next**](https://react.i18next.com/) - Internationalization framework for React / React Native.
+- [**react-router-dom 6.23**](https://reactrouter.com/en/main) - A React Router enables "client side routing".
+- [**Axios**](https://axios-http.com/) - A simple promise based HTTP client for the browser and node.js.
+- [**Swiperjs**](https://swiperjs.com/) - The Most Modern Mobile Touch Slider.
+- [**react-infinite-scroll-component**](https://www.npmjs.com/package/react-infinite-scroll-component) - A component to make all your infinite scrolling woes go away with just 4.15 kB!.
+- [**primereact**](https://primereact.org/) - Elevate your web applications with PrimeReact's comprehensive suite of customizable, feature-rich UI components.
 
-- `Video de trailer con modal` -- LISTO
-- `Transición al cargar los elementos` -- LISTO
-- `Ver lo de la petición rápida al hacer scroll`
+## 🚀 Getting Started
 
-//https://swiperjs.com/
+First, run the development server:
+
+```bash
+npm install
+npm run dev
+```
+
+Application opens on port 3000
+
+<img src='./public//wallpaper-en.webp'>
+<div align="center">
+
+![Static Badge](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/NextJs-000000?style=flat&logo=nextdotjs&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=ffffff)
+![Static Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=ffffff)
+
+</div>
+
+# ✉️ Contact
+
+- E-mail address: reyesjrondon@gmail.com
+- [Portfolio](https://www.reyesrondon.dev/en)
+- [Linkedin](https://www.linkedin.com/in/reyes-rondon/?locale=en_US)
