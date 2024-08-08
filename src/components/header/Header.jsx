@@ -50,7 +50,7 @@ export function Header() {
   }
 
   return (
-    <Navbar className="w-full md:fixed md:top-0 md:left-0 z-20 bg-[#0F172A] animated fadeIn border-0">
+    <Navbar className="w-full md:fixed md:top-0 md:left-0 z-20 bg-[#0F172A] animated fadeIn border-0 p-5">
       <div className="container mx-auto flex flex-wrap items-center justify-between text-blue-gray-900">
         <Link
           to={"/"}
@@ -104,7 +104,7 @@ export function Header() {
           </div>
           <Button
             size="md"
-            className="rounded-lg bg-[#2074F6]"
+            className="rounded-lg bg-[#2074F6] p-3 uppercase"
             type="submit"
             form="searchBar"
           >
@@ -173,7 +173,7 @@ export function Header() {
                   containerProps={{
                     className: "min-w-[288px]",
                   }}
-                  className=" !border-t-blue-gray-300 pl-9 placeholder:text-blue-gray-300 focus:!border-blue-gray-300 rounded-xl"
+                  className=" !border-t-blue-gray-300 pl-9 placeholder:text-blue-gray-300 focus:!border-blue-gray-300 rounded-xl bg-transparent"
                   labelProps={{
                     className: "before:content-none after:content-none",
                   }}
@@ -202,7 +202,7 @@ export function Header() {
               </div>
               <Button
                 size="md"
-                className="mt-4 rounded-lg sm:mt-0 bg-[#2074F6]"
+                className="mt-4 rounded-lg sm:mt-0 bg-[#2074F6] p-3 uppercase"
                 type="submit"
                 form="searchBarMobile"
               >

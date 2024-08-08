@@ -41,13 +41,13 @@ export const Person = () => {
               }`}
               alt={`${person.name}`}
             />
-            <div className="">
+            <div>
               <PersonInfo info={person} />
             </div>
           </div>
           <div className="col-span-3 lg:ml-9">
             <h3 className="text-left text-white text-3xl md:text-4xl lg:text-4xl mb-5 font-bold">
-              {person.name},{" "}
+              {person.name} -{" "}
               <span style={{color: "#3B82F6"}}>
                 {person.known_for_department}
               </span>
