@@ -65,13 +65,12 @@ export const ItemsGridSeries = ({serie}) => {
           </div>
           <img
             alt={`${serie.name}`}
-            className="absolute inset-0 transform w-full -translate-y-4"
+            className="absolute inset-0 transform w-full -translate-y-4 img-mask"
             src={`${
               serie.poster_path
                 ? `https://image.tmdb.org/t/p/w780/${serie.poster_path}`
                 : "/movie-play.svg"
             }`}
-            style={{maskImage: "linear-gradient(black 30%, transparent)"}}
           />
         </div>
       </Link>

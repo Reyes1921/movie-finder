@@ -25,12 +25,12 @@ export const RecommendationsMovies = ({movieId}) => {
               <span className="loader"></span>
             </div>
           ) : (
-            <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mb-10">
+            <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-10">
               {movieSerie.results.slice(0, 6).map((movie) => {
                 return (
                   <div
                     key={movie.id}
-                    className="border-2 border-transparent hover:border-[#2074F6] rounded-xl h-[450px]"
+                    className="border-2 border-transparent hover:border-[#2074F6] rounded-xl"
                   >
                     <Link
                       to={`/movie/${movie.title
@@ -53,7 +53,7 @@ export const RecommendationsMovies = ({movieId}) => {
                                   {movie.title}
                                 </h3>
                               </div>
-                              <div className=" flex flex-col-2 justify-around text-sm">
+                              <div className="hidden md:flex flex-col-2 justify-around text-sm">
                                 <div
                                   className={`flex justify-center border rounded-md p-1 min-w-[53px] ${colorScore(
                                     movie.vote_average.toFixed(1)
@@ -72,22 +72,17 @@ export const RecommendationsMovies = ({movieId}) => {
                                   </div>
                                 </div>
                               </div>
-                              <div className="flex flex-col"></div>
                             </div>
                           </div>
                         </div>
                         <img
-                          className="absolute inset-0 transform w-full -translate-y-4"
+                          className="absolute inset-0 transform w-full -translate-y-4 img-mask"
                           src={`${
                             movie.poster_path
                               ? `https://image.tmdb.org/t/p/w780/${movie.poster_path}`
                               : "/movie-play.svg"
                           }`}
                           alt={`${movie.title}`}
-                          style={{
-                            maskImage:
-                              "linear-gradient(black 60%, transparent)",
-                          }}
                         />
                       </div>
                     </Link>

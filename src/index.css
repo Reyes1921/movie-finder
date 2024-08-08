@@ -26,6 +26,10 @@ html {
   color: white;
 }
 
+.img-mask {
+  mask-image: linear-gradient(black 30%, transparent);
+}
+
 .btn {
   font-size: 1.2rem;
   padding: 1rem 2rem;
@@ -274,6 +278,12 @@ div.menu-mobile > ul.p-menubar-root-list {
   left: auto;
   right: 0;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .img-mask {
+    mask-image: linear-gradient(black 90%, transparent);
+  }
 }
 
 /* ===== Scrollbar CSS ===== */

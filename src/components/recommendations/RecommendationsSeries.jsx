@@ -25,7 +25,7 @@ export const RecommendationsSeries = ({serieId}) => {
               <span className="loader"></span>
             </div>
           ) : (
-            <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-6 mb-10">
+            <div className="grid gap-3 grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-10">
               {movieSerie.results.slice(0, 6).map((serie) => {
                 return (
                   <div
@@ -53,7 +53,7 @@ export const RecommendationsSeries = ({serieId}) => {
                                   {serie.name}
                                 </h3>
                               </div>
-                              <div className=" flex flex-col-2 justify-around text-sm">
+                              <div className="hidden md:flex flex-col-2 justify-around text-sm">
                                 <div
                                   className={`flex flex-col border rounded-md p-1 min-w-[53px] ${colorScore(
                                     serie.vote_average.toFixed(1)
@@ -76,16 +76,12 @@ export const RecommendationsSeries = ({serieId}) => {
                           </div>
                         </div>
                         <img
-                          className="absolute inset-0 transform w-full -translate-y-4"
+                          className="absolute inset-0 transform w-full -translate-y-4 img-mask"
                           src={`${
                             serie.poster_path
                               ? `https://image.tmdb.org/t/p/w780/${serie.poster_path}`
                               : "/movie-play.svg"
                           }`}
-                          style={{
-                            maskImage:
-                              "linear-gradient(black 60%, transparent)",
-                          }}
                           alt={`${serie.name}`}
                         />
                       </div>
