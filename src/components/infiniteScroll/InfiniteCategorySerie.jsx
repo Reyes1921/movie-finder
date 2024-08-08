@@ -4,8 +4,11 @@ import {Loading, SerieCategoryGrid} from "../../components"
 import {Layout} from "../../layout/Layout"
 import axios from "axios"
 const apiBearer = import.meta.env.VITE_API_BEARER
+import {useTranslation} from "react-i18next"
 
 export const InfiniteCategorySerie = ({media_type, title, id}) => {
+  const {t, i18n} = useTranslation()
+  const [language, setLanguage] = useState(i18n.language)
   const [hasMore, setHasMore] = useState(true)
   const [index, setIndex] = useState(2)
   const [items, setItems] = useState([])
@@ -14,15 +17,24 @@ export const InfiniteCategorySerie = ({media_type, title, id}) => {
       <span className="loader"></span>
     </div>
   )
+
+  useEffect(() => {
+    setLanguage(i18n.language)
+  }, [i18n.language])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     axios
-      .get(`https://api.themoviedb.org/3/tv/${media_type}`, {
-        headers: {
-          Authorization: apiBearer,
-        },
-      })
+      .get(
+        `https://api.themoviedb.org/3/tv/${media_type}?${
+          language === "en" ? "language=en-US" : "language=es-ES"
+        }`,
+        {
+          headers: {
+            Authorization: apiBearer,
+          },
+        }
+      )
       .then((res) => {
         setItems(res.data.results)
         setTimeout(() => {
@@ -32,16 +44,22 @@ export const InfiniteCategorySerie = ({media_type, title, id}) => {
       .catch((err) => {
         console.log(err)
       })
-  }, [])
+    window.scrollTo(0, 0)
+  }, [language])
 
   const fetchMoreData = () => {
     if (index <= 300) {
       axios
-        .get(`https://api.themoviedb.org/3/tv/${media_type}?page=${index}`, {
-          headers: {
-            Authorization: apiBearer,
-          },
-        })
+        .get(
+          `https://api.themoviedb.org/3/tv/${media_type}?page=${index}&${
+            language === "en" ? "language=en-US" : "language=es-ES"
+          }`,
+          {
+            headers: {
+              Authorization: apiBearer,
+            },
+          }
+        )
         .then((res) => {
           setItems((prevItems) => [...prevItems, ...res.data.results])
           res.data.results.length > 0 ? setHasMore(true) : setHasMore(false)
@@ -66,7 +84,7 @@ export const InfiniteCategorySerie = ({media_type, title, id}) => {
         >
           <Layout>
             <h2 className="text-3xl md:text-4xl pt-8 md:pt-5 p-5 text-center md:text-left font-bold text-[#3b82f6]">
-              {title[0].toUpperCase() + title.substring(1)} series
+              {title[0].toUpperCase() + title.substring(1)} {t("series")}
             </h2>
             <SerieCategoryGrid serieData={items} idCat={id} />
           </Layout>

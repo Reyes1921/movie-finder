@@ -27,14 +27,17 @@ export const Companies = ({companies}) => {
                 640: {
                   slidesPerView: companies.length > 1 ? 1 : companies.length,
                   spaceBetween: 20,
+                  slidesPerGroup: 1,
                 },
                 768: {
                   slidesPerView: companies.length > 3 ? 3 : companies.length,
                   spaceBetween: 40,
+                  slidesPerGroup: 1,
                 },
                 1024: {
                   slidesPerView: companies.length > 5 ? 5 : companies.length,
                   spaceBetween: 30,
+                  slidesPerGroup: 3,
                 },
               }}
               cssMode={true}

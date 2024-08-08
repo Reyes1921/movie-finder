@@ -4,6 +4,8 @@ import {initReactI18next} from "react-i18next"
 const resources = {
   en: {
     translation: {
+      movies: "movies",
+      series: "series",
       Search: "Search",
       Home: "Home",
       Movies: "Movies",
@@ -56,6 +58,8 @@ const resources = {
   },
   es: {
     translation: {
+      movies: "películas",
+      series: "series",
       Search: "Buscar",
       Home: "Inicio",
       Movies: "Películas",
@@ -101,7 +105,7 @@ const resources = {
       Gender: "Género",
       Male: "Hombre",
       Female: "Mujer",
-      Birthday: "Cumpleaños",
+      Birthday: "Fecha de nacimiento",
       "show less": "ver menos",
       "read more": "leer más",
     },

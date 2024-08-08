@@ -56,16 +56,19 @@ export const KnownFor = ({id}) => {
                 slidesPerView:
                   moviesSeries.cast.length > 1 ? 1 : moviesSeries.cast.length,
                 spaceBetween: 20,
+                slidesPerGroup: 1,
               },
               768: {
                 slidesPerView:
                   moviesSeries.cast.length > 3 ? 3 : moviesSeries.cast.length,
                 spaceBetween: 40,
+                slidesPerGroup: 1,
               },
               1024: {
                 slidesPerView:
                   moviesSeries.cast.length > 5 ? 5 : moviesSeries.cast.length,
                 spaceBetween: 30,
+                slidesPerGroup: 3,
               },
             }}
             cssMode={true}

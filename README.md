@@ -56,15 +56,17 @@ Currently, two official plugins are available:
 - `Por géneros` -- LISTO
 - `Watch providers` -- LISTO
 - `Nav` -- LISTO
-- `Velocidad de carga de todo`
-- `Validaciones de links not found`
+- `Validaciones de links not found` -- LISTO
+- `Slider que pase mas items a la vez` -- LISTO
 - `Hueco en person`
-- `Slider que pase mas items a la vez`
+- `DarkMode??`
+- `Todos los generos`
+- `Tamaño del select de streaming`
+- `Language???` -- LISTO
 
 EN PAUSA 19-07-2024
 
-- `Language???`
-- `DarkMode??`
+- `Velocidad de carga de todo`
 - `Flicker`
 - `CSS foto page` -- LISTO
 - `Fondo con el otro fondo` -- LISTO

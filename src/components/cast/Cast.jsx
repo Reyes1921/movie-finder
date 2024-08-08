@@ -53,14 +53,17 @@ export const Cast = ({type, id}) => {
                   640: {
                     slidesPerView: cast.cast.length > 2 ? 2 : cast.cast.length,
                     spaceBetween: 20,
+                    slidesPerGroup: 1,
                   },
                   768: {
                     slidesPerView: cast.cast.length > 3 ? 3 : cast.cast.length,
                     spaceBetween: 40,
+                    slidesPerGroup: 1,
                   },
                   1024: {
                     slidesPerView: cast.cast.length > 6 ? 6 : cast.cast.length,
                     spaceBetween: 30,
+                    slidesPerGroup: 3,
                   },
                 }}
                 cssMode={true}
