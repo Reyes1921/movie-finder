@@ -1,8 +1,10 @@
 import {Link} from "react-router-dom"
 import {Crew} from "./Crew"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
+import {useTranslation} from "react-i18next"
 
 export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
+  const {t} = useTranslation()
   error ? console.log(error) : ""
 
   const {findInArrayNameTwo, findInArrayProducers} = useCustomFunctions()
@@ -25,12 +27,12 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
             <div className="grid grid-cols-1  lg:gap-2 md:gap-4 gap-8 px-5 ">
               <div className="flex flex-col justify-center m-1 text-center border-b-2 border-blue-500">
                 <p className="text-xl font-semibold leading-tight text-blue-500">
-                  Directed By
+                  {t("Directed By")}
                 </p>
                 <div className="flex flex-col md:flex-row justify-center">
                   {findInArrayNameTwo(crew.crew, "Director", "name").length ===
                   0
-                    ? "Not Found"
+                    ? t("Not Found")
                     : findInArrayNameTwo(crew.crew, "Director").map((item) => {
                         return (
                           <Link
@@ -64,12 +66,12 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
               </div>
               <div className="flex flex-col justify-center m-1 text-center border-b-2 border-blue-500">
                 <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
-                  Writed By
+                  {t("Writed By")}
                 </p>
                 <div className="flex flex-col md:flex-row justify-center">
                   {findInArrayNameTwo(crew.crew, "Writer", "Screenplay", "Book")
                     .length === 0
-                    ? "Not Found"
+                    ? t("Not Found")
                     : findInArrayNameTwo(
                         crew.crew,
                         "Writer",
@@ -110,19 +112,19 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
               <div className="flex flex-col md:flex-row justify-around border-b-2 border-blue-500">
                 <div className="flex flex-col justify-center m-1 text-center p-5">
                   <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
-                    Music by
+                    {t("Music by")}
                   </p>
                   <Crew crewData={crew.crew} job={"Original Music Composer"} />
                 </div>
                 <div className="flex flex-col justify-center m-1 text-center p-5">
                   <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
-                    Cinematography by
+                    {t("Cinematography by")}
                   </p>
                   <Crew crewData={crew.crew} job={"Director of Photography"} />
                 </div>
                 <div className="flex flex-col justify-center m-1 text-center p-5">
                   <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
-                    Editing by
+                    {t("Editing by")}
                   </p>
                   <Crew crewData={crew.crew} job={"Editor"} />
                 </div>
@@ -130,7 +132,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
             </div>
             <div className="grid justify-center mt-5 mb-5 md:mb-8 lg:mb-8">
               <h4 className="text-left text-blue-500 text-3xl font-bold ">
-                Produced by
+                {t("Produced by")}
               </h4>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-5 md:grid-cols-3 text-center p-1">
@@ -140,7 +142,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
                 "Producer",
                 "Co-Producer"
               ).length === 0
-                ? "Not Found"
+                ? t("Not Found")
                 : findInArrayProducers(
                     crew.crew,
                     "Executive Producer",

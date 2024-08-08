@@ -1,6 +1,8 @@
 import {Link} from "react-router-dom"
+import {useTranslation} from "react-i18next"
 
 export const ItemGridSearch = ({movieSerie}) => {
+  const {t} = useTranslation()
   let movieOrSerie = movieSerie.media_type === "movie" ? "movie" : "serie"
   let titleOrName = movieSerie.media_type === "movie" ? "title" : "name"
   let releasedOrAired =
@@ -10,7 +12,7 @@ export const ItemGridSearch = ({movieSerie}) => {
     <div className=" w-full min-w-[500] min-h-[500]  max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
       <Link
         to={`/${movieOrSerie}/${movieSerie[titleOrName]
-          .toLowerCase()
+          ?.toLowerCase()
           .split(" ")
           .join("-")}/${movieSerie.id}`}
       >
@@ -32,18 +34,24 @@ export const ItemGridSearch = ({movieSerie}) => {
                 <div className="flex justify-around mb-0 pb-0">
                   <div className="relative text-sm">
                     <div className="popularity">{movieSerie.popularity}</div>
-                    <div className="text-sm text-gray-400">Popularity:</div>
+                    <div className="text-xs text-gray-400">
+                      {t("Popularity")}:
+                    </div>
                   </div>
                   <div className="flex flex-col ">
                     <div className="text-sm">{movieSerie[releasedOrAired]}</div>
-                    <div className="text-xs text-gray-400">Release date:</div>
+                    <div className="text-xs text-gray-400">
+                      {t("Release Date")}:
+                    </div>
                   </div>
                   <div className="flex flex-col ">
                     <div className="text-sm">
                       {movieSerie.media_type.substr(0, 1).toUpperCase() +
                         movieSerie.media_type.substr(1)}
                     </div>
-                    <div className="text-xs text-gray-400">Media Type:</div>
+                    <div className="text-xs text-gray-400">
+                      {t("Media Type")}:
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col overview">

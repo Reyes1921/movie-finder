@@ -4,10 +4,12 @@ import {ModalTrailer} from "../modal/ModalTrailer"
 import {useGetMovieSerie} from "../../hooks"
 import {useState} from "react"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
+import {useTranslation} from "react-i18next"
 
 export const StatsSerie = ({data}) => {
   const {colorScore} = useCustomFunctions()
   const [stream, setStream] = useState("US")
+  const {t} = useTranslation()
 
   const {movieSerie, loading} = useGetMovieSerie(
     `tv/${data.id}/watch/providers`
@@ -36,7 +38,7 @@ export const StatsSerie = ({data}) => {
           <div className="flex justify-around">
             <div className="flex flex-col py-2 md:py-0 pr-2 md:px-5">
               <p className="text-base tracking-tight text-blue-500">
-                Origin Country
+                {t("Origin Country")}
               </p>
               <span className="flex flex-wrap">
                 {data.origin_country.map((item, index) => (
@@ -57,7 +59,7 @@ export const StatsSerie = ({data}) => {
             </div>
             <div className="flex flex-col py-2 md:py-0 pl-2 md:px-5">
               <p className="text-base tracking-tight text-blue-500">
-                Spoken Languages
+                {t("Spoken Languages")}
               </p>
               <span className="flex flex-wrap">
                 {data.spoken_languages.map((item, index) => (
@@ -102,7 +104,9 @@ export const StatsSerie = ({data}) => {
                   Object.entries(movieSerie?.results).length > 0 || "hidden"
                 }`}
               >
-                <span className="font-bold text-blue-500">Streaming:</span>
+                <span className="font-bold text-blue-500">
+                  {t("Streaming")}:
+                </span>
                 <select
                   name="select"
                   className="ml-2 text-blue-500 pl-3 min-w-[80px] text-sm rounded"
@@ -146,7 +150,7 @@ export const StatsSerie = ({data}) => {
             {data.status}
           </dt>
           <dd className="order-first text-base font-bold tracking-tight text-blue-500">
-            Status
+            {t("Status")}
           </dd>
         </div>
         <div className="flex flex-col bg-white/5 p-5">
@@ -154,7 +158,7 @@ export const StatsSerie = ({data}) => {
             {data.first_air_date}
           </dt>
           <dd className="order-first text-base font-bold tracking-tight text-blue-500">
-            Release Date
+            {t("Release Date")}
           </dd>
         </div>
         <div className="flex flex-col bg-white/5 p-5">
@@ -162,7 +166,7 @@ export const StatsSerie = ({data}) => {
             {data.number_of_seasons}
           </dt>
           <dd className="order-first text-base font-bold tracking-tight text-blue-500">
-            Seasons
+            {t("Seasons")}
           </dd>
         </div>
         <div className="flex flex-col bg-white/5 p-5">
@@ -170,7 +174,7 @@ export const StatsSerie = ({data}) => {
             {data.number_of_episodes}
           </dt>
           <dd className="order-first text-base font-bold tracking-tight text-blue-500">
-            Episodes
+            {t("Episodes")}
           </dd>
         </div>
         <div className="flex flex-col bg-white/5 p-5">
@@ -178,7 +182,7 @@ export const StatsSerie = ({data}) => {
             {data.popularity}
           </dt>
           <dd className="order-first text-base font-bold tracking-tight text-blue-500">
-            Popularity
+            {t("Popularity")}
           </dd>
         </div>
         <div className="flex flex-col bg-white/5 p-5">
@@ -186,7 +190,7 @@ export const StatsSerie = ({data}) => {
             {data.last_air_date}
           </dt>
           <dd className="order-first text-base font-bold tracking-tight text-blue-500">
-            Last Air Date
+            {t("Last Air Date")}
           </dd>
         </div>
         <div className="flex flex-col bg-white/5 p-5">
@@ -194,7 +198,7 @@ export const StatsSerie = ({data}) => {
             {data.tagline}
           </dt>
           <dd className="order-first text-base font-bold tracking-tight text-blue-500">
-            Tagline
+            {t("Tagline")}
           </dd>
         </div>
         <div className="flex flex-col bg-white/5 p-5">
@@ -202,7 +206,7 @@ export const StatsSerie = ({data}) => {
             {data.vote_count}
           </dt>
           <dd className="order-first text-base font-bold tracking-tight text-blue-500">
-            Vote Count
+            {t("Vote Count")}
           </dd>
         </div>
       </dl>

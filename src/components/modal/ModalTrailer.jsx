@@ -1,9 +1,11 @@
 import {useGetMovieSerie} from "../../hooks"
 import {useState} from "react"
 import {Dialog} from "primereact/dialog"
+import {useTranslation} from "react-i18next"
 
 export const ModalTrailer = ({dataId, type}) => {
   const [visible, setVisible] = useState(false)
+  const {t} = useTranslation()
 
   const {
     movieSerie: data,
@@ -29,7 +31,7 @@ export const ModalTrailer = ({dataId, type}) => {
           alt="play icon image"
           className="mr-2"
         />
-        Watch Trailer
+        {t("Watch Trailer")}
       </button>
 
       <Dialog

@@ -15,7 +15,7 @@ import {useTranslation} from "react-i18next"
 import {useEffect, useState} from "react"
 
 export const MoviePage = () => {
-  const {i18n} = useTranslation()
+  const {t, i18n} = useTranslation()
   const {movieId} = useParams()
   const [language, setLanguage] = useState(i18n.language)
 
@@ -91,7 +91,7 @@ export const MoviePage = () => {
               <div className="w-full bg-slate-900">
                 <div className="">
                   <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold my-5">
-                    Crew
+                    {t("Crew")}
                   </h3>
                   <div className="md:w-full">
                     <Accordion className="bg-[#1B2335] rounded-2xl p-5">
@@ -100,7 +100,7 @@ export const MoviePage = () => {
                           <span className="flex items-center gap-2 w-full">
                             <FaUserGroup className=" text-xl md:text-2xl" />
                             <span className="font-bold white-space-nowrap ml-2 text-center">
-                              Crew
+                              {t("Crew")}
                             </span>
                           </span>
                         }

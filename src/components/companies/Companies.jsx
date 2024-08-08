@@ -4,8 +4,10 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper/modules"
+import {useTranslation} from "react-i18next"
 
 export const Companies = ({companies}) => {
+  const {t} = useTranslation()
   return (
     <div
       className={` my-5 items-center justify-center bg-[slate-900] h-auto ${
@@ -15,7 +17,7 @@ export const Companies = ({companies}) => {
       <div className="w-full bg-slate-900">
         <div className="">
           <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold">
-            Production Companies
+            {t("Production Companies")}
           </h3>
         </div>
         <div className="bg-[#3B82F6] bg-opacity-80 rounded-2xl py-3">

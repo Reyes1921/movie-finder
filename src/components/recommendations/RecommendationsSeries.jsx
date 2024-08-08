@@ -1,8 +1,10 @@
 import {Link} from "react-router-dom"
 import {useGetMovieSerie} from "../../hooks"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
+import {useTranslation} from "react-i18next"
 
 export const RecommendationsSeries = ({serieId}) => {
+  const {t} = useTranslation()
   const {movieSerie, loading, error} = useGetMovieSerie(
     `/tv/${serieId}/recommendations`
   )
@@ -16,7 +18,7 @@ export const RecommendationsSeries = ({serieId}) => {
       ) : (
         <>
           <h3 className="text-left text-white text-xl md:text-4xl mb-10 mt-10 font-bold">
-            Recommendations
+            {t("Recommendations")}
           </h3>
           {loading ? (
             <div className="flex justify-center">
@@ -66,7 +68,7 @@ export const RecommendationsSeries = ({serieId}) => {
                                     {serie?.first_air_date}
                                   </div>
                                   <div className="text-xs text-gray-400">
-                                    Release date
+                                    {t("Release Date")}
                                   </div>
                                 </div>
                               </div>

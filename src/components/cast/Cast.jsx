@@ -5,13 +5,26 @@ import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper/modules"
+import {useTranslation} from "react-i18next"
+import {useEffect, useState} from "react"
 
 export const Cast = ({type, id}) => {
+  const {t, i18n} = useTranslation()
+  const [language, setLanguage] = useState(i18n.language)
+
+  useEffect(() => {
+    setLanguage(i18n.language)
+  }, [i18n.language])
+
   const {
     movieSerie: cast,
     loading,
     error,
-  } = useGetMovieSerie(`/${type}/${id}/credits`)
+  } = useGetMovieSerie(
+    `/${type}/${id}/credits?${
+      language === "en" ? "language=en-US" : "language=es-ES"
+    }`
+  )
 
   error ? console.log(error) : ""
 
@@ -24,7 +37,7 @@ export const Cast = ({type, id}) => {
       <div className="w-full bg-slate-900">
         <div className="">
           <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold">
-            Cast
+            {t("Cast")}
           </h3>
         </div>
         <div className="bg-[#1B2335] rounded-2xl py-3">
