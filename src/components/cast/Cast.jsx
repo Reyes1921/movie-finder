@@ -49,13 +49,14 @@ export const Cast = ({type, id}) => {
             <div className="swiper-white">
               <Swiper
                 loop={cast.cast.length > 6 ? true : false}
+                slidesPerView={cast.cast.length > 3 ? 3 : cast.cast.length}
                 breakpoints={{
                   640: {
-                    slidesPerView: cast.cast.length > 2 ? 2 : cast.cast.length,
+                    slidesPerView: cast.cast.length > 3 ? 3 : cast.cast.length,
                     spaceBetween: 20,
                   },
                   768: {
-                    slidesPerView: cast.cast.length > 3 ? 3 : cast.cast.length,
+                    slidesPerView: cast.cast.length > 4 ? 4 : cast.cast.length,
                     spaceBetween: 40,
                   },
                   1024: {

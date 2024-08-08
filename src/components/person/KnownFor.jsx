@@ -49,13 +49,14 @@ export const KnownFor = ({id}) => {
           }`}
         >
           <Swiper
-            centeredSlides={true}
             loop={moviesSeries.cast.length > 5 ? true : false}
+            slidesPerView={
+              moviesSeries.cast.length > 2 ? 2 : moviesSeries.cast.length
+            }
             breakpoints={{
               640: {
                 slidesPerView:
-                  moviesSeries.cast.length > 1 ? 1 : moviesSeries.cast.length,
-                spaceBetween: 20,
+                  moviesSeries.cast.length > 2 ? 2 : moviesSeries.cast.length,
               },
               768: {
                 slidesPerView:
@@ -65,7 +66,7 @@ export const KnownFor = ({id}) => {
               1024: {
                 slidesPerView:
                   moviesSeries.cast.length > 5 ? 5 : moviesSeries.cast.length,
-                spaceBetween: 30,
+                spaceBetween: 15,
               },
             }}
             cssMode={true}
@@ -94,31 +95,16 @@ export const KnownFor = ({id}) => {
                               .join("-")
                       }/${movieOrSerie.id}`}
                     >
-                      <div
-                        className="overflow-hidden rounded-xl relative text-white h-full"
-                        data-movie-id={movieOrSerie.id}
-                      >
-                        <div className="absolute inset-0 z-10" />
+                      <img
+                        className="rounded-xl"
+                        src={`${
+                          movieOrSerie.poster_path
+                            ? `https://image.tmdb.org/t/p/w780/${movieOrSerie.poster_path}`
+                            : "/movie-play.svg"
+                        }`}
+                        alt={`${movieOrSerie.title}`}
+                      />
 
-                        <div className="relative cursor-pointer group z-10 p-5 space-y-6">
-                          <div className=" align-self-end w-full mt-10">
-                            <div className="h-16" />
-                            <div className="space-y-6">
-                              <div className="flex flex-col space-y-2 inner mt-3"></div>
-                              <div className=" flex flex-col-2 justify-around text-sm"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <img
-                          className="absolute inset-0 transform w-full -translate-y-4"
-                          src={`${
-                            movieOrSerie.poster_path
-                              ? `https://image.tmdb.org/t/p/w780/${movieOrSerie.poster_path}`
-                              : "/movie-play.svg"
-                          }`}
-                          alt={`${movieOrSerie.title}`}
-                        />
-                      </div>
                       <h3 className="text-base text-white text-center min-h-[56px] mt-2">
                         {movieOrSerie.title || movieOrSerie.name}
                       </h3>

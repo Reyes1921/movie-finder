@@ -58,7 +58,7 @@ Currently, two official plugins are available:
 - `Nav` -- LISTO
 - `Validaciones de links not found` -- LISTO
 - `Slider que pase mas items a la vez` -- LISTO
-- `Hueco en person`
+- `Hueco en person` -- LISTO
 - `Todos los generos`
 - `DarkMode??` -- NO
 - `Tamaño del select de streaming` -- LISTO
