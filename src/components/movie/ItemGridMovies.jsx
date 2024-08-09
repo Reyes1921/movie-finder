@@ -3,7 +3,6 @@ import {Link} from "react-router-dom"
 import {useGetRuntime} from "../../hooks"
 import {useCustomFunctions} from "../../helpers"
 import {useTranslation} from "react-i18next"
-import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const ItemGridMovies = ({movie}) => {
   const {t} = useTranslation()
