@@ -38,9 +38,7 @@ export const InfiniteMovies = ({media_type, title}) => {
       )
       .then((res) => {
         setItems(res.data.results)
-        setTimeout(() => {
-          setLoading(false)
-        }, 500)
+        setLoading(false)
       })
       .catch((err) => {
         console.log(err)
