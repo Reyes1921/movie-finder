@@ -76,7 +76,7 @@ export const ItemGridMovies = ({movie}) => {
             rel="preload"
             width={"auto"}
             height={"auto"}
-            className="absolute inset-0 transform w-full -translate-y-4 img-mask aspect-[9/14]"
+            className="absolute inset-0 transform w-full -translate-y-4 img-mask"
             src={`${
               movie.poster_path
                 ? `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`
