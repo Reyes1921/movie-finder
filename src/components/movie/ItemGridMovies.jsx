@@ -73,6 +73,7 @@ export const ItemGridMovies = ({movie}) => {
           </div>
           <img
             alt={`${movie.title}`}
+            loading="lazy"
             className="absolute inset-0 transform w-full -translate-y-4 img-mask"
             src={`${
               movie.poster_path
