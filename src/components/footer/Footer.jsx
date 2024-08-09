@@ -37,8 +37,8 @@ export const Footer = ({type}) => {
           <LazyLoadImage
             src="/themoviedb.svg"
             alt="themoviedb logo"
-            width={"auto"}
-            height={"auto"}
+            width={80}
+            height={80}
             className="w-20 md:w-28"
           />
         </div>
