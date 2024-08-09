@@ -74,6 +74,7 @@ export const ItemGridMovies = ({movie}) => {
           </div>
           <LazyLoadImage
             alt={`${movie.title}`}
+            rel="preload"
             width={"auto"}
             height={"auto"}
             className="absolute inset-0 transform w-full -translate-y-4 img-mask aspect-[9/13]"
