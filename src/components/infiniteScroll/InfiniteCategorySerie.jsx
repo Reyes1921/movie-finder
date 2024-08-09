@@ -109,6 +109,7 @@ export const InfiniteCategorySerie = ({media_type, title, id}) => {
                       key={genres.id}
                       to={`/serie/category/${genres.name
                         .toLowerCase()
+                        .replace("?", "")
                         .split(" ")
                         .join("-")}/${genres.id}`}
                     >

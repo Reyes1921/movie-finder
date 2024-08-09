@@ -87,10 +87,12 @@ export const KnownFor = ({id}) => {
                         movieOrSerie.title
                           ? movieOrSerie.title
                               ?.toLowerCase()
+                              .replace("?", "")
                               .split(" ")
                               .join("-")
                           : movieOrSerie.name
                               ?.toLowerCase()
+                              .replace("?", "")
                               .split(" ")
                               .join("-")
                       }/${movieOrSerie.id}`}

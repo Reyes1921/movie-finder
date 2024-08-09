@@ -111,6 +111,7 @@ export const InfiniteCategoryMovies = ({media_type, title, id}) => {
                       key={genres.id}
                       to={`/movie/category/${genres.name
                         .toLowerCase()
+                        .replace("?", "")
                         .split(" ")
                         .join("-")}/${genres.id}`}
                     >

@@ -9,9 +9,11 @@ export const ItemsGridSeries = ({serie}) => {
   return (
     <div className="w-full min-w-[500] min-h-[500]  max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
       <Link
-        to={`/serie/${serie.name.toLowerCase().split(" ").join("-")}/${
-          serie?.id
-        }`}
+        to={`/serie/${serie.name
+          .toLowerCase()
+          .replace("?", "")
+          .split(" ")
+          .join("-")}/${serie?.id}`}
       >
         <div
           className="overflow-hidden rounded-xl relative text-white h-full"

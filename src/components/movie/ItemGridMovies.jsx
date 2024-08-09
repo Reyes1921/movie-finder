@@ -19,9 +19,11 @@ export const ItemGridMovies = ({movie}) => {
   return (
     <div className="w-full min-w-[500] min-h-[500] max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
       <Link
-        to={`/movie/${movie.title.toLowerCase().split(" ").join("-")}/${
-          movie?.id
-        }`}
+        to={`/movie/${movie.title
+          .toLowerCase()
+          .replace("?", "")
+          .split(" ")
+          .join("-")}/${movie?.id}`}
       >
         <div
           className="overflow-hidden rounded-xl relative text-white h-full"

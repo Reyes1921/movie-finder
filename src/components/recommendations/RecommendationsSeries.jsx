@@ -36,6 +36,7 @@ export const RecommendationsSeries = ({serieId}) => {
                     <Link
                       to={`/serie/${serie.name
                         .toLowerCase()
+                        .replace("?", "")
                         .split(" ")
                         .join("-")}/${serie.id}`}
                     >

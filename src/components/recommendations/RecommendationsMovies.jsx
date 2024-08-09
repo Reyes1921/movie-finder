@@ -36,6 +36,7 @@ export const RecommendationsMovies = ({movieId}) => {
                     <Link
                       to={`/movie/${movie.title
                         .toLowerCase()
+                        .replace("?", "")
                         .split(" ")
                         .join("-")}/${movie.id}`}
                     >

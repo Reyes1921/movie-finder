@@ -14,6 +14,7 @@ export const ItemGridSearch = ({movieSerie}) => {
       <Link
         to={`/${movieOrSerie}/${movieSerie[titleOrName]
           ?.toLowerCase()
+          .replace("?", "")
           .split(" ")
           .join("-")}/${movieSerie.id}`}
       >
