@@ -56,7 +56,7 @@ export const useCustomFunction = () => {
         <Typography
           variant="h6"
           color="blue-gray"
-          className="mb-1 hover:text-blue-500 p-2 active:bg-blue-500 rounded-lg active:text-white"
+          className="mb-1 hover:text-blue-500 p-4 active:bg-blue-500 rounded-lg active:text-white"
         >
           {title}
         </Typography>
@@ -69,7 +69,7 @@ export const useCustomFunction = () => {
         <Typography
           variant="h6"
           color="blue-gray"
-          className="mb-1 hover:text-blue-500 p-2 active:bg-blue-500 rounded-lg active:text-white"
+          className="mb-1 hover:text-blue-500 p-4 active:bg-blue-500 rounded-lg active:text-white"
         >
           {title}
         </Typography>
