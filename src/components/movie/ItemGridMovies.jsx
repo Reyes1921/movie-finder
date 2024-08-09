@@ -75,7 +75,7 @@ export const ItemGridMovies = ({movie}) => {
           <LazyLoadImage
             alt={`${movie.title}`}
             loading="lazy"
-            className="absolute inset-0 transform w-full -translate-y-4 img-mask"
+            className="absolute inset-0 transform w-full -translate-y-4 img-mask aspect-[9/13]"
             src={`${
               movie.poster_path
                 ? `https://image.tmdb.org/t/p/w780/${movie.poster_path}`
