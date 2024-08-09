@@ -30,16 +30,10 @@ export const Footer = ({type}) => {
       }`}
       style={{backgroundColor: "#0F172A"}}
     >
-      <div
-        className={`flex justify-evenly md:justify-evenly items-center p-3 pt-1`}
-      >
+      <div className={`flex justify-around items-center p-3 pt-1`}>
         <div className="flex justify-left md:justify-start pt-2 md:pt-0 md:mt-0">
           <h3 className="text-white text-xs md:text-base">Powered By &nbsp;</h3>
-          <img
-            src="/themoviedb.svg"
-            alt="themoviedb logo"
-            className="w-5/12 lg:w-4/12 md:w-4/12 "
-          />
+          <img src="/themoviedb.svg" alt="themoviedb logo" className="w-20 " />
         </div>
         <div className="flex items-center justify-left md:justify-end mt-2 md:mt-0">
           <h3 className="text-white text-xs md:text-base flex justify-center">
@@ -54,9 +48,7 @@ export const Footer = ({type}) => {
             >
               <img
                 src={icon.src}
-                height="12"
-                width="20"
-                className="filter dark:invert"
+                className="filter dark:invert h-4 w-4 md:h-5 md:w-5"
                 alt={icon.alt}
               />
             </Link>
