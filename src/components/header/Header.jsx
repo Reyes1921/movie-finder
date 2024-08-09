@@ -174,12 +174,12 @@ export function Header() {
                   containerProps={{
                     className: "min-w-[288px]",
                   }}
-                  className=" !border-t-blue-gray-300 pl-9 placeholder:text-blue-gray-300 focus:!border-blue-gray-300 rounded-xl bg-transparent relative"
+                  className=" !border-t-blue-gray-300 pl-9 placeholder:text-blue-gray-300 focus:!border-blue-gray-300 rounded-xl bg-transparent relative min-h-10"
                   labelProps={{
                     className: "before:content-none after:content-none",
                   }}
                 />
-                <div className="absolute left-3 top-[10px]">
+                <div className="absolute left-3 top-[13px]">
                   <svg
                     width="13"
                     height="14"
