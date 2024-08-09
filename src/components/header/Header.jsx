@@ -52,7 +52,7 @@ export function Header() {
   }
 
   return (
-    <Navbar className="w-full fixed top-0 left-0 z-20 bg-[#0F172A] animated fadeIn border-0 p-3">
+    <Navbar className="w-full fixed top-0 left-0 z-20 bg-[#0F172A] animated fadeIn border-0 p-3 px-5">
       <div className="container mx-auto flex flex-wrap items-center justify-between text-blue-gray-900">
         <Link
           to={"/"}
