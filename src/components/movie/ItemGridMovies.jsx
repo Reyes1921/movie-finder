@@ -72,7 +72,7 @@ export const ItemGridMovies = ({movie}) => {
               </div>
             </div>
           </div>
-          <LazyLoadImage
+          <img
             alt={`${movie.title}`}
             rel="preload"
             width={"auto"}
@@ -80,7 +80,7 @@ export const ItemGridMovies = ({movie}) => {
             className="absolute inset-0 transform w-full -translate-y-4 img-mask aspect-[9/13]"
             src={`${
               movie.poster_path
-                ? `https://image.tmdb.org/t/p/w780/${movie.poster_path}`
+                ? `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`
                 : "/movie-play.svg"
             }`}
           />
