@@ -51,7 +51,7 @@ export function Header() {
   }
 
   return (
-    <Navbar className="w-full md:fixed md:top-0 md:left-0 z-20 bg-[#0F172A] animated fadeIn border-0 p-5">
+    <Navbar className="w-full fixed top-0 left-0 z-20 bg-[#0F172A] animated fadeIn border-0 p-5">
       <div className="container mx-auto flex flex-wrap items-center justify-between text-blue-gray-900">
         <Link
           to={"/"}
@@ -62,7 +62,7 @@ export function Header() {
             className="h-11 aspect-square"
             alt="Movie Finder Logo"
           />
-          <span className="text-left text-white text-xl md:text-3xl font-bold">
+          <span className="text-left text-white text-xl md:text-2xl font-bold">
             Movie Finder
           </span>
         </Link>
@@ -121,7 +121,7 @@ export function Header() {
         />
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden mr-10 mb-6"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -179,7 +179,7 @@ export function Header() {
                     className: "before:content-none after:content-none",
                   }}
                 />
-                <div className="!absolute left-3 top-[13px]">
+                <div className="!absolute left-3 top-[10px]">
                   <svg
                     width="13"
                     height="14"

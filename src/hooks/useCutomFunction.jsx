@@ -163,7 +163,7 @@ export const useCustomFunction = () => {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-medium">
             <ListItem
-              className={`items-center gap-2 font-medium text-white lg:flex lg:rounded-full  hover:bg-blue-500 py-2 ${
+              className={`items-center gap-2 font-medium text-white lg:flex lg:rounded-full  hover:bg-blue-500 py-4 ${
                 isMenuOpenMobile ? "bg-blue-500" : ""
               }`}
             >
@@ -185,7 +185,7 @@ export const useCustomFunction = () => {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-medium">
             <ListItem
-              className={` items-center gap-2 font-medium text-white lg:flex lg:rounded-full hover:bg-blue-500 py-2 ${
+              className={` items-center gap-2 font-medium text-white lg:flex lg:rounded-full hover:bg-blue-500 py-4 ${
                 isMenuOpenTwoMobile ? "bg-blue-500" : ""
               }`}
             >
