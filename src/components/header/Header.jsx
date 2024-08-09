@@ -124,6 +124,7 @@ export function Header() {
         />
         <IconButton
           variant="text"
+          aria-label="Toggle Button"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden mr-10 mb-6"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}

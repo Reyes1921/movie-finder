@@ -52,32 +52,24 @@ export const useCustomFunction = () => {
 
   const renderItemsMovies = navListMenuItemsMovies.map(({title, link}) => (
     <Link to={link} key={title} aria-label={`Go to ${title} page`}>
-      <Menu>
-        <MenuItem>
-          <Typography
-            variant="h6"
-            color="blue-gray"
-            className="mb-1  p-3 hover:bg-blue-500 rounded-lg hover:text-white"
-          >
-            {title}
-          </Typography>
-        </MenuItem>
-      </Menu>
+      <Typography
+        variant="h6"
+        color="blue-gray"
+        className="mb-1  p-3 hover:bg-blue-500 rounded-lg hover:text-white"
+      >
+        {title}
+      </Typography>
     </Link>
   ))
   const renderItemsSeries = navListMenuItemsSeries.map(({title, link}) => (
     <Link to={link} key={title} aria-label={`Go to ${title} page`}>
-      <Menu role="menu">
-        <MenuItem>
-          <Typography
-            variant="h6"
-            color="blue-gray"
-            className="mb-1  p-3 hover:bg-blue-500 rounded-lg hover:text-white"
-          >
-            {title}
-          </Typography>
-        </MenuItem>
-      </Menu>
+      <Typography
+        variant="h6"
+        color="blue-gray"
+        className="mb-1  p-3 hover:bg-blue-500 rounded-lg hover:text-white"
+      >
+        {title}
+      </Typography>
     </Link>
   ))
 
