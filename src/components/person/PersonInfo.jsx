@@ -1,6 +1,6 @@
 import {useTranslation} from "react-i18next"
-import {Link} from "react-router-dom"
 import {useGetMovieSerie} from "../../hooks"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const PersonInfo = ({info}) => {
   const {
@@ -30,7 +30,11 @@ export const PersonInfo = ({info}) => {
               className="p-2"
               target="_blank"
             >
-              <img src="/icons/facebook.svg" alt="" className="w-6 h-6" />
+              <LazyLoadImage
+                src="/icons/facebook.svg"
+                alt=""
+                className="w-6 h-6"
+              />
             </a>
           )}
           {!infoLinks?.instagram_id || (
@@ -39,7 +43,11 @@ export const PersonInfo = ({info}) => {
               className="p-2"
               target="_blank"
             >
-              <img src="/icons/instagram.svg" alt="" className="w-6 h-6" />
+              <LazyLoadImage
+                src="/icons/instagram.svg"
+                alt=""
+                className="w-6 h-6"
+              />
             </a>
           )}
           {!infoLinks?.twitter_id || (
@@ -48,7 +56,7 @@ export const PersonInfo = ({info}) => {
               className="p-2"
               target="_blank"
             >
-              <img src="/icons/x.svg" alt="" className="w-6 h-6" />
+              <LazyLoadImage src="/icons/x.svg" alt="" className="w-6 h-6" />
             </a>
           )}
           {!infoLinks?.tiktok_id || (
@@ -57,7 +65,11 @@ export const PersonInfo = ({info}) => {
               className="p-2"
               target="_blank"
             >
-              <img src="/icons/tiktok.svg" alt="" className="w-6 h-6" />
+              <LazyLoadImage
+                src="/icons/tiktok.svg"
+                alt=""
+                className="w-6 h-6"
+              />
             </a>
           )}
           {!infoLinks?.youtube_id || (
@@ -66,7 +78,11 @@ export const PersonInfo = ({info}) => {
               className="p-2"
               target="_blank"
             >
-              <img src="/icons/youtube.svg" alt="" className="w-6 h-6" />
+              <LazyLoadImage
+                src="/icons/youtube.svg"
+                alt=""
+                className="w-6 h-6"
+              />
             </a>
           )}
           {!infoLinks?.imdb_id || (
@@ -75,7 +91,7 @@ export const PersonInfo = ({info}) => {
               className="p-2"
               target="_blank"
             >
-              <img src="/icons/imdb.svg" alt="" className="w-6 h-6" />
+              <LazyLoadImage src="/icons/imdb.svg" alt="" className="w-6 h-6" />
             </a>
           )}
         </div>

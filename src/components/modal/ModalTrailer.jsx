@@ -2,6 +2,7 @@ import {useGetMovieSerie} from "../../hooks"
 import {useState} from "react"
 import {Dialog} from "primereact/dialog"
 import {useTranslation} from "react-i18next"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const ModalTrailer = ({dataId, type}) => {
   const [visible, setVisible] = useState(false)
@@ -24,7 +25,7 @@ export const ModalTrailer = ({dataId, type}) => {
         onClick={() => setVisible(true)}
         disabled={data.results?.length > 0 ? false : true}
       >
-        <img
+        <LazyLoadImage
           src="/play-svg.svg"
           height={25}
           width={25}

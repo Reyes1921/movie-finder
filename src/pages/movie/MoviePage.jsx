@@ -13,6 +13,7 @@ import {Accordion, AccordionTab} from "primereact/accordion"
 import {FaUserGroup} from "react-icons/fa6"
 import {useTranslation} from "react-i18next"
 import {useEffect, useState} from "react"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const MoviePage = () => {
   const {t, i18n} = useTranslation()
@@ -59,7 +60,7 @@ export const MoviePage = () => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-4 pp">
               <div className="col-span-1 flex justify-center">
-                <img
+                <LazyLoadImage
                   className="h-64 md:h-full max-w-full rounded p-5 object-contain aspect-[16/9]"
                   loading="lazy"
                   src={`${

@@ -11,6 +11,7 @@ import {useNavigate} from "react-router-dom"
 import {useCustomFunction} from "../../hooks/useCutomFunction"
 import {useTranslation} from "react-i18next"
 import {SelectButton} from "primereact/selectbutton"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export function Header() {
   const [openNav, setOpenNav] = useState(false)
@@ -57,7 +58,7 @@ export function Header() {
           to={"/"}
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img
+          <LazyLoadImage
             src="/cinema-film-movie-svgrepo-com.svg"
             className="h-11 aspect-square"
             alt="Movie Finder Logo"

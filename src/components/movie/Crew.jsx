@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const Crew = ({crewData, job}) => {
   const {findInArrayName, findInArrayNameTwo, findInArrayImg, findInArrayId} =
@@ -22,7 +23,7 @@ export const Crew = ({crewData, job}) => {
           className="hover:scale-110 transition-all"
         >
           <div className="flex flex-col ">
-            <img
+            <LazyLoadImage
               alt=""
               className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full"
               src={

@@ -2,6 +2,7 @@ import {Link} from "react-router-dom"
 import {Crew} from "./Crew"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 import {useTranslation} from "react-i18next"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
   const {t} = useTranslation()
@@ -44,7 +45,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
                             className="p-5 hover:scale-110 transition-all"
                           >
                             <div className="flex flex-col ">
-                              <img
+                              <LazyLoadImage
                                 alt=""
                                 className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full mt-2"
                                 src={
@@ -88,7 +89,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
                             className="p-5 hover:scale-110 transition-all"
                           >
                             <div className="flex flex-col ">
-                              <img
+                              <LazyLoadImage
                                 alt=""
                                 className="self-center flex-shrink-0 w-14 h-14 object-cover mb-4 bg-center bg-cover rounded-full mt-2"
                                 src={

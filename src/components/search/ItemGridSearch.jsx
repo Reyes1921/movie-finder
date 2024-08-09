@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom"
 import {useTranslation} from "react-i18next"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const ItemGridSearch = ({movieSerie}) => {
   const {t} = useTranslation()
@@ -62,7 +63,7 @@ export const ItemGridSearch = ({movieSerie}) => {
               </div>
             </div>
           </div>
-          <img
+          <LazyLoadImage
             alt={`${movieSerie[titleOrName]}`}
             className="absolute inset-0 transform w-full -translate-y-4 img-mask"
             src={`${

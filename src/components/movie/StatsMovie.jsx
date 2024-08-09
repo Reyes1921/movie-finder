@@ -5,6 +5,7 @@ import {useState} from "react"
 import {useGetMovieSerie} from "../../hooks"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 import {useTranslation} from "react-i18next"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const StatsMovie = ({data}) => {
   const {numberFormater, time_convert, colorScore} = useCustomFunctions()
@@ -125,7 +126,7 @@ export const StatsMovie = ({data}) => {
                 <div className="flex ml-3">
                   {movieSerie?.results[stream]?.flatrate?.map((item) => {
                     return (
-                      <img
+                      <LazyLoadImage
                         key={item.provider_name}
                         src={
                           loading

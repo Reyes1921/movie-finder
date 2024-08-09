@@ -4,6 +4,7 @@ import {useGetMovieSerie} from "../../hooks"
 import {KnownFor, Loading, PersonInfo, ReadMore} from "../../components"
 import {useTranslation} from "react-i18next"
 import {useEffect, useState} from "react"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const Person = () => {
   const {idPerson} = useParams()
@@ -38,7 +39,7 @@ export const Person = () => {
                 {person.known_for_department}
               </span>
             </h3>
-            <img
+            <LazyLoadImage
               className="h-72 md:h-auto max-w-full rounded-2xl object-contain bg-contain p-5 aspect-[16/20]"
               src={`${
                 person.profile_path

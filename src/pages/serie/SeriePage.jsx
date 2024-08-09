@@ -10,6 +10,7 @@ import {
 } from "../../components"
 import {useTranslation} from "react-i18next"
 import {useEffect, useState} from "react"
+import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const SeriePage = () => {
   const {i18n} = useTranslation()
@@ -48,7 +49,7 @@ export const SeriePage = () => {
           >
             <div className="grid grid-cols-1 lg:grid-cols-4 pp">
               <div className="col-span-1 flex justify-center">
-                <img
+                <LazyLoadImage
                   className="h-64 md:h-full max-w-full rounded object-contain bg-contain p-5 aspect-[16/9]"
                   src={`${
                     serie.poster_path
