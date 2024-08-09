@@ -51,7 +51,7 @@ export const useCustomFunction = () => {
   ]
 
   const renderItemsMovies = navListMenuItemsMovies.map(({title, link}) => (
-    <Link to={link} key={title}>
+    <Link to={link} key={title} role="menu">
       <MenuItem>
         <Typography
           variant="h6"
@@ -64,7 +64,7 @@ export const useCustomFunction = () => {
     </Link>
   ))
   const renderItemsSeries = navListMenuItemsSeries.map(({title, link}) => (
-    <Link to={link} key={title}>
+    <Link to={link} key={title} role="menu">
       <MenuItem>
         <Typography
           variant="h6"
@@ -79,7 +79,7 @@ export const useCustomFunction = () => {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 outline-0">
-      <Menu>
+      <Menu role="menu">
         <MenuItem>
           <Typography
             as="li"
@@ -93,7 +93,7 @@ export const useCustomFunction = () => {
           </Typography>
         </MenuItem>
       </Menu>
-      <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
+      <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen} role="menu">
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-medium">
             <MenuItem
@@ -118,7 +118,12 @@ export const useCustomFunction = () => {
       <div className="block lg:hidden">
         <Collapse open={isMenuOpenMobile}>{renderItemsMovies}</Collapse>
       </div>
-      <Menu allowHover open={isMenuOpenTwo} handler={setIsMenuOpenTwo}>
+      <Menu
+        allowHover
+        open={isMenuOpenTwo}
+        handler={setIsMenuOpenTwo}
+        role="menu"
+      >
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-medium">
             <MenuItem

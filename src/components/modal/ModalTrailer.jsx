@@ -17,6 +17,7 @@ export const ModalTrailer = ({dataId, type}) => {
   return (
     <div className="flex justify-center items-center">
       <button
+        role="button"
         className={`${
           data.results?.length > 0
             ? "opacity-1 hover:opacity-80 hover:scale-105 transition-all"

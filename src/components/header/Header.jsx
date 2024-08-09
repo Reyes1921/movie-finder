@@ -106,6 +106,7 @@ export function Header() {
           </div>
           <Button
             size="md"
+            role="button"
             className="rounded-lg bg-[#2074F6] p-3 uppercase"
             type="submit"
             form="searchBar"
@@ -204,6 +205,7 @@ export function Header() {
               </div>
               <Button
                 size="md"
+                role="button"
                 className="mt-4 rounded-lg sm:mt-0 bg-[#2074F6] p-3 uppercase"
                 type="submit"
                 form="searchBarMobile"

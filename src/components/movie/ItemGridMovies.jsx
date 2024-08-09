@@ -72,7 +72,7 @@ export const ItemGridMovies = ({movie}) => {
             </div>
           </div>
           <img
-            alt={`${movie.title}`}
+            alt={`Image of ${movie.title}`}
             rel="preload"
             width={"auto"}
             height={"auto"}
