@@ -105,7 +105,7 @@ export const StatsSerie = ({data}) => {
                   Object.entries(movieSerie?.results).length > 0 || "hidden"
                 }`}
               >
-                <span className="font-bold text-blue-500">
+                <span className="font-bold text-blue-500 mb-3">
                   {t("Streaming")}:
                 </span>
                 <select
