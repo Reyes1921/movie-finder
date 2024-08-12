@@ -163,7 +163,7 @@ export const StatsMovie = ({data}) => {
             {t("Release Date")}
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-5">
+        <div className="flex flex-col bg-white/5 p-5 flex-wrap">
           <dt className="text-base font-bold leading-6 text-gray-300">
             {numberFormater(data.budget)}
           </dt>

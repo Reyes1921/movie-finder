@@ -108,7 +108,7 @@ export function Header() {
             size="md"
             aria-label="Search"
             role="button"
-            className="rounded-lg bg-[#2074F6] p-3 uppercase"
+            className="rounded-lg bg-[#2074F6] p-3 uppercase z-20"
             type="submit"
             form="searchBar"
           >
@@ -209,7 +209,7 @@ export function Header() {
                 size="md"
                 aria-label="Search"
                 role="button"
-                className="mt-4 rounded-lg sm:mt-0 bg-[#2074F6] p-3 uppercase"
+                className="mt-4 rounded-lg sm:mt-0 bg-[#2074F6] p-3 uppercase z-20"
                 type="submit"
                 form="searchBarMobile"
               >
