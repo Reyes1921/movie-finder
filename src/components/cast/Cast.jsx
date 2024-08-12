@@ -56,11 +56,11 @@ export const Cast = ({type, id}) => {
                     spaceBetween: 20,
                   },
                   768: {
-                    slidesPerView: cast.cast.length > 4 ? 4 : cast.cast.length,
+                    slidesPerView: cast.cast.length > 6 ? 6 : cast.cast.length,
                     spaceBetween: 40,
                   },
                   1024: {
-                    slidesPerView: cast.cast.length > 6 ? 6 : cast.cast.length,
+                    slidesPerView: cast.cast.length > 8 ? 8 : cast.cast.length,
                     spaceBetween: 30,
                   },
                 }}

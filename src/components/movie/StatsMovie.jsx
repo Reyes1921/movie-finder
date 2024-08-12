@@ -163,8 +163,8 @@ export const StatsMovie = ({data}) => {
             {t("Release Date")}
           </dd>
         </div>
-        <div className="flex flex-col bg-white/5 p-5 flex-wrap">
-          <dt className="text-base font-bold leading-6 text-gray-300">
+        <div className="flex flex-col bg-white/5 p-5">
+          <dt className="text-base font-bold leading-6 text-gray-300 break-all">
             {numberFormater(data.budget)}
           </dt>
           <dd className="order-first  text-base font-bold tracking-tight text-blue-500">
@@ -172,7 +172,7 @@ export const StatsMovie = ({data}) => {
           </dd>
         </div>
         <div className="flex flex-col bg-white/5 p-5">
-          <dt className="text-base font-bold leading-6 text-gray-300">
+          <dt className="text-base font-bold leading-6 text-gray-300 break-all">
             {numberFormater(data.revenue)}
           </dt>
           <dd className="order-first  text-base font-bold tracking-tight text-blue-500">
