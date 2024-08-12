@@ -105,12 +105,12 @@ export const StatsMovie = ({data}) => {
                   Object.entries(movieSerie?.results).length > 0 || "hidden"
                 }`}
               >
-                <span className="font-bold text-blue-500 mb-3">
+                <span className="font-bold text-blue-500">
                   {t("Streaming")}:
                 </span>
                 <select
                   name="select"
-                  className="ml-2 text-blue-500 pl-3 min-w-[80px] min-h-[40px] text-sm rounded"
+                  className="ml-2 text-blue-500 pl-3 min-w-[80px] min-h-[40px] text-sm rounded mb-3"
                   onChange={selectChange}
                 >
                   {Object.entries(movieSerie.results).map((item) => (
@@ -135,7 +135,7 @@ export const StatsMovie = ({data}) => {
                               item.logo_path
                         }
                         alt={item.provider_name}
-                        className="w-16 h-12 p-1"
+                        className="w-16 h-12 p-1 rounded-lg"
                       />
                     )
                   })}
