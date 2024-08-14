@@ -58,6 +58,12 @@ const resources = {
       "read more": "read more",
       github: "https://github.com/Reyes1921/movie-finder/blob/main/README.md",
       linkedin: "https://www.linkedin.com/in/reyes-rondon/?locale=en_US/",
+      "Top Rated Movies": "Top Rated Movies",
+      "Popular Movies": "Popular Movies",
+      "Upcoming Movies": "Upcoming Movies",
+      "Popular Series": "Popular Series",
+      "On The Air Series": "On The Air Series",
+      "Top Rated Series": "Top Rated Series",
     },
   },
   es: {
@@ -117,6 +123,12 @@ const resources = {
       github:
         "https://github.com/Reyes1921/movie-finder/blob/main/README.es.md",
       linkedin: "https://www.linkedin.com/in/reyes-rondon/",
+      "Top Rated Movies": "Películas mejor valoradas",
+      "Popular Movies": "Películas populares",
+      "Upcoming Movies": "Próximas películas",
+      "Popular Series": "Series populares",
+      "On The Air Series": "Series al aire",
+      "Top Rated Series": "Series mejor valoradas",
     },
   },
 }

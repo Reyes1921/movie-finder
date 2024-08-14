@@ -1,5 +1,7 @@
 import {InfiniteMovies} from "../../components"
+import {useTranslation} from "react-i18next"
 
 export const UpcomingMovies = () => {
-  return <InfiniteMovies media_type={"upcoming"} title={"Upcoming Movies"} />
+  const {t} = useTranslation()
+  return <InfiniteMovies media_type={"upcoming"} title={t("Upcoming Movies")} />
 }

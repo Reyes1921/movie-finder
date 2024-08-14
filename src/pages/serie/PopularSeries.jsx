@@ -1,5 +1,7 @@
 import {InfiniteSeries} from "../../components"
+import {useTranslation} from "react-i18next"
 
 export const PopularSeries = () => {
-  return <InfiniteSeries media_type={"popular"} title={"Popular Series"} />
+  const {t} = useTranslation()
+  return <InfiniteSeries media_type={"popular"} title={t("Popular Series")} />
 }
