@@ -162,7 +162,7 @@ export function Header() {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <div className="container mx-auto">
+        <div className="container mx-auto bg-[#0F172A] rounded-lg p-5">
           {navListMobile}
           <div className="flex flex-col gap-x-2 sm:flex-row sm:items-center">
             <form
