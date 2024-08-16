@@ -162,7 +162,7 @@ export function Header() {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <div className="container mx-auto bg-[#0F172A] rounded-lg p-1">
+        <div className="container mx-auto bg-[#0F172A] rounded-lg pb-0 md:pb-1 p-1">
           {navListMobile}
           <div className="flex flex-col gap-x-2 sm:flex-row sm:items-center">
             <form
@@ -220,7 +220,7 @@ export function Header() {
               value={value}
               onChange={onChangeLang}
               options={options}
-              className=" lg:hidden m-4 flex justify-center"
+              className=" lg:hidden mb-1 md:mb-4 m-4 flex justify-center"
             />
           </div>
         </div>

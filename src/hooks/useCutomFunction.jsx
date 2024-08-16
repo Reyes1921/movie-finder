@@ -55,7 +55,7 @@ export const useCustomFunction = () => {
       <Typography
         variant="h6"
         color="blue-gray"
-        className="mb-1  p-3 hover:bg-blue-500 rounded-lg hover:text-white border-b-[1px] md:border-b-[0px]"
+        className="mb-1 p-3 hover:bg-blue-500 rounded-lg hover:text-white border-b-[1px] md:border-b-[0px]"
       >
         {title}
       </Typography>
@@ -66,7 +66,7 @@ export const useCustomFunction = () => {
       <Typography
         variant="h6"
         color="blue-gray"
-        className="mb-1  p-3 hover:bg-blue-500 rounded-lg hover:text-white border-b-[1px] md:border-b-[0px]"
+        className="mb-1 p-3 hover:bg-blue-500 rounded-lg hover:text-white border-b-[1px] md:border-b-[0px]"
       >
         {title}
       </Typography>
@@ -135,7 +135,7 @@ export const useCustomFunction = () => {
             </MenuItem>
           </Typography>
         </MenuHandler>
-        <MenuList className=" gap-3 overflow-visible lg:grid bg-[#0F172A] border-2 border-blue-500 rounded-2xl mt-1 z-30">
+        <MenuList className="gap-3 overflow-visible lg:grid bg-[#0F172A] border-2 border-blue-500 rounded-2xl mt-1 z-30">
           <ul className="col-span-4 flex w-full flex-col gap-1 border-0 text-white outline-0">
             {renderItemsSeries}
           </ul>
@@ -148,7 +148,7 @@ export const useCustomFunction = () => {
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 outline-0">
       <Menu>
         <Link to="/" className="flex items-center">
-          <ListItem className="hover:bg-blue-500 py-4 mt-3 border-b-[1px]">
+          <ListItem className="hover:bg-blue-500 py-4 border-b-[1px] border-b-[#2074F6] mb-2">
             <Typography
               as="li"
               variant="small"
@@ -164,7 +164,7 @@ export const useCustomFunction = () => {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-medium">
             <ListItem
-              className={`items-center gap-2 font-medium text-white lg:flex lg:rounded-full hover:bg-blue-500 py-4 border-b-[1px]${
+              className={`items-center gap-2 font-medium text-white lg:flex lg:rounded-full hover:bg-blue-500 py-4 border-b-[#2074F6] border-b-[1px]${
                 isMenuOpenMobile ? "bg-blue-500" : ""
               }`}
             >
@@ -188,7 +188,7 @@ export const useCustomFunction = () => {
         <MenuHandler>
           <Typography as="a" href="#" variant="small" className="font-medium">
             <ListItem
-              className={`items-center gap-2 font-medium text-white lg:flex lg:rounded-full hover:bg-blue-500 py-4 border-b-[1px]${
+              className={`items-center gap-2 font-medium text-white lg:flex lg:rounded-full hover:bg-blue-500 py-4 border-b-[#2074F6] border-b-[1px]${
                 isMenuOpenTwoMobile ? "bg-blue-500" : ""
               }`}
             >
