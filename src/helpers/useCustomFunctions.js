@@ -139,6 +139,21 @@ export const useCustomFunctions = () => {
     },
   ]
 
+  function calculateAge(birthdate) {
+    // Parse the birthdate string into a Date object
+    const birthDateObj = new Date(birthdate)
+    // Get the current date
+    const currentDate = new Date()
+    // Calculate the age in milliseconds
+    const ageInMillis = currentDate - birthDateObj
+    // Convert milliseconds to years
+    const ageInYears = ageInMillis / (1000 * 60 * 60 * 24 * 365.25)
+    // Round down the age to the nearest integer
+    const age = Math.floor(ageInYears)
+
+    return age
+  }
+
   return {
     numberFormater,
     time_convert,
@@ -152,5 +167,6 @@ export const useCustomFunctions = () => {
     responsiveOptionsPerson,
     navListMenuItemsMovies,
     navListMenuItemsSeries,
+    calculateAge,
   }
 }

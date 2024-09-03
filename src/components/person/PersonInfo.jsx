@@ -1,6 +1,7 @@
 import {useTranslation} from "react-i18next"
 import {useGetMovieSerie} from "../../hooks"
 import {LazyLoadImage} from "react-lazy-load-image-component"
+import {useCustomFunctions} from "../../helpers"
 
 export const PersonInfo = ({info}) => {
   const {
@@ -8,6 +9,8 @@ export const PersonInfo = ({info}) => {
     loading,
     error,
   } = useGetMovieSerie(`person/${info.id}/external_ids`)
+
+  const {calculateAge} = useCustomFunctions()
 
   const {t} = useTranslation()
 
@@ -101,7 +104,12 @@ export const PersonInfo = ({info}) => {
           <h2 className="text-left text-white text-lg font-bold">
             {t("Birthday")}
           </h2>
-          <p className="text-gray-400 text-base">{info.birthday}</p>
+          <p className="text-gray-400 text-base">
+            {info.birthday} -{" "}
+            <span>
+              {calculateAge(info.birthday)} {t("years old")}
+            </span>
+          </p>
         </div>
         <div className={`p-2 ${info.deathday ? "inline-block" : "hidden"}`}>
           <h2 className="text-left text-white text-lg font-bold">

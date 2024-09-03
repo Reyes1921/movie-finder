@@ -64,6 +64,7 @@ const resources = {
       "Popular Series": "Popular Series",
       "On The Air Series": "On The Air Series",
       "Top Rated Series": "Top Rated Series",
+      "years old": "years old",
     },
   },
   es: {
@@ -129,6 +130,7 @@ const resources = {
       "Popular Series": "Series populares",
       "On The Air Series": "Series al aire",
       "Top Rated Series": "Series mejor valoradas",
+      "years old": "años",
     },
   },
 }
