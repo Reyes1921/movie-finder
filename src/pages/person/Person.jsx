@@ -59,7 +59,11 @@ export const Person = () => {
                 {person.known_for_department}
               </span>
             </h3>
-            <h3 className="text-left text-white text-2xl mb-5 mt-5 font-bold">
+            <h3
+              className={`text-left text-white text-2xl mb-5 mt-5 font-bold ${
+                person.biography ? "block" : "hidden"
+              }`}
+            >
               {t("Biography")}
             </h3>
             <div className="text-gray-400 text-justify mb-5 text-1xl ">

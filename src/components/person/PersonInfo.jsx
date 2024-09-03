@@ -100,24 +100,24 @@ export const PersonInfo = ({info}) => {
         </div>
       )}
       <div className="text-left">
-        <div className="p-2">
+        <div className={`p-2 ${info.birthday ? "block" : "hidden"}`}>
           <h2 className="text-left text-white text-lg font-bold">
             {t("Birthday")}
           </h2>
           <p className="text-gray-400 text-base">
             {info.birthday} -{" "}
             <span>
-              {calculateAge(info.birthday)} {t("years old")}
+              {calculateAge(info?.birthday)} {t("years old")}
             </span>
           </p>
         </div>
-        <div className={`p-2 ${info.deathday ? "inline-block" : "hidden"}`}>
+        <div className={`p-2 ${info.deathday ? "block" : "hidden"}`}>
           <h2 className="text-left text-white text-lg font-bold">
             {t("Date of Death")}
           </h2>
           <p className="text-gray-400 text-base">{info.deathday}</p>
         </div>
-        <div className="p-2">
+        <div className={`p-2 ${info.place_of_birth ? "block" : "hidden"}`}>
           <h2 className="text-left text-white text-lg font-bold">
             {t("Place of Birth")}
           </h2>
