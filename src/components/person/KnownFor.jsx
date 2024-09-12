@@ -98,7 +98,7 @@ export const KnownFor = ({id}) => {
                       }/${movieOrSerie.id}`}
                     >
                       <img
-                        className="rounded-xl"
+                        className="rounded-xl min-h-[286px]"
                         src={`${
                           movieOrSerie.poster_path
                             ? `https://image.tmdb.org/t/p/w780/${movieOrSerie.poster_path}`

@@ -175,6 +175,19 @@ div.p-selectbutton div.p-button {
   outline-offset: 0;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #fff;
+  opacity: 0.5;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #2074f6;
+}
+
 /*SPINER*/
 
 .loader {

@@ -17,8 +17,10 @@ export const Search = () => {
   const {movieSerie, loading, error} = useGetMovieSerie(
     `/search/multi?query=${data}&${
       language === "en" ? "language=en-US" : "language=es-ES"
-    }&include_adult=true`
+    }`
   )
+
+  console.log(movieSerie)
 
   error ? console.log(error) : ""
 
@@ -31,7 +33,8 @@ export const Search = () => {
           <h2 className="text-3xl md:text-4xl pt-8 md:pt-5 p-5 text-center md:text-left font-bold text-[#3b82f6]">
             {t("Results for")}: <span className="text-white">{data}</span>
           </h2>
-          {movieSerie?.results?.length === 0 ? (
+          {movieSerie?.results?.length === 0 ||
+          movieSerie?.results?.every((item) => item.media_type === "person") ? (
             <div className="h-screen flex justify-center items-center animated fadeIn">
               <h3 className="text-white text-center text-4xl p-20">
                 {t("There are no results to show for")} "
