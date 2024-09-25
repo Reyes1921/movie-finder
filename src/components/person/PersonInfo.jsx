@@ -32,6 +32,7 @@ export const PersonInfo = ({info}) => {
               href={`https://www.facebook.com/${infoLinks?.facebook_id}/`}
               className="p-2"
               target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               <LazyLoadImage
                 src="/icons/facebook.svg"
@@ -45,6 +46,7 @@ export const PersonInfo = ({info}) => {
               href={`https://www.instagram.com/${infoLinks?.instagram_id}/`}
               className="p-2"
               target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               <LazyLoadImage
                 src="/icons/instagram.svg"
@@ -58,6 +60,7 @@ export const PersonInfo = ({info}) => {
               href={`https://x.com/${infoLinks?.twitter_id}/`}
               className="p-2"
               target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               <LazyLoadImage src="/icons/x.svg" alt="" className="w-6 h-6" />
             </a>
@@ -67,6 +70,7 @@ export const PersonInfo = ({info}) => {
               href={`https://www.tiktok.com/@${infoLinks?.tiktok_id}/`}
               className="p-2"
               target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               <LazyLoadImage
                 src="/icons/tiktok.svg"
@@ -80,6 +84,7 @@ export const PersonInfo = ({info}) => {
               href={`https://www.youtube.com/${infoLinks?.youtube_id}/`}
               className="p-2"
               target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               <LazyLoadImage
                 src="/icons/youtube.svg"
@@ -93,6 +98,7 @@ export const PersonInfo = ({info}) => {
               href={`https://www.imdb.com/name/${infoLinks?.imdb_id}/`}
               className="p-2"
               target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               <LazyLoadImage src="/icons/imdb.svg" alt="" className="w-6 h-6" />
             </a>
