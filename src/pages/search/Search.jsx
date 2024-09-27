@@ -19,9 +19,7 @@ export const Search = () => {
       language === "en" ? "language=en-US" : "language=es-ES"
     }`
   )
-
-  console.log(movieSerie)
-
+  window.scrollTo(0, 0)
   error ? console.log(error) : ""
 
   return (

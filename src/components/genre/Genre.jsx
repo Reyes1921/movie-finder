@@ -36,8 +36,10 @@ export const Genre = ({mediaType, id, language}) => {
               >
                 <span
                   className={`${
-                    id == genres.id ? "bg-white text-blue-900" : "bg-blue-900"
-                  } inline-flex text-white text-center px-2 py-1 rounded text-md font-semibold m-2 hover:scale-110 transition-all`}
+                    id == genres.id
+                      ? "bg-white text-blue-900"
+                      : "bg-blue-900 text-white"
+                  } inline-flex text-center px-2 py-1 rounded text-md font-semibold m-2 hover:scale-110 transition-all`}
                 >
                   {genres.name}
                 </span>

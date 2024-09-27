@@ -4,8 +4,6 @@ export * from "./header/Header"
 export * from "./modal/ModalTrailer"
 //Infinite
 export * from "./infiniteScroll/InfiniteMovies"
-export * from "./infiniteScroll/InfiniteCategoryMovies-OLD"
-export * from "./infiniteScroll/InfiniteCategorySerie-OLD"
 export * from "./infiniteScroll/InfiniteSeries"
 //Movie
 export * from "./movie/Crew"

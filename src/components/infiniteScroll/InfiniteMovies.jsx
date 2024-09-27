@@ -38,7 +38,9 @@ export const InfiniteMovies = ({media_type, title}) => {
       )
       .then((res) => {
         setItems(res.data.results)
-        setLoading(false)
+        setTimeout(() => {
+          setLoading(false)
+        }, 500)
       })
       .catch((err) => {
         console.log(err)
@@ -72,23 +74,23 @@ export const InfiniteMovies = ({media_type, title}) => {
 
   return (
     <>
-      {loading ? (
-        <Loading />
-      ) : (
-        <InfiniteScroll
-          dataLength={items.length}
-          next={fetchMoreData}
-          hasMore={hasMore}
-          loader={loadingMessage}
-        >
-          <Layout>
-            <h2 className="text-3xl md:text-4xl pt-8 md:pt-5 p-5 text-center md:text-left font-bold text-[#3b82f6]">
-              {title}
-            </h2>
+      <Layout>
+        <h2 className="text-3xl md:text-4xl pt-8 md:pt-5 p-5 text-center md:text-left font-bold text-[#3b82f6]">
+          {title}
+        </h2>
+        {loading ? (
+          <Loading />
+        ) : (
+          <InfiniteScroll
+            dataLength={items.length}
+            next={fetchMoreData}
+            hasMore={hasMore}
+            loader={loadingMessage}
+          >
             <MovieGrid movieData={items} />
-          </Layout>
-        </InfiniteScroll>
-      )}
+          </InfiniteScroll>
+        )}
+      </Layout>
     </>
   )
 }
