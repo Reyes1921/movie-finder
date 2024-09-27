@@ -164,14 +164,14 @@ export function Header() {
       <Collapse open={openNav}>
         <div className="container mx-auto bg-[#0F172A] rounded-lg pb-0 md:pb-1 p-1">
           {navListMobile}
-          <div className="flex flex-col gap-x-2 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-x-2 sm:justify-center sm:items-center">
             <form
               action=""
               onSubmit={submit}
               id="searchBarMobile"
-              className="flex flex-col"
+              className="grid grid-cols-1 sm:grid-cols-4 gap-2 justify-center items-center"
             >
-              <div className="relative w-full gap-2 md:w-max">
+              <div className="relative w-full gap-2 md:w-max col-span-full sm:col-span-3">
                 <Input
                   type="search"
                   placeholder={t("Search")}
@@ -209,7 +209,7 @@ export function Header() {
                 size="md"
                 aria-label="Search"
                 role="button"
-                className="mt-4 rounded-lg sm:mt-0 bg-[#2074F6] p-3 uppercase z-20"
+                className="mt-2 sm:mt-0 rounded-lg bg-[#2074F6] p-3 uppercase z-20 col-span-full sm:col-span-1"
                 type="submit"
                 form="searchBarMobile"
               >
