@@ -19,7 +19,6 @@ export const useGetMovieSerie = (param) => {
   }
 
   useEffect(() => {
-    // console.log("FIRST YEAH")
     getDataMovieSerie()
   }, [param])
 

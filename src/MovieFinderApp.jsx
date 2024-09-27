@@ -2,11 +2,9 @@ import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom"
 
 import {
   Home,
-  CategoryMovie,
   PopularMovies,
   PopularSeries,
   UpcomingMovies,
-  CategorySerie,
   UpcomingSeries,
   TopRatedMovies,
   TopRatedSeries,
@@ -14,6 +12,7 @@ import {
   SeriePage,
   Search,
   Person,
+  GenrePage,
 } from "./pages"
 
 const router = createBrowserRouter([
@@ -62,12 +61,8 @@ const router = createBrowserRouter([
     element: <Person />,
   },
   {
-    path: "/movie/category/:categoryName/:idCategory",
-    element: <CategoryMovie />,
-  },
-  {
-    path: "/serie/category/:categoryName/:idCategory",
-    element: <CategorySerie />,
+    path: "/:mediaType/category/:categoryName/:idCategory",
+    element: <GenrePage />,
   },
   {
     path: "/*",

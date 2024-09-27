@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom"
 import {useTranslation} from "react-i18next"
-import {LazyLoadImage} from "react-lazy-load-image-component"
 
 export const Footer = ({type}) => {
   const {t} = useTranslation()
@@ -34,7 +33,7 @@ export const Footer = ({type}) => {
       <div className={`flex justify-around items-center p-3 pt-1`}>
         <div className="flex justify-left md:justify-start pt-2 md:pt-0 md:mt-0">
           <h3 className="text-white text-xs md:text-base">Powered By &nbsp;</h3>
-          <LazyLoadImage
+          <img
             src="/themoviedb.svg"
             alt="themoviedb logo"
             width={80}
@@ -53,7 +52,7 @@ export const Footer = ({type}) => {
               target="_blank"
               className="p-2 hover:scale-110 hover:opacity-70 inline-block"
             >
-              <LazyLoadImage
+              <img
                 src={icon.src}
                 className="filter dark:invert h-4 w-4 md:h-5 md:w-5"
                 alt={icon.alt}

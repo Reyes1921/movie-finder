@@ -96,7 +96,7 @@ export const StatsSerie = ({data}) => {
           )
         })}
         <div className="space-x-3 mt-5 animated fadeIn">
-          <div className="font-bold flex">
+          <div className="font-bold flex min-h-[52px]">
             {loading ? (
               ""
             ) : (

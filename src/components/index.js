@@ -4,17 +4,20 @@ export * from "./header/Header"
 export * from "./modal/ModalTrailer"
 //Infinite
 export * from "./infiniteScroll/InfiniteMovies"
-export * from "./infiniteScroll/InfiniteCategoryMovies"
-export * from "./infiniteScroll/InfiniteCategorySerie"
+export * from "./infiniteScroll/InfiniteCategoryMovies-OLD"
+export * from "./infiniteScroll/InfiniteCategorySerie-OLD"
 export * from "./infiniteScroll/InfiniteSeries"
 //Movie
 export * from "./movie/Crew"
 export * from "./movie/CrewMovie"
 export * from "./movie/ItemGridMovies"
-export * from "./movie/MovieCategoryGrid"
 export * from "./movie/MovieGrid"
 export * from "./movie/MovieGridRest"
 export * from "./movie/StatsMovie"
+//Genre
+export * from "./genre/Genre"
+export * from "./genre/InfiniteGenre"
+export * from "./genre/GenreGrid"
 //Person
 export * from "./person/KnownFor"
 export * from "./person/PersonInfo"
@@ -27,7 +30,6 @@ export * from "./search/ItemGridSearch"
 export * from "./search/SearchGrid"
 //Serie
 export * from "./serie/ItemsGridSeries"
-export * from "./serie/SerieCategoryGrid"
 export * from "./serie/SerieGrid"
 export * from "./serie/StatsSerie"
 //Cast

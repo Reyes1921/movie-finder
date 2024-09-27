@@ -19,6 +19,7 @@ export const StatsMovie = ({data}) => {
   const selectChange = (event) => {
     setStream(event.target.value)
   }
+
   return (
     <div className="mx-auto max-w-2xl lg:max-w-none">
       <div className="flex justify-center md:justify-start items-center flex-wrap">
@@ -96,7 +97,7 @@ export const StatsMovie = ({data}) => {
           )
         })}
         <div className="space-x-3 mt-5 md:ml-5 animated fadeIn">
-          <div className="font-bold flex">
+          <div className="font-bold flex min-h-[52px]">
             {loading ? (
               ""
             ) : (
