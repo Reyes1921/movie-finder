@@ -83,18 +83,19 @@ export const InfiniteGenre = ({media, title, id}) => {
         </span>
       </h2>
       <Genre language={language} mediaType={type} id={id} />
-      {loading ? (
+      {/* {loading ? (
         <Loading />
-      ) : (
-        <InfiniteScroll
-          dataLength={items.length}
-          next={fetchMoreData}
-          hasMore={hasMore}
-          loader={loadingMessage}
-        >
-          <GenreGrid data={items} media={media} />
-        </InfiniteScroll>
-      )}
+      ) : ( */}
+      <InfiniteScroll
+        dataLength={items.length}
+        next={fetchMoreData}
+        hasMore={hasMore}
+        loader={loadingMessage}
+        scrollThreshold={0.5}
+      >
+        <GenreGrid data={items} media={media} />
+      </InfiniteScroll>
+      {/* )} */}
     </Layout>
   )
 }

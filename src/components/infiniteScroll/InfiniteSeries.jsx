@@ -78,18 +78,19 @@ export const InfiniteSeries = ({media_type, title}) => {
         <h2 className="text-3xl md:text-4xl pt-8 md:pt-5 p-5 text-center md:text-left font-bold text-[#3b82f6]">
           {title}
         </h2>
-        {loading ? (
+        {/* {loading ? (
           <Loading />
-        ) : (
-          <InfiniteScroll
-            dataLength={items.length}
-            next={fetchMoreData}
-            hasMore={hasMore}
-            loader={loadingMessage}
-          >
-            <SerieGrid serieData={items} />
-          </InfiniteScroll>
-        )}
+        ) : ( */}
+        <InfiniteScroll
+          dataLength={items.length}
+          next={fetchMoreData}
+          hasMore={hasMore}
+          loader={loadingMessage}
+          scrollThreshold={0.5}
+        >
+          <SerieGrid serieData={items} />
+        </InfiniteScroll>
+        {/* )} */}
       </Layout>
     </>
   )
