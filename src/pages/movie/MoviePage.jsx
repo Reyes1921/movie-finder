@@ -86,7 +86,7 @@ export const MoviePage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full m-0 overflow-hidden border-t-transparent">
+          <div className="w-full m-0 overflow-hidden">
             <Cast type={"movie"} id={movie.id} />
             <div className="flex items-center justify-center bg-slate-900 h-auto rounded-lg">
               <div className="w-full bg-slate-900 rounded-xl">
