@@ -18,7 +18,7 @@ export const RecommendationsMovies = ({movieId}) => {
         " "
       ) : (
         <>
-          <h3 className="text-left text-white text-xl md:text-4xl mb-10 mt-10 font-bold">
+          <h3 className="text-left text-white text-xl md:text-4xl mb-10 mt-10 font-bold px-5">
             {t("Recommendations")}
           </h3>
           {loading ? (

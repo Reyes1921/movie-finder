@@ -5,6 +5,7 @@ import {Layout} from "../../layout/Layout"
 import axios from "axios"
 const apiBearer = import.meta.env.VITE_API_BEARER
 import {useTranslation} from "react-i18next"
+import {MessageEnd} from "../infiniteScroll/MessageEnd"
 
 export const InfiniteGenre = ({media, title, id}) => {
   const {t, i18n} = useTranslation()
@@ -51,7 +52,7 @@ export const InfiniteGenre = ({media, title, id}) => {
   }, [language, id])
 
   const fetchMoreData = () => {
-    if (index <= 300) {
+    if (index <= 100) {
       axios
         .get(
           `https://api.themoviedb.org/3/discover/${type}?with_genres=${id}&page=${index}&${
@@ -83,19 +84,20 @@ export const InfiniteGenre = ({media, title, id}) => {
         </span>
       </h2>
       <Genre language={language} mediaType={type} id={id} />
-      {/* {loading ? (
+      {loading ? (
         <Loading />
-      ) : ( */}
-      <InfiniteScroll
-        dataLength={items.length}
-        next={fetchMoreData}
-        hasMore={hasMore}
-        loader={loadingMessage}
-        scrollThreshold={0.5}
-      >
-        <GenreGrid data={items} media={media} />
-      </InfiniteScroll>
-      {/* )} */}
+      ) : (
+        <InfiniteScroll
+          dataLength={items.length}
+          next={fetchMoreData}
+          hasMore={hasMore}
+          loader={loadingMessage}
+          scrollThreshold={0.5}
+          endMessage={<MessageEnd />}
+        >
+          <GenreGrid data={items} media={media} />
+        </InfiniteScroll>
+      )}
     </Layout>
   )
 }

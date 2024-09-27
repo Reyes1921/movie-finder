@@ -35,11 +35,10 @@ export const SeriePage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="p-5">
+        <div className="p-5 ">
           <div
-            className="md:gg w-full h-auto shadow-md overflow-hidden bg-cover my-5 rounded-2xl"
+            className="md:gg w-full h-auto shadow-md overflow-hidden bg-cover my-5 mb-10 rounded-2xl overlayImg"
             style={{
-              maskImage: "linear-gradient(black 97%, transparent)",
               backgroundImage: `url(${
                 serie.poster_path
                   ? `https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${serie.backdrop_path}`

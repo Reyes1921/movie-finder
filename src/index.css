@@ -31,6 +31,17 @@ html {
   mask-image: linear-gradient(black 30%, transparent);
 }
 
+.overlayImg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  background: inherit;
+  filter: blur(40px) saturate(400%);
+  z-index: -1;
+}
+
 .btn {
   font-size: 1.2rem;
   padding: 1rem 2rem;
@@ -297,6 +308,9 @@ div.menu-mobile > ul.p-menubar-root-list {
 @media (max-width: 768px) {
   .img-mask {
     mask-image: linear-gradient(black 90%, transparent);
+  }
+  .overlayImg::after {
+    height: 170%;
   }
 }
 

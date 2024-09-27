@@ -30,11 +30,11 @@ export const Cast = ({type, id}) => {
 
   return (
     <div
-      className={` items-center justify-center bg-slate-900 h-auto ${
+      className={`md:mt-16 px-5 items-center justify-center bg-slate-900 w-full h-auto rounded-lg ${
         cast?.cast?.length > 0 ? "flex" : "hidden"
       }`}
     >
-      <div className="w-full bg-slate-900">
+      <div className="w-full bg-slate-900 py-5 rounded-md">
         <div className="">
           <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold">
             {t("Cast")}
@@ -56,7 +56,7 @@ export const Cast = ({type, id}) => {
                     spaceBetween: 20,
                   },
                   768: {
-                    slidesPerView: cast.cast.length > 6 ? 6 : cast.cast.length,
+                    slidesPerView: cast.cast.length > 5 ? 5 : cast.cast.length,
                     spaceBetween: 40,
                   },
                   1024: {

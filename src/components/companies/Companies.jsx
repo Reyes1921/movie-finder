@@ -14,7 +14,7 @@ export const Companies = ({companies}) => {
         companies.length > 0 ? "flex" : "hidden"
       }`}
     >
-      <div className="w-full bg-slate-900">
+      <div className="w-full bg-slate-900 p-5 rounded-lg">
         <div className="">
           <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold">
             {t("Production Companies")}
@@ -25,6 +25,10 @@ export const Companies = ({companies}) => {
             <Swiper
               slidesPerView={companies.length > 3 ? 3 : companies.length}
               breakpoints={{
+                390: {
+                  slidesPerView: companies.length > 1 ? 1 : companies.length,
+                  spaceBetween: 20,
+                },
                 640: {
                   slidesPerView: companies.length > 1 ? 1 : companies.length,
                   spaceBetween: 20,

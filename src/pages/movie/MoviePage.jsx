@@ -49,7 +49,7 @@ export const MoviePage = () => {
       ) : (
         <div className="p-5">
           <div
-            className="md:gg w-full h-auto shadow-md overflow-hidden bg-cover my-5 rounded-2xl"
+            className="md:gg w-full h-auto shadow-md overflow-hidden bg-cover my-5 rounded-2xl overlayImg"
             style={{
               backgroundImage: `url(${
                 movie.poster_path
@@ -58,7 +58,7 @@ export const MoviePage = () => {
               })`,
             }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-4 pp">
+            <div className="grid grid-cols-1 lg:grid-cols-4 pp ">
               <div className="col-span-1 flex justify-center">
                 <LazyLoadImage
                   className="h-64 md:h-full max-w-full rounded p-5 object-contain aspect-[16/9]"
@@ -86,11 +86,11 @@ export const MoviePage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full m-0 overflow-hidden">
+          <div className="w-full m-0 overflow-hidden border-t-transparent">
             <Cast type={"movie"} id={movie.id} />
-            <div className="flex items-center justify-center bg-slate-900 h-auto">
-              <div className="w-full bg-slate-900">
-                <div className="">
+            <div className="flex items-center justify-center bg-slate-900 h-auto rounded-lg">
+              <div className="w-full bg-slate-900 rounded-xl">
+                <div className="px-5 ">
                   <h3 className="text-left text-white text-xl md:text-4xl mb-5 font-bold my-5">
                     {t("Crew")}
                   </h3>

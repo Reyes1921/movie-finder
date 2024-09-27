@@ -65,6 +65,8 @@ const resources = {
       "On The Air Series": "On The Air Series",
       "Top Rated Series": "Top Rated Series",
       "years old": "years old",
+      messageEnd:
+        "It looks like you have reached the end. We hope you enjoyed the journey!",
       // "Action & Adventure": "Action & Adventure",
       // "Action-&-adventure": "Action & Adventure",
       // Action: "action",
@@ -160,6 +162,8 @@ const resources = {
       "On The Air Series": "Series al aire",
       "Top Rated Series": "Series mejor valoradas",
       "years old": "años",
+      messageEnd:
+        "Parece que ha llegado al final. Esperamos que haya disfrutado del viaje.",
       // "Action & Adventure": "Acción y aventura",
       // "Action-&-adventure": "Acción y aventura",
       // Action: "acción",
