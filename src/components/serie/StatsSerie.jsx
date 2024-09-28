@@ -7,7 +7,7 @@ import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 import {useTranslation} from "react-i18next"
 import {LazyLoadImage} from "react-lazy-load-image-component"
 
-export const StatsSerie = ({data}) => {
+export const StatsSerie = ({data, language}) => {
   const {colorScore} = useCustomFunctions()
   const [stream, setStream] = useState("US")
   const {t} = useTranslation()
@@ -33,7 +33,7 @@ export const StatsSerie = ({data}) => {
           <div className=" text-center text-black">T M D B</div>
         </div>
         <div className="m-2">
-          <ModalTrailer dataId={data.id} type={"tv"} />
+          <ModalTrailer dataId={data.id} type={"tv"} language={language} />
         </div>
         <div className="m-2">
           <div className="flex justify-around">

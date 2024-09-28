@@ -61,7 +61,6 @@ export const ModalTrailer = ({dataId, type, language}) => {
           setVisible(false)
         }}
       >
-        {/* 7.9-13.6 */}
         <lite-youtube
           videoplay={t("Watch Trailer")}
           posterquality="maxresdefault"
@@ -69,30 +68,6 @@ export const ModalTrailer = ({dataId, type, language}) => {
           videoid={video?.key}
           videotitle={video?.name}
         ></lite-youtube>
-        {/* <iframe
-          id="player"
-          type="text/html"
-          style={{backgroundColor: "#000"}}
-          width="100%"
-          height="100%"
-          title={loading ? "" : data.results[data.results.length - 1]?.name}
-          src={
-            loading
-              ? "#"
-              : "https://www.youtube.com/embed/" +
-                data?.results[
-                  data?.results.findIndex(
-                    (item) =>
-                      item.name.includes("trailer") ||
-                      item.name.includes("Trailer")
-                  ) || 0
-                ]?.key +
-                "?autoplay=1&mute=0&enablejsapi=1&origin=https://movie-finder-3000.netlify.app"
-          }
-          frameBorder={0}
-          onError={error}
-          allowFullScreen={true}
-        ></iframe> */}
       </Dialog>
     </div>
   )

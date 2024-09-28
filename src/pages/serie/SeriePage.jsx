@@ -69,7 +69,7 @@ export const SeriePage = () => {
                 <p className="text-white text-justify mb-5 text-1xl ">
                   {serie.overview}
                 </p>
-                <StatsSerie data={serie} />
+                <StatsSerie data={serie} language={language} />
               </div>
             </div>
           </div>
