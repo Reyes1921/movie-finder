@@ -82,7 +82,7 @@ export const MoviePage = () => {
                 <p className="text-white text-justify mb-5 text-1xl">
                   {movie.overview}
                 </p>
-                <StatsMovie data={movie} />
+                <StatsMovie data={movie} language={language} />
               </div>
             </div>
           </div>

@@ -4,7 +4,7 @@ import {Dialog} from "primereact/dialog"
 import {useTranslation} from "react-i18next"
 import {LazyLoadImage} from "react-lazy-load-image-component"
 
-export const ModalTrailer = ({dataId, type}) => {
+export const ModalTrailer = ({dataId, type, language}) => {
   const [visible, setVisible] = useState(false)
   const {t} = useTranslation()
 
@@ -12,7 +12,23 @@ export const ModalTrailer = ({dataId, type}) => {
     movieSerie: data,
     loading,
     error,
-  } = useGetMovieSerie(`/${type}/${dataId}/videos`)
+  } = useGetMovieSerie(
+    `/${type}/${dataId}/videos?${
+      language === "en" ? "language=en-US" : "language=es-ES"
+    }`
+  )
+
+  const video = loading
+    ? ""
+    : data?.results[
+        data?.results.findIndex(
+          (item) =>
+            item.type === "trailer" ||
+            item.type === "Trailer" ||
+            item.type === "Tráiler" ||
+            item.type === "tráiler"
+        ) || 0
+      ]
 
   return (
     <div className="flex justify-center items-center">
@@ -39,13 +55,21 @@ export const ModalTrailer = ({dataId, type}) => {
       <Dialog
         visible={visible}
         modal={false}
-        className="transition-all p-5 w-full h-full md:w-[1100px] md:h-[650px]"
+        className="transition-all p-4 w-full  md:w-[1050px] md:h-[650px] m-auto my-auto"
         onHide={() => {
           if (!visible) return
           setVisible(false)
         }}
       >
-        <iframe
+        {/* 7.9-13.6 */}
+        <lite-youtube
+          videoplay={t("Watch Trailer")}
+          posterquality="maxresdefault"
+          params="controls=0mute=0&enablejsapi=1&origin=https://movie-finder-3000.netlify.app"
+          videoid={video?.key}
+          videotitle={video?.name}
+        ></lite-youtube>
+        {/* <iframe
           id="player"
           type="text/html"
           style={{backgroundColor: "#000"}}
@@ -68,7 +92,7 @@ export const ModalTrailer = ({dataId, type}) => {
           frameBorder={0}
           onError={error}
           allowFullScreen={true}
-        ></iframe>
+        ></iframe> */}
       </Dialog>
     </div>
   )
