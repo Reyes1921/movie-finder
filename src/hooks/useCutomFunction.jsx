@@ -91,7 +91,7 @@ export const useCustomFunction = () => {
       </Menu>
       <Menu allowHover open={isMenuOpen} handler={setIsMenuOpen} role="menu">
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-medium">
+          <Typography as="a" variant="small" className="font-medium">
             <MenuItem
               className={`hidden items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full hover:text-blue-500`}
             >
@@ -121,7 +121,7 @@ export const useCustomFunction = () => {
         role="menu"
       >
         <MenuHandler>
-          <Typography as="a" href="#" variant="small" className="font-medium">
+          <Typography as="a" variant="small" className="font-medium">
             <MenuItem
               className={` items-center gap-2 font-medium text-blue-gray-900 lg:flex lg:rounded-full hover:text-blue-500`}
             >

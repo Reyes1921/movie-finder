@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-Application opens on port 3000
+Application opens on port 5173
 
 <img src='./public//wallpaper-en.webp'>
 <div align="center">
