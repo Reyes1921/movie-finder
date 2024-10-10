@@ -25,6 +25,7 @@ export const ItemGridMovies = ({movie}) => {
           .split(" ")
           .join("-")}/${movie?.id}`}
       >
+        {/* <Link to={`/movie/${encodeURIComponent(movie.title)}/${movie?.id}`}> */}
         <div
           className="overflow-hidden rounded-xl relative text-white h-full"
           data-movie-id={movie?.id}

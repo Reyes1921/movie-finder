@@ -28,7 +28,7 @@ export const InfiniteMovies = ({media_type, title}) => {
     setLoading(true)
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/${media_type}?${
+        `https://api.themoviedb.org/3/movie/${media_type}?page=1&${
           language === "en" ? "language=en-US" : "language=es-ES"
         }`,
         {
@@ -39,6 +39,7 @@ export const InfiniteMovies = ({media_type, title}) => {
       )
       .then((res) => {
         setItems(res.data.results)
+        setIndex(2)
         setTimeout(() => {
           setLoading(false)
         }, 500)
@@ -48,7 +49,6 @@ export const InfiniteMovies = ({media_type, title}) => {
       })
     window.scrollTo(0, 0)
   }, [language])
-
   const fetchMoreData = () => {
     if (index <= 100) {
       axios
@@ -64,6 +64,7 @@ export const InfiniteMovies = ({media_type, title}) => {
         )
         .then((res) => {
           setItems((prevItems) => [...prevItems, ...res.data.results])
+          console.log(items)
           res.data.results.length > 0 ? setHasMore(true) : setHasMore(false)
         })
         .catch((err) => console.log(err))
