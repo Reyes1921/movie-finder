@@ -70,7 +70,6 @@ export const InfiniteMovies = ({media_type, title}) => {
         )
         .then((res) => {
           setItems((prevItems) => [...prevItems, ...res.data.results])
-          console.log(items)
           res.data.results.length > 0 ? setHasMore(true) : setHasMore(false)
         })
         .catch((err) => console.log(err))
