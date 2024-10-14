@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 import {useTranslation} from "react-i18next"
+import slugify from "slugify"
 
 export const ItemsGridSeries = ({serie}) => {
   const {t} = useTranslation()
@@ -8,13 +9,14 @@ export const ItemsGridSeries = ({serie}) => {
 
   return (
     <div className="w-full min-w-[500] min-h-[500]  max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
-      <Link
+      {/* <Link
         to={`/serie/${serie.name
           .toLowerCase()
           .replace("?", "")
           .split(" ")
           .join("-")}/${serie?.id}`}
-      >
+      > */}
+      <Link to={`/serie/${slugify(serie.name)}/${serie?.id}`}>
         <div
           className="overflow-hidden rounded-xl relative text-white h-full"
           data-movie-id={serie?.id}

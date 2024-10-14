@@ -38,6 +38,7 @@ export const InfiniteSeries = ({media_type, title}) => {
         }
       )
       .then((res) => {
+        setHasMore(true)
         setItems(res.data.results)
         setIndex(2)
         setTimeout(() => {
@@ -47,10 +48,15 @@ export const InfiniteSeries = ({media_type, title}) => {
       .catch((err) => {
         console.log(err)
       })
+      .finally(
+        setTimeout(() => {
+          setLoading(false)
+        }, 500)
+      )
     window.scrollTo(0, 0)
   }, [language])
   const fetchMoreData = () => {
-    if (index <= 100) {
+    if (index <= 10) {
       axios
         .get(
           `https://api.themoviedb.org/3/tv/${media_type}?page=${index}&${
@@ -67,6 +73,11 @@ export const InfiniteSeries = ({media_type, title}) => {
           res.data.results.length > 0 ? setHasMore(true) : setHasMore(false)
         })
         .catch((err) => console.log(err))
+        .finally(
+          setTimeout(() => {
+            setLoading(false)
+          }, 500)
+        )
       setIndex((prevIndex) => prevIndex + 1)
     } else {
       setHasMore(false)

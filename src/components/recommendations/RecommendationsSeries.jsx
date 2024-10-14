@@ -3,11 +3,20 @@ import {useGetMovieSerie} from "../../hooks"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 import {useTranslation} from "react-i18next"
 import {LazyLoadImage} from "react-lazy-load-image-component"
+import {useEffect, useState} from "react"
 
 export const RecommendationsSeries = ({serieId}) => {
-  const {t} = useTranslation()
+  const {t, i18n} = useTranslation()
+  const [language, setLanguage] = useState(i18n.language)
+
+  useEffect(() => {
+    setLanguage(i18n.language)
+  }, [i18n.language])
+
   const {movieSerie, loading, error} = useGetMovieSerie(
-    `/tv/${serieId}/recommendations`
+    `/tv/${serieId}/recommendations?${
+      language === "en" ? "language=en-US" : "language=es-ES"
+    }`
   )
   error ? console.log(error) : ""
 

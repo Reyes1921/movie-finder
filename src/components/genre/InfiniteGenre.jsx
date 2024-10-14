@@ -39,6 +39,7 @@ export const InfiniteGenre = ({media, title, id}) => {
         }
       )
       .then((res) => {
+        setHasMore(true)
         setItems(res.data.results)
         setIndex(2)
         setTimeout(() => {
@@ -48,11 +49,16 @@ export const InfiniteGenre = ({media, title, id}) => {
       .catch((err) => {
         console.log(err)
       })
+      .finally(
+        setTimeout(() => {
+          setLoading(false)
+        }, 500)
+      )
     window.scrollTo(0, 0)
   }, [language, id])
 
   const fetchMoreData = () => {
-    if (index <= 100) {
+    if (index <= 10) {
       axios
         .get(
           `https://api.themoviedb.org/3/discover/${type}?with_genres=${id}&page=${index}&${
@@ -69,6 +75,11 @@ export const InfiniteGenre = ({media, title, id}) => {
           res.data.results.length > 0 ? setHasMore(true) : setHasMore(false)
         })
         .catch((err) => console.log(err))
+        .finally(
+          setTimeout(() => {
+            setLoading(false)
+          }, 500)
+        )
       setIndex((prevIndex) => prevIndex + 1)
     } else {
       setHasMore(false)

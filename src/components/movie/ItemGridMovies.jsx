@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import {useGetRuntime} from "../../hooks"
 import {useCustomFunctions} from "../../helpers"
 import {useTranslation} from "react-i18next"
+import slugify from "slugify"
 
 export const ItemGridMovies = ({movie}) => {
   const {t} = useTranslation()
@@ -18,13 +19,14 @@ export const ItemGridMovies = ({movie}) => {
 
   return (
     <div className="w-full min-w-[500] min-h-[500] max-w-full bg-slate-900 shadow-md rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6]">
-      <Link
+      {/* <Link
         to={`/movie/${movie.title
           .toLowerCase()
           .replace("?", "")
           .split(" ")
           .join("-")}/${movie?.id}`}
-      >
+      > */}
+      <Link to={`/movie/${slugify(movie.title)}/${movie?.id}`}>
         {/* <Link to={`/movie/${encodeURIComponent(movie.title)}/${movie?.id}`}> */}
         <div
           className="overflow-hidden rounded-xl relative text-white h-full"
