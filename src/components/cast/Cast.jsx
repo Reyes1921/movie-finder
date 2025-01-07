@@ -4,13 +4,7 @@ import {Swiper, SwiperSlide} from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import {
-  Navigation,
-  Pagination,
-  Mousewheel,
-  Keyboard,
-  FreeMode,
-} from "swiper/modules"
+import {Navigation, Pagination, Keyboard, FreeMode} from "swiper/modules"
 import {useTranslation} from "react-i18next"
 import {useEffect, useState} from "react"
 
@@ -46,7 +40,7 @@ export const Cast = ({type, id}) => {
             {t("Cast")}
           </h3>
         </div>
-        <div className="bg-[#1B2335] rounded-2xl py-3">
+        <div className="bg-[#1B2335] rounded-2xl py-3 ">
           {loading ? (
             <div className="flex justify-center">
               <span className="loader"></span>

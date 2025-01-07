@@ -5,7 +5,7 @@ import {Swiper, SwiperSlide} from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper/modules"
+import {Navigation, Pagination, Keyboard, FreeMode} from "swiper/modules"
 import {useTranslation} from "react-i18next"
 
 export const KnownFor = ({id}) => {
@@ -53,27 +53,36 @@ export const KnownFor = ({id}) => {
             slidesPerView={
               moviesSeries.cast.length > 2 ? 2 : moviesSeries.cast.length
             }
+            slidesPerGroup={
+              moviesSeries.cast.length > 2 ? 2 : moviesSeries.cast.length
+            }
             breakpoints={{
               640: {
                 slidesPerView:
+                  moviesSeries.cast.length > 2 ? 2 : moviesSeries.cast.length,
+                slidesPerGroup:
                   moviesSeries.cast.length > 2 ? 2 : moviesSeries.cast.length,
               },
               768: {
                 slidesPerView:
                   moviesSeries.cast.length > 3 ? 3 : moviesSeries.cast.length,
+                slidesPerGroup:
+                  moviesSeries.cast.length > 2 ? 2 : moviesSeries.cast.length,
                 spaceBetween: 40,
               },
               1024: {
                 slidesPerView:
                   moviesSeries.cast.length > 5 ? 5 : moviesSeries.cast.length,
+                slidesPerGroup:
+                  moviesSeries.cast.length > 4 ? 4 : moviesSeries.cast.length,
                 spaceBetween: 15,
               },
             }}
-            cssMode={true}
+            freeMode={true}
+            // cssMode={true}
             navigation={true}
-            mousewheel={true}
             keyboard={true}
-            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+            modules={[FreeMode, Navigation, Pagination, Keyboard]}
             className="mySwiper"
           >
             {moviesSeries.cast.map((movieOrSerie) => {

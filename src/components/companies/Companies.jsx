@@ -3,13 +3,7 @@ import {Swiper, SwiperSlide} from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import {
-  Navigation,
-  Pagination,
-  Mousewheel,
-  Keyboard,
-  FreeMode,
-} from "swiper/modules"
+import {Navigation, Pagination, Keyboard, FreeMode} from "swiper/modules"
 import {useTranslation} from "react-i18next"
 
 export const Companies = ({companies}) => {
