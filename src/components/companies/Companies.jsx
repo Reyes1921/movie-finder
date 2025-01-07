@@ -3,7 +3,13 @@ import {Swiper, SwiperSlide} from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper/modules"
+import {
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  FreeMode,
+} from "swiper/modules"
 import {useTranslation} from "react-i18next"
 
 export const Companies = ({companies}) => {
@@ -23,30 +29,31 @@ export const Companies = ({companies}) => {
         <div className="bg-[#3B82F6] bg-opacity-80 rounded-2xl py-3">
           <div className="swiper-white">
             <Swiper
+              loop={companies.length > 4 ? true : false}
               slidesPerView={companies.length > 3 ? 3 : companies.length}
+              slidesPerGroup={companies.length > 2 ? 2 : companies.length}
               breakpoints={{
-                390: {
-                  slidesPerView: companies.length > 1 ? 1 : companies.length,
-                  spaceBetween: 20,
-                },
                 640: {
-                  slidesPerView: companies.length > 1 ? 1 : companies.length,
+                  slidesPerView: companies.length > 3 ? 3 : companies.length,
+                  slidesPerGroup: companies.length > 2 ? 2 : companies.length,
                   spaceBetween: 20,
                 },
                 768: {
-                  slidesPerView: companies.length > 3 ? 3 : companies.length,
+                  slidesPerView: companies.length > 5 ? 5 : companies.length,
+                  slidesPerGroup: companies.length > 3 ? 3 : companies.length,
                   spaceBetween: 40,
                 },
                 1024: {
-                  slidesPerView: companies.length > 5 ? 5 : companies.length,
+                  slidesPerView: companies.length > 8 ? 8 : companies.length,
+                  slidesPerGroup: companies.length > 4 ? 4 : companies.length,
                   spaceBetween: 30,
                 },
               }}
-              cssMode={true}
+              freeMode={true}
+              // cssMode={true}
               navigation={true}
-              mousewheel={true}
               keyboard={true}
-              modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+              modules={[FreeMode, Navigation, Pagination, Keyboard]}
               className="mySwiper"
             >
               {companies.map((company) => {

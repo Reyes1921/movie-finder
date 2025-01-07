@@ -27,7 +27,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
           <section className="py-6 rounded-xl text-white pp mt-4">
             <div className="grid grid-cols-1  lg:gap-2 md:gap-4 gap-8 px-5 ">
               <div className="flex flex-col justify-center m-1 text-center border-b-2 border-blue-500">
-                <p className="text-xl font-semibold leading-tight text-blue-500">
+                <p className="text-lg font-semibold leading-tight text-blue-500">
                   {t("Directed By")}
                 </p>
                 <div className="flex flex-col md:flex-row justify-center">
@@ -66,7 +66,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
                 </div>
               </div>
               <div className="flex flex-col justify-center m-1 text-center border-b-2 border-blue-500">
-                <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
+                <p className="text-lg font-semibold leading-tight mb-5  text-blue-500">
                   {t("Writed By")}
                 </p>
                 <div className="flex flex-col md:flex-row justify-center">
@@ -112,19 +112,19 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
               </div>
               <div className="flex flex-col md:flex-row justify-around border-b-2 border-blue-500">
                 <div className="flex flex-col justify-center m-1 text-center p-5">
-                  <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
+                  <p className="text-lg font-semibold leading-tight mb-5  text-blue-500">
                     {t("Music by")}
                   </p>
                   <Crew crewData={crew.crew} job={"Original Music Composer"} />
                 </div>
                 <div className="flex flex-col justify-center m-1 text-center p-5">
-                  <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
+                  <p className="text-lg font-semibold leading-tight mb-5  text-blue-500">
                     {t("Cinematography by")}
                   </p>
                   <Crew crewData={crew.crew} job={"Director of Photography"} />
                 </div>
                 <div className="flex flex-col justify-center m-1 text-center p-5">
-                  <p className="text-xl font-semibold leading-tight mb-5  text-blue-500">
+                  <p className="text-lg font-semibold leading-tight mb-5  text-blue-500">
                     {t("Editing by")}
                   </p>
                   <Crew crewData={crew.crew} job={"Editor"} />
@@ -132,7 +132,7 @@ export const CrewMovie = ({movieSerie: crew, loading, error, img}) => {
               </div>
             </div>
             <div className="grid justify-center mt-5 mb-5 md:mb-8 lg:mb-8">
-              <h4 className="text-left text-blue-500 text-3xl font-bold ">
+              <h4 className="text-left text-blue-500 text-xl font-bold ">
                 {t("Produced by")}
               </h4>
             </div>

@@ -4,7 +4,13 @@ import {Swiper, SwiperSlide} from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-import {Navigation, Pagination, Mousewheel, Keyboard} from "swiper/modules"
+import {
+  Navigation,
+  Pagination,
+  Mousewheel,
+  Keyboard,
+  FreeMode,
+} from "swiper/modules"
 import {useTranslation} from "react-i18next"
 import {useEffect, useState} from "react"
 
@@ -50,25 +56,29 @@ export const Cast = ({type, id}) => {
               <Swiper
                 loop={cast.cast.length > 8 ? true : false}
                 slidesPerView={cast.cast.length > 3 ? 3 : cast.cast.length}
+                slidesPerGroup={cast.cast.length > 2 ? 2 : cast.cast.length}
                 breakpoints={{
                   640: {
                     slidesPerView: cast.cast.length > 3 ? 3 : cast.cast.length,
+                    slidesPerGroup: cast.cast.length > 2 ? 2 : cast.cast.length,
                     spaceBetween: 20,
                   },
                   768: {
                     slidesPerView: cast.cast.length > 5 ? 5 : cast.cast.length,
+                    slidesPerGroup: cast.cast.length > 3 ? 3 : cast.cast.length,
                     spaceBetween: 40,
                   },
                   1024: {
                     slidesPerView: cast.cast.length > 8 ? 8 : cast.cast.length,
+                    slidesPerGroup: cast.cast.length > 4 ? 4 : cast.cast.length,
                     spaceBetween: 30,
                   },
                 }}
-                cssMode={true}
+                freeMode={true}
+                // cssMode={true}
                 navigation={true}
-                mousewheel={true}
                 keyboard={true}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                modules={[FreeMode, Navigation, Pagination, Keyboard]}
                 className="mySwiper"
               >
                 {cast.cast.map((person) => {
@@ -95,7 +105,7 @@ export const Cast = ({type, id}) => {
                             <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center sm:text-left">
                               {person.name}
                             </p>
-                            <span className="text-[10px] sm:text-xs md:text-sm text-[#3b82f6] text-center sm:text-left break-all">
+                            <span className="text-[10px] sm:text-xs md:text-xs text-[#3b82f6] text-center sm:text-left break-all">
                               {person.character}
                             </span>
                           </div>

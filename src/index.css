@@ -306,6 +306,11 @@ div.menu-mobile > ul.p-menubar-root-list {
 }
 
 @media (max-width: 768px) {
+  div.swiper-button-prev,
+  div.swiper-button-next {
+    display: none;
+  }
+
   .img-mask {
     mask-image: linear-gradient(black 90%, transparent);
   }
