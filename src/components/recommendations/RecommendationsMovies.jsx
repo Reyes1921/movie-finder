@@ -89,7 +89,7 @@ export const RecommendationsMovies = ({movieId}) => {
 
                             <div className="relative cursor-pointer group z-10 p-5 space-y-6">
                               <div className=" align-self-end w-full mt-10">
-                                <div className="h-32 md:h-52" />
+                                <div className="h-16 md:h-52" />
                                 <div className="space-y-6">
                                   <div className="flex flex-col space-y-2 inner mt-3">
                                     <h3 className="text-base font-bold text-white min-h-[56px] hidden md:flex">
