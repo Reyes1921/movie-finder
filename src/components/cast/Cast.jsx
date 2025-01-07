@@ -101,8 +101,8 @@ export const Cast = ({type, id}) => {
                             alt={`${person.name}`}
                             className="rounded-lg w-16 h-16 md:w-32 md:h-32 object-cover mx-auto"
                           />
-                          <div className="mt-2">
-                            <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center sm:text-left">
+                          <div className="mt-2 leading-3">
+                            <p className="text-[10px] sm:text-xs md:text-sm text-center sm:text-left">
                               {person.name}
                             </p>
                             <span className="text-[10px] sm:text-xs md:text-xs text-[#3b82f6] text-center sm:text-left break-all">

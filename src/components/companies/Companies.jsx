@@ -29,7 +29,7 @@ export const Companies = ({companies}) => {
         <div className="bg-[#3B82F6] bg-opacity-80 rounded-2xl py-3">
           <div className="swiper-white">
             <Swiper
-              loop={companies.length > 4 ? true : false}
+              loop={companies.length > 3 ? true : false}
               slidesPerView={companies.length > 3 ? 3 : companies.length}
               slidesPerGroup={companies.length > 2 ? 2 : companies.length}
               breakpoints={{
@@ -73,11 +73,11 @@ export const Companies = ({companies}) => {
                           }`}
                         />
 
-                        <div className="mt-2">
+                        <div className="mt-2 text-center leading-3">
                           <p className="text-[10px] sm:text-xs md:text-sm font-bold text-center">
                             {company.name}
                           </p>
-                          <span className="text-[10px] sm:text-xs md:text-sm text-black text-center">
+                          <span className="text-[10px] sm:text-xs md:text-sm text-black text-center ">
                             {
                               languages.filter(
                                 (lang) =>
