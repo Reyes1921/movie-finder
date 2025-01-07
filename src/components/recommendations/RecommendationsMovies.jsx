@@ -2,7 +2,6 @@ import {Link} from "react-router-dom"
 import {useGetMovieSerie} from "../../hooks"
 import {useCustomFunctions} from "../../helpers/useCustomFunctions"
 import {useTranslation} from "react-i18next"
-import {LazyLoadImage} from "react-lazy-load-image-component"
 import {useEffect, useState} from "react"
 
 export const RecommendationsMovies = ({movieId}) => {
@@ -86,7 +85,7 @@ export const RecommendationsMovies = ({movieId}) => {
                             </div>
                           </div>
                         </div>
-                        <LazyLoadImage
+                        <img
                           className="absolute inset-0 transform w-full -translate-y-4 img-mask"
                           src={`${
                             movie.poster_path

@@ -45,10 +45,10 @@ export const StatsMovie = ({data, language}) => {
               <span className="flex flex-wrap">
                 {data.origin_country.map((item, index) => (
                   <p className="" key={item}>
-                    {
+                    {t(
                       languages.filter((lang) => lang.iso_3166_1 === item)[0]
                         ?.english_name
-                    }
+                    )}
                     {data.origin_country.length > 1
                       ? data.origin_country.length - 1 === index
                         ? ""
@@ -66,7 +66,7 @@ export const StatsMovie = ({data, language}) => {
               <span className="flex flex-wrap">
                 {data.spoken_languages.map((item, index) => (
                   <p className="text-center" key={item.english_name}>
-                    {item.english_name}
+                    {t(item.english_name)}
                     {data.spoken_languages.length > 1
                       ? data.spoken_languages.length - 1 === index
                         ? ""
