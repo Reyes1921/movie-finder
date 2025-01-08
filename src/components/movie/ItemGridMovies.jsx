@@ -26,7 +26,7 @@ export const ItemGridMovies = ({movie}) => {
 
           <div className="relative cursor-pointer group z-10 pb-0">
             <div className=" align-self-end w-full">
-              <div className="aspect-[16/22]" />
+              <div className="aspect-[15/22] mid:aspect-[16/22]" />
               <div className="space-y-3">
                 {/* <div className="flex flex-col space-y-2 inner">
                   <h3 className="hidden text-base md:text-xl font-bold text-white min-h-[56px] pb-5 md:pb-0">
