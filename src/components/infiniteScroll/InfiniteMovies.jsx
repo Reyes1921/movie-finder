@@ -105,7 +105,7 @@ export const InfiniteMovies = ({media_type, title}) => {
             scrollThreshold={0.5}
             endMessage={<MessageEnd />}
           >
-            <MovieGrid movieData={items} language={language} />
+            <MovieGrid movieData={items} />
           </InfiniteScroll>
         )}
       </Layout>

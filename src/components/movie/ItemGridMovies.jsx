@@ -4,7 +4,7 @@ import {useGetRuntime} from "../../hooks"
 import {useCustomFunctions} from "../../helpers"
 import slugify from "slugify"
 
-export const ItemGridMovies = ({movie, language}) => {
+export const ItemGridMovies = ({movie}) => {
   const param = `movie/${movie.id}`
   const [runTimes, setRuntimes] = useState(param)
   const {runtime, loading} = useGetRuntime(runTimes)
@@ -13,7 +13,7 @@ export const ItemGridMovies = ({movie, language}) => {
     setRuntimes(param)
   }, [loading])
 
-  const {time_convert, colorScore, getDate} = useCustomFunctions()
+  const {time_convert, colorScore} = useCustomFunctions()
 
   return (
     <div className="w-full min-w-[500] min-h-[500] max-w-full bg-slate-900 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.4)] rounded-2xl overflow-hidden mx-auto border-2 border-transparent hover:border-[#2074F6] mb-2 pb-2">
@@ -46,9 +46,7 @@ export const ItemGridMovies = ({movie, language}) => {
                     </div>
                   </div>
                   <div className="flex justify-center items-center p-1">
-                    <div className="text-xs">
-                      {getDate(movie?.release_date, language)}
-                    </div>
+                    <div className="text-xs">{movie?.release_date}</div>
                   </div>
                   <div className="flex justify-center items-center p-1 min-w-[76px]">
                     <div className=" text-xs min-w-[68px] min-h-[16px]">
