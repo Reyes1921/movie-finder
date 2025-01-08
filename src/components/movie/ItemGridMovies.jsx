@@ -22,17 +22,17 @@ export const ItemGridMovies = ({movie}) => {
           className="overflow-hidden rounded-xl relative text-white h-full"
           data-movie-id={movie?.id}
         >
-          <div className="absolute inset-0 z-10 " />
+          <div className="absolute inset-0 z-10" />
 
           <div className="relative cursor-pointer group z-10 pb-0">
             <div className=" align-self-end w-full">
               <div className="aspect-[16/22]" />
               <div className="space-y-3">
-                <div className="flex flex-col space-y-2 inner">
+                {/* <div className="flex flex-col space-y-2 inner">
                   <h3 className="hidden text-base md:text-xl font-bold text-white min-h-[56px] pb-5 md:pb-0">
                     {movie?.title}
                   </h3>
-                </div>
+                </div> */}
                 <div className="hidden md:flex justify-around mb-0 pb-0">
                   <div className="relative text-sm">
                     <div
@@ -54,11 +54,11 @@ export const ItemGridMovies = ({movie}) => {
                     </div>
                   </div>
                 </div>
-                <div className="hidden flex-col overview">
+                {/* <div className="hidden flex-col overview">
                   <p className="text-xs text-gray-400 mb-5 mt-0 min-h-[56px]">
                     {movie?.overview?.substr(0, 120) + "..."}
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ export const ItemGridMovies = ({movie}) => {
             rel="preload"
             width={"auto"}
             height={"auto"}
-            className="absolute inset-0 transform w-full  img-mask"
+            className="absolute inset-0 transform w-full img-mask"
             src={`${
               movie.poster_path
                 ? `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`
