@@ -48,15 +48,12 @@ export const RecommendationsSeries = ({serieId}) => {
                 breakpoints={{
                   640: {
                     slidesPerView: 3,
-                    slidesPerGroup: 2,
                   },
                   768: {
                     slidesPerView: 3,
-                    slidesPerGroup: 2,
                   },
                   1024: {
                     slidesPerView: 6,
-                    slidesPerGroup: 3,
                     spaceBetween: 10,
                   },
                 }}
@@ -85,12 +82,13 @@ export const RecommendationsSeries = ({serieId}) => {
                             className="overflow-hidden rounded-xl relative text-white h-full"
                             data-movie-id={serie.id}
                           >
-                            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-[#1d273d2b] to-transparent" />
-
+                            <div className="absolute inset-0 z-10" />
+                            {/*bg-gradient-to-t from-black via-[#1d273d2b]
+                            to-transparent */}
                             <div className="relative cursor-pointer group z-10 p-5 space-y-6">
                               <div className=" align-self-end w-full mt-10">
-                                <div className="h-16 md:h-52" />
-                                <div className="space-y-6">
+                                <div className="aspect-[16/22]" />
+                                <div className="space-y-6 hidden">
                                   <div className="flex flex-col space-y-2 inner mt-3">
                                     <h3 className="text-base font-bold text-white min-h-[56px] hidden md:flex">
                                       {serie.name}
@@ -119,7 +117,8 @@ export const RecommendationsSeries = ({serieId}) => {
                               </div>
                             </div>
                             <img
-                              className="absolute inset-0 transform w-full -translate-y-4 img-mask"
+                              className="absolute inset-0 transform w-full"
+                              //-translate-y-4 img-mask
                               src={`${
                                 serie.poster_path
                                   ? `https://image.tmdb.org/t/p/w780/${serie.poster_path}`
