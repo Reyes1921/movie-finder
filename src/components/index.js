@@ -10,7 +10,6 @@ export * from "./movie/Crew"
 export * from "./movie/CrewMovie"
 export * from "./movie/ItemGridMovies"
 export * from "./movie/MovieGrid"
-// export * from "./movie/MovieGridRest"
 export * from "./movie/StatsMovie"
 //Genre
 export * from "./genre/Genre"

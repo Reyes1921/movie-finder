@@ -154,19 +154,26 @@ export const useCustomFunctions = () => {
     return age
   }
 
+  function getDate(date, lang) {
+    const options = {month: "short", day: "numeric", year: "numeric"}
+    const language = lang === "en" ? "en-US" : "es-ES"
+    return new Date(date).toLocaleDateString(language, options)
+  }
+
   return {
-    numberFormater,
-    time_convert,
+    calculateAge,
     colorScore,
+    findInArrayId,
+    findInArrayImg,
     findInArrayName,
     findInArrayNameTwo,
-    findInArrayImg,
     findInArrayProducers,
-    findInArrayId,
-    responsiveOptions,
-    responsiveOptionsPerson,
+    getDate,
     navListMenuItemsMovies,
     navListMenuItemsSeries,
-    calculateAge,
+    numberFormater,
+    responsiveOptions,
+    responsiveOptionsPerson,
+    time_convert,
   }
 }

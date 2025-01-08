@@ -87,7 +87,7 @@ export const RecommendationsMovies = ({movieId}) => {
                             to-transparent */}
                             <div className="relative cursor-pointer group z-10 p-5 space-y-6">
                               <div className=" align-self-end w-full mt-10">
-                                <div className="aspect-[16/22]" />
+                                <div className="aspect-[18/22] md:aspect-[16/22]" />
                                 <div className="space-y-6 hidden">
                                   <div className="flex flex-col space-y-2 inner mt-3">
                                     <h3 className="text-base font-bold text-white min-h-[56px] hidden md:flex">
